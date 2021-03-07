@@ -1,0 +1,697 @@
+{
+  "completedHtml": "<image src='./IMAGES/MoodSurvey - Done - 878.svg' /><p>Done! 👊 Thanks for completing the survey.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "pages": [
+    {
+      "name": ".STARTER",
+      "elements": [
+        {
+          "type": "html",
+          "name": "introduction",
+          "html": "<image src='./IMAGES/MoodSurvey - Start - 1064.svg' /><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p>"
+        }
+      ]
+    },
+    {
+      "name": ".DASS",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "DASS1-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS1",
+              "title": "I found it hard to wind down.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS2-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS2",
+              "title": "I was aware of dryness of my mouth.",
+              "enableIf": "{DASS1} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS3-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS3",
+              "title": "I couldn't seem to experience any positive feeling at all.",
+              "enableIf": "{DASS2} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS4-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS4",
+              "title": "I experienced breathing difficulty (e.g., excessively rapid breathing, breathlessness in the absence of physical exertion.)",
+              "enableIf": "{DASS3} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS5-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS5",
+              "title": "I found it difficult to work up the initiative to do things.",
+              "enableIf": "{DASS4} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS6-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS6",
+              "title": "I tended to over-react to situations.",
+              "enableIf": "{DASS5} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS7-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS7",
+              "title": "I experienced trembling (e.g., in the hands.)",
+              "enableIf": "{DASS6} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS8-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS8",
+              "title": "I felt that I was using a lot of nervous energy.",
+              "enableIf": "{DASS7} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS9-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS9",
+              "title": "I was worried about situations in which I might panic and make a fool of myself.",
+              "enableIf": "{DASS8} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS10-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS10",
+              "title": "I felt that I had nothing to look forward to.",
+              "enableIf": "{DASS9} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS11-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS11",
+              "title": "I found myself getting agitated.",
+              "enableIf": "{DASS10} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS3-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS12",
+              "title": "I found it difficult to relax.",
+              "enableIf": "{DASS11} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS13-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS13",
+              "title": "I felt downhearted and blue.",
+              "enableIf": "{DASS12} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS14-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS14",
+              "title": "I was intolerant of anything that kept me from getting on with what I was doing.",
+              "enableIf": "{DASS13} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS15-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS15",
+              "title": "I felt I was close to panic.",
+              "enableIf": "{DASS14} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS16-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS16",
+              "title": "I was unable to become enthusiastic about anything.",
+              "enableIf": "{DASS15} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS17-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS17",
+              "title": "I felt I wasn't worth much as a person.",
+              "enableIf": "{DASS16} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS18-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS18",
+              "title": "I felt that I was rather touchy.",
+              "enableIf": "{DASS17} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS19-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS19",
+              "title": "I was aware of the action of my heart in the absence of physical exertion (e.g., sense of heart rate increase, heart missing a beat.)",
+              "enableIf": "{DASS18} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS3-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS20",
+              "title": "I felt scared without any good reason.",
+              "enableIf": "{DASS19} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        },
+        {
+          "type": "panel",
+          "name": "DASS3-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "DASS21",
+              "title": "I felt that life was meaningless.",
+              "enableIf": "{DASS20} notempty",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "0",
+                  "text": "Did not apply to me at all"
+                },
+                {
+                  "value": "1",
+                  "text": "Applied to me some degree, or some of the time"
+                },
+                {
+                  "value": "2",
+                  "text": "Applied to me a considerable degree, or a good part of the time"
+                },
+                {
+                  "value": "3",
+                  "text": "Applied to me very much, or most of the time "
+                }
+              ]
+            }
+          ],
+          "title": "Over the past week..."
+        }
+      ]
+    }
+  ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
+  "showProgressBar": "bottom",
+  "progressBarType": "questions",
+  "startSurveyText": "Start",
+  "firstPageIsStarted": true
+}

@@ -1,0 +1,234 @@
+{
+  "completedHtml": "<image src='./IMAGES/ChangeSurvey - Done - 992.svg' /><p>Thanks so much! You've finished the mid questionnaires and Part 2 of Vibe Up is now unlocked.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "pages": [
+    {
+      "name": ".STARTER",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<image src='./IMAGES/ChangeSurvey - Start - 985.svg' /><p>Each statement describes what a person might think when starting a new self-help programme.<p><p>Please indicate the extent to which you agree or disagree with each statement in terms of what you think <b>right now.</b></p>"
+        }
+      ]
+    },
+    {
+      "name": ".URC",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "URC19-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC19",
+              "title": "I wish I had more ideas on how to solve my problems.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        },
+        {
+          "type": "panel",
+          "name": "URC24-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC24",
+              "title": "I hope that this app will contain good advice for me.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        },
+        {
+          "type": "panel",
+          "name": "URC25-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC25",
+              "title": "Anyone can talk about changing; I’m actually doing something about it.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        },
+        {
+          "type": "panel",
+          "name": "URC26-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC26",
+              "title": "All this talk about psychology is boring. Why can’t people just forget their problems?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        },
+        {
+          "type": "panel",
+          "name": "URC29-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC29",
+              "title": "I have worries but so does the next person. Why spend time thinking about them?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        },
+        {
+          "type": "panel",
+          "name": "URC30-panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "URC30",
+              "title": "I am actively working on my problem.",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "1",
+                  "text": "Strongly disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Undecided"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "5",
+                  "text": "Strongly agree"
+                }
+              ]
+            }
+          ],
+          "title": "Right now..."
+        }
+      ]
+    }
+  ],
+  "showProgressBar": "bottom",
+  "progressBarType": "questions",
+  "startSurveyText": "Start",
+  "firstPageIsStarted": true
+}

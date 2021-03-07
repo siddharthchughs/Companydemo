@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/bdi_orange_main</color>
+    <color name="colorPrimaryDark">@color/bdi_orange_dark</color>
+    <color name="colorAccent">@color/bdi_purple_main</color>
+
+    <color name="white">#FFF</color>
+    <color name="gray">#737373</color>
+    <color name="bdi_orange_main">#FFB753</color>
+    <color name="bdi_orange_dark">#F47D13</color>
+
+    <color name="bdi_purple_main">#6C63FF</color>
+
+    <color name="bdi_black">#31261D</color>
+
+    <color name="bdi_light_grey">#cccccc</color>
+
+    <color name="delete_red">#FF422E</color>
+</resources>
