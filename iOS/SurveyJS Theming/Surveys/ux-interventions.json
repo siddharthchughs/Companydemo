@@ -1,0 +1,137 @@
+{
+  "completedHtml": "<image src='./IMAGES/YourFeedback - Done - 1264.svg' /><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "pages": [
+    {
+      "name": ".UX",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "UX1",
+          "title": "I found the app easy to use.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX2",
+          "title": "I found the app useful for my mental health.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX3",
+          "title": "Overall, I am satisfied with the app.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX4a",
+          "title": "I had no problems using the app.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "UX4b",
+          "visible": false,
+          "visibleIf": "{UX4a} <= 2",
+          "title": "Can you tell us what problem(s) you encountered?",
+          "description": "Letting us know will help us improve the experience for others. Thank you!",
+          "requiredIf": "{UX4a} <= 2",
+          "requiredErrorText": "This field is required",
+          "validators": [
+            {
+              "type": "text",
+              "text": "Please enter no more than 256 characters",
+              "minLength": 5,
+              "maxLength": 256,
+              "allowDigits": true
+            }
+          ],
+          "maxLength": 256,
+          "placeHolder": "Type your answer here."
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX5",
+          "title": "I trusted the information given by the app.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX6",
+          "title": "Activities or actions suggested by the app were new for me.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX7",
+          "title": "In the past two weeks, I have put into practice activities or actions suggested by the app.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "UX8",
+          "title": "I intend in the future to put into practice activities or actions suggested by the app.",
+          "isRequired": true,
+          "choices": [
+            { "value": "1", "text": "Strongly disagree" },
+            { "value": "2", "text": "Disagree" },
+            { "value": "3", "text": "Undecided" },
+            { "value": "4", "text": "Agree" },
+            { "value": "5", "text": "Strongly agree" }
+          ]
+        }
+      ]
+    }
+  ],
+  "showProgressBar": "bottom",
+  "progressBarType": "questions"
+}

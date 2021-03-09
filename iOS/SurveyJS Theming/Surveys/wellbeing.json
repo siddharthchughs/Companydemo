@@ -1,0 +1,86 @@
+{
+  "completedHtml": "<image src='./IMAGES/WellbeingSurvey - Done - 1076.svg' /><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "pages": [
+    {
+      "name": ".WELLBEING",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "PAVS1",
+          "title": "In the past week, on how many days did you engage in moderate to strenuous exercise?",
+          "description": "Moderate exercise means that you are breathing hard enough that, while you might be able to talk, singing would not be possible.\n\nStrenuous exercise means being out of breath enough that you can’t talk.",
+          "isRequired": true,
+          "rateMin": 0,
+          "rateMax": 7
+        },
+        {
+          "type": "text",
+          "name": "PAVS2",
+          "visible": false,
+          "visibleIf": "{PAVS1} > 0 and {PAVS1} <= 7",
+          "title": "On average, how many minutes did each session of moderate to strenuous exercise last for?",
+          "requiredIf": "{PAVS1} > 0 and {PAVS1} <= 7",
+          "requiredErrorText": "Invalid value provided",
+          "validators": [
+            {
+              "type": "numeric",
+              "text": "Invalid value provided",
+              "minValue": 1,
+              "maxValue": 240
+            }
+          ],
+          "inputType": "number",
+          "min": "1",
+          "max": "240",
+          "step": 1,
+          "maxLength": 1,
+          "placeHolder": "Enter value"
+        },
+        {
+          "type": "radiogroup",
+          "name": "PSQI6",
+          "visibleIf": "{PAVS1} <= 0",
+          "title": "During the past week, how would you rate your sleep quality overall?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "0",
+              "text": "Very bad"
+            },
+            {
+              "value": "1",
+              "text": "Fairly bad"
+            },
+            {
+              "value": "2",
+              "text": "Good"
+            },
+            {
+              "value": "3",
+              "text": "Fairly good"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "MIND1-panel1",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "MIND1",
+              "title": "During the past week, how mindful have you been?",
+              "isRequired": true,
+              "rateMin": 0,
+              "rateMax": 4,
+              "minRateDescription": "Not at all mindful",
+              "maxRateDescription": "Extremely mindful"
+            }
+          ],
+          "title": "Mindfulness is a practice where you intentionally focus your attention on what you're experiencing in the present moment, with an attitude of openness and non-judgment."
+        }
+      ]
+    }
+  ],
+  "showProgressBar": "bottom",
+  "progressBarType": "questions"
+}

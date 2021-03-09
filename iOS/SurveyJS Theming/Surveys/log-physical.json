@@ -1,0 +1,57 @@
+{
+  "pages": [
+    {
+      "name": ".LOG",
+      "elements": [
+        {
+          "type": "multipletext",
+          "name": "LOGb",
+          "title": "How much time did you spend being physically active yesterday?",
+          "description": "Please include any changes you made to increase your physical activity throughout the day (not just exercise workouts).",
+          "isRequired": true,
+          "requiredErrorText": "Please enter a valid number for these fields.",
+          "items": [
+            {
+              "name": "hours",
+              "placeHolder": "xx",
+              "inputType": "number",
+              "title": "Hours",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "text": "Please enter a number between 0 and 23",
+                  "minValue": 0,
+                  "maxValue": 23
+                }
+              ]
+            },
+            {
+              "name": "minutes",
+              "placeHolder": "xx",
+              "inputType": "number",
+              "title": "Minutes",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "text": "Please enter a number between 0 and 59",
+                  "minValue": 0,
+                  "maxValue": 59
+                }
+              ]
+            }
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "html",
+          "name": "image",
+          "html": "<image src='./IMAGES/PhysicalActivityLog - 1501.svg' />"
+        }
+      ]
+    }
+  ],
+  "showCompletedPage": false,
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "completeText": "Log time"
+}

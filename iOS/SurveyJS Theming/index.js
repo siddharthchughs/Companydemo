@@ -1,0 +1,1 @@
+function loadSurveyJson(e){var s=new Survey.Model(JSON.parse(e));$("#surveyContainer").Survey({model:s,onComplete:function(e){var s=JSON.stringify(e.data);webkit.messageHandlers.submitSurvey.postMessage(s)}})}function dismissSurvey(){webkit.messageHandlers.finishSurvey.postMessage({})}Survey.StylesManager.applyTheme();

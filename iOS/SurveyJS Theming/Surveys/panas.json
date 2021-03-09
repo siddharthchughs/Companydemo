@@ -1,0 +1,463 @@
+{
+  "completedHtml": "<image src='./IMAGES/DailyCheckin - Done - 1126.svg'/><p>All done! Thanks for checking in with us. See you soon.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "pages": [
+    {
+      "name": ".STARTER",
+      "elements": [
+        {
+          "type": "html",
+          "name": "introduction",
+          "html": "<image src='./IMAGES/DailyCheckin - Start - 1120.svg'/><p>We've got a few questions about your current feelings and behaviours. The survey will take 1-2 minutes.</p>\n<p>Please complete the questions as soon as possible. This helps us to get more accurate data to understand how young people like you have been experiencing daily life.</p>\n<p>Incomplete surveys will expire in one hour.</p>"
+        }
+      ]
+    },
+    {
+      "name": ".PANAS",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "PANAS0",
+          "title": "How do you feel right now?",
+          "description": "Please select all that apply. Click 'Next' if none apply.",
+          "choices": [
+            {
+              "value": "upset",
+              "text": "Upset"
+            },
+            {
+              "value": "determined",
+              "text": "Determined"
+            },
+            {
+              "value": "hostile",
+              "text": "Hostile"
+            },
+            {
+              "value": "attentive",
+              "text": "Attentive"
+            },
+            {
+              "value": "alert",
+              "text": "Alert"
+            },
+            {
+              "value": "afraid",
+              "text": "Afraid"
+            },
+            {
+              "value": "ashamed",
+              "text": "Ashamed"
+            },
+            {
+              "value": "active",
+              "text": "Active"
+            },
+            {
+              "value": "inspired",
+              "text": "Inspired"
+            },
+            {
+              "value": "hopeless",
+              "text": "Hopeless"
+            },
+            {
+              "value": "nervous",
+              "text": "Nervous"
+            },
+            {
+              "value": "calm",
+              "text": "Calm"
+            }
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS1",
+          "visibleIf": "{PANAS0} = ['upset']",
+          "title": "To what extent do you feel upset right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS2",
+          "visibleIf": "{PANAS0} = ['hostile']",
+          "title": "To what extent do you feel hostile right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS3",
+          "visibleIf": "{PANAS0} = ['alert']",
+          "title": "To what extent do you feel alert right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS4",
+          "visibleIf": "{PANAS0} = ['ashamed']",
+          "title": "To what extent do you feel ashamed right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS5",
+          "visibleIf": "{PANAS0} = ['inspired']",
+          "title": "To what extent do you feel inspired right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS6",
+          "visibleIf": "{PANAS0} = ['nervous']",
+          "title": "To what extent do you feel nervous right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS7",
+          "visibleIf": "{PANAS0} = ['determined']",
+          "title": "To what extent do you feel determined right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS8",
+          "visibleIf": "{PANAS0} = ['attentive']",
+          "title": "To what extent do you feel attentive right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS9",
+          "visibleIf": "{PANAS0} = ['afraid']",
+          "title": "To what extent do you feel afraid right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS10",
+          "visibleIf": "{PANAS0} = ['active']",
+          "title": "To what extent do you feel active right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS11",
+          "visibleIf": "{PANAS0} = ['hopeless']",
+          "title": "To what extent do you feel hopeless right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "PANAS12",
+          "visibleIf": "{PANAS0} = ['calm']",
+          "title": "To what extent do you feel calm right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very slightly or not at all"
+            },
+            {
+              "value": "2",
+              "text": "A little"
+            },
+            {
+              "value": "3",
+              "text": "Moderately"
+            },
+            {
+              "value": "4",
+              "text": "Quite a bit"
+            },
+            {
+              "value": "5",
+              "text": "Extremely"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "BHV1",
+          "visibleIf": "{PANAS0} notempty",
+          "title": "How likely are you to do something specifically as a result of how you feel right now?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "0",
+              "text": "Highly unlikely"
+            },
+            {
+              "value": "1",
+              "text": "Unlikely"
+            },
+            {
+              "value": "2",
+              "text": "Likely"
+            },
+            {
+              "value": 3,
+              "text": "Highly likely"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "BHV2",
+          "visibleIf": "{BHV1} >= 2",
+          "title": "What is it that you are likely to do?",
+          "description": "We don't actively monitor responses to this question, but help is always available if you need it.",
+          "requiredIf": "{BHV1} >= 2",
+          "maxLength": 512
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "startSurveyText": "Start",
+  "completeText": "Next",
+  "firstPageIsStarted": true
+}
