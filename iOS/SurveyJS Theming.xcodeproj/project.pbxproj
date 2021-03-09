@@ -15,15 +15,16 @@
 		237E422C25F5FBC400FB39C0 /* SurveyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422B25F5FBC400FB39C0 /* SurveyListView.swift */; };
 		237E423025F5FCC400FB39C0 /* SurveyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */; };
 		237E423425F5FE2000FB39C0 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E423225F5FE2000FB39C0 /* SurveyViewController.swift */; };
-		237E423C25F5FE6100FB39C0 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423625F5FE6000FB39C0 /* index.js */; };
-		237E423D25F5FE6100FB39C0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 237E423725F5FE6000FB39C0 /* index.html */; };
-		237E423E25F5FE6100FB39C0 /* survey.jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423825F5FE6000FB39C0 /* survey.jquery.min.js */; };
-		237E423F25F5FE6100FB39C0 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423925F5FE6000FB39C0 /* jquery.min.js */; };
-		237E424025F5FE6100FB39C0 /* survey.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 237E423A25F5FE6000FB39C0 /* survey.min.css */; };
+		237E423C25F5FE6100FB39C0 /* index.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423625F5FE6000FB39C0 /* index.min.js */; };
 		237E424125F5FE6100FB39C0 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 237E423B25F5FE6100FB39C0 /* index.css */; };
 		237E424525F6020C00FB39C0 /* SurveyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E424425F6020C00FB39C0 /* SurveyRow.swift */; };
 		60D5EB8B25F737B20095B693 /* IMAGES in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8925F737B20095B693 /* IMAGES */; };
 		60D5EB8C25F737B20095B693 /* SURVEYS in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8A25F737B20095B693 /* SURVEYS */; };
+		60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8E25F742D80095B693 /* survey.jquery.min.js */; };
+		60D5EB9425F742D80095B693 /* survey_container.html in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8F25F742D80095B693 /* survey_container.html */; };
+		60D5EB9525F742D80095B693 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB9025F742D80095B693 /* jquery.min.js */; };
+		60D5EB9625F742D80095B693 /* INTERVENTIONS in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB9125F742D80095B693 /* INTERVENTIONS */; };
+		60D5EB9725F742D80095B693 /* survey.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB9225F742D80095B693 /* survey.min.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,15 +38,16 @@
 		237E422B25F5FBC400FB39C0 /* SurveyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListView.swift; sourceTree = "<group>"; };
 		237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetail.swift; sourceTree = "<group>"; };
 		237E423225F5FE2000FB39C0 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
-		237E423625F5FE6000FB39C0 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		237E423725F5FE6000FB39C0 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		237E423825F5FE6000FB39C0 /* survey.jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = survey.jquery.min.js; sourceTree = "<group>"; };
-		237E423925F5FE6000FB39C0 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		237E423A25F5FE6000FB39C0 /* survey.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = survey.min.css; sourceTree = "<group>"; };
+		237E423625F5FE6000FB39C0 /* index.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.min.js; sourceTree = "<group>"; };
 		237E423B25F5FE6100FB39C0 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		237E424425F6020C00FB39C0 /* SurveyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyRow.swift; sourceTree = "<group>"; };
 		60D5EB8925F737B20095B693 /* IMAGES */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IMAGES; path = ../../Assets/IMAGES; sourceTree = "<group>"; };
 		60D5EB8A25F737B20095B693 /* SURVEYS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SURVEYS; path = ../../Assets/SURVEYS; sourceTree = "<group>"; };
+		60D5EB8E25F742D80095B693 /* survey.jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = survey.jquery.min.js; path = ../../Assets/survey.jquery.min.js; sourceTree = "<group>"; };
+		60D5EB8F25F742D80095B693 /* survey_container.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = survey_container.html; path = ../../Assets/survey_container.html; sourceTree = "<group>"; };
+		60D5EB9025F742D80095B693 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = ../../Assets/jquery.min.js; sourceTree = "<group>"; };
+		60D5EB9125F742D80095B693 /* INTERVENTIONS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = INTERVENTIONS; path = ../../Assets/INTERVENTIONS; sourceTree = "<group>"; };
+		60D5EB9225F742D80095B693 /* survey.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = survey.min.css; path = ../../Assets/survey.min.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,14 +122,15 @@
 		237E424325F5FEB200FB39C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60D5EB9125F742D80095B693 /* INTERVENTIONS */,
+				60D5EB9025F742D80095B693 /* jquery.min.js */,
+				60D5EB8F25F742D80095B693 /* survey_container.html */,
+				60D5EB8E25F742D80095B693 /* survey.jquery.min.js */,
+				60D5EB9225F742D80095B693 /* survey.min.css */,
 				60D5EB8925F737B20095B693 /* IMAGES */,
 				60D5EB8A25F737B20095B693 /* SURVEYS */,
 				237E423B25F5FE6100FB39C0 /* index.css */,
-				237E423A25F5FE6000FB39C0 /* survey.min.css */,
-				237E423725F5FE6000FB39C0 /* index.html */,
-				237E423625F5FE6000FB39C0 /* index.js */,
-				237E423925F5FE6000FB39C0 /* jquery.min.js */,
-				237E423825F5FE6000FB39C0 /* survey.jquery.min.js */,
+				237E423625F5FE6000FB39C0 /* index.min.js */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -190,15 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D5EB8B25F737B20095B693 /* IMAGES in Resources */,
-				237E423E25F5FE6100FB39C0 /* survey.jquery.min.js in Resources */,
-				237E423C25F5FE6100FB39C0 /* index.js in Resources */,
-				237E423F25F5FE6100FB39C0 /* jquery.min.js in Resources */,
-				237E423D25F5FE6100FB39C0 /* index.html in Resources */,
+				237E423C25F5FE6100FB39C0 /* index.min.js in Resources */,
 				237E424125F5FE6100FB39C0 /* index.css in Resources */,
 				60D5EB8C25F737B20095B693 /* SURVEYS in Resources */,
 				237E421C25F5FAF100FB39C0 /* Preview Assets.xcassets in Resources */,
-				237E424025F5FE6100FB39C0 /* survey.min.css in Resources */,
+				60D5EB9425F742D80095B693 /* survey_container.html in Resources */,
+				60D5EB9725F742D80095B693 /* survey.min.css in Resources */,
 				237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */,
+				60D5EB9525F742D80095B693 /* jquery.min.js in Resources */,
+				60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */,
+				60D5EB9625F742D80095B693 /* INTERVENTIONS in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
