@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct SurveyView: View {
     var body: some View {
         SurveyListView()
     }
@@ -8,6 +8,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SurveyView()
     }
 }

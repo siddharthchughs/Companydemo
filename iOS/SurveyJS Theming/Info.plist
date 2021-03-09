@@ -29,6 +29,15 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Font/dmsans_regular.ttf</string>
+		<string>Font/dmsans_medium.ttf</string>
+		<string>Font/dmsans_bold.ttf</string>
+		<string>Font/dmsans_bolditalic.ttf</string>
+		<string>Font/dmsans_mediumitalic.ttf</string>
+		<string>Font/dmsans_italic.ttf</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>

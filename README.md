@@ -18,6 +18,10 @@ Please download and install [Android Studio](https://developer.android.com/studi
 
 Please download and install [Xcode](https://developer.apple.com/xcode/).
 
+## Something not look quite right?
+
+Take a look at the following blog post on [Debugging webviews on both Android and iOS](https://blog.vuplex.com/debugging-webviews).
+
 ## Contributing
 
 Contributions are most welcome. Before submitting an issue or pull request, please familiarise yourself with the [Contribution Guidelines](./CONTRIBUTING.md).
