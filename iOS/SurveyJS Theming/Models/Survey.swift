@@ -18,7 +18,7 @@ struct Survey: Identifiable {
 }
 
 var surveys: [Survey] = {
-    guard let surveysDirecory = Bundle.main.path(forResource: "Surveys", ofType: nil) else {
+    guard let surveysDirecory = Bundle.main.path(forResource: "SURVEYS", ofType: nil) else {
         return []
     }
 
