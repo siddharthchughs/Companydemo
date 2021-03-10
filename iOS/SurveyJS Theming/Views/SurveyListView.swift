@@ -2,18 +2,17 @@ import SwiftUI
 
 struct SurveyListView: View {
     var body: some View {
-        NavigationView {
-            List(surveys) { survey in
-                NavigationLink(destination:
-                    SurveyDetail(survey: survey)
-                        .navigationTitle(survey.fileName)
-                        .navigationBarTitleDisplayMode(.inline)
-                ) {
-                    SurveyRow(survey: survey)
-                }
+        List(surveys) { survey in
+            NavigationLink(destination:
+                SurveyDetail(survey: survey)
+                    .ignoresSafeArea()
+                    .navigationTitle(survey.name)
+                    .navigationBarTitleDisplayMode(.inline)
+            ) {
+                NamedItemRow(item: survey)
             }
-            .navigationTitle(Text("Surveys"))
         }
+        .listStyle(GroupedListStyle())
     }
 }
 

@@ -9,9 +9,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont.customFont(forTextStyle: .body, weight: .bold)], for: .normal)
         UITableViewCell.appearance().textLabelFont = bodyFont
         UITableViewCell.appearance().detailTextLabelFont = bodyFont
-        UINavigationBar.appearance().titleTextAttributes = [.font: UIFont.customFont(forTextStyle: .headline, weight: .bold)]
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont.customFont(forTextStyle: .largeTitle)]
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.customFont(forTextStyle: .caption2, weight: .medium)], for: .normal)
+
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.configureWithDefaultBackground()
+        standardAppearance.titleTextAttributes = [.font: UIFont.customFont(forTextStyle: .headline, weight: .bold)]
+        UINavigationBar.appearance().scrollEdgeAppearance = standardAppearance
+
+        let scrollEdgeAppearance = UINavigationBarAppearance()
+        scrollEdgeAppearance.configureWithTransparentBackground()
+        scrollEdgeAppearance.titleTextAttributes = [.font: UIFont.customFont(forTextStyle: .largeTitle)]
+        UINavigationBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
 
         return true
     }
