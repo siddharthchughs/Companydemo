@@ -18,6 +18,23 @@ Please download and install [Android Studio](https://developer.android.com/studi
 
 Please download and install [Xcode](https://developer.apple.com/xcode/).
 
+## Editing the HTML/CSS/JS
+
+For convenience, all assets used in the apps are located in the `/Assets` directory. There you will find the HTML, CSS, JavaScript and custom font files.
+
+Subdirectories:
+
+- Font - Contains the custom fonts
+- IMAGES - Contains the images used for the Surveys
+- INTERVENTIONS - Contains the subdirectories and files for interventions and modules
+- SURVEYS - Contains the SurveyJS JSON files
+
+### Index.min.js and index.css
+
+You will note that the `index.min.js` and `index.css` files referenced in the `survey_container.html` are not in the `/Assets` directory. These files are unique to each platform as it includes specific JavaScript to handle the communication between the web views and the native applications, and specific styling needs if necessary.
+
+These files can be found in each of the platforms own asset directories.
+
 ## Something not look quite right?
 
 Take a look at the following blog post on [Debugging webviews on both Android and iOS](https://blog.vuplex.com/debugging-webviews).
