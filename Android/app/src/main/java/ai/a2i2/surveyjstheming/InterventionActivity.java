@@ -30,25 +30,12 @@ public class InterventionActivity extends FragmentActivity {
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
         toolbar.setTitle(interventionKey);
 
-        try {
-            String interventionPath = INTERVENTION_LIST.get(interventionKey);
-            InputStream inputStream = getApplicationContext().getAssets().open("INTERVENTIONS" + interventionPath);
-            StringBuilder textBuilder = new StringBuilder();
-            try (Reader reader = new BufferedReader(new InputStreamReader
-                    (inputStream, Charset.forName(StandardCharsets.UTF_8.name())))) {
-                int c = 0;
-                while ((c = reader.read()) != -1) {
-                    textBuilder.append((char) c);
-                }
-            }
-            createInterventionFragment(textBuilder.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String interventionPath = INTERVENTION_LIST.get(interventionKey);
+        createInterventionFragment("INTERVENTIONS" + interventionPath);
     }
 
-    private void createInterventionFragment(final String htmlContent) {
-        final InterventionFragment fragment = InterventionFragment.newInstance(htmlContent);
+    private void createInterventionFragment(final String indexPath) {
+        final InterventionFragment fragment = InterventionFragment.newInstance(indexPath);
 
         if (!isFinishing() || !isDestroyed()) {
             getSupportFragmentManager().beginTransaction()

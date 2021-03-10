@@ -16,14 +16,14 @@ import androidx.fragment.app.Fragment;
 
 public class InterventionFragment extends Fragment implements View.OnKeyListener {
 
-    private static final String ARG_CONTENT = "content";
-    private String content;
+    private static final String ARG_PATH = "content";
+    private String path;
     private WebView webView;
 
-    public static InterventionFragment newInstance(@NonNull String content) {
+    public static InterventionFragment newInstance(@NonNull String path) {
         final InterventionFragment fragment = new InterventionFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_CONTENT, content);
+        args.putString(ARG_PATH, path);
         fragment.setArguments(args);
         return fragment;
     }
@@ -32,7 +32,7 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            content = getArguments().getString(ARG_CONTENT);
+            path = getArguments().getString(ARG_PATH);
         }
     }
 
@@ -50,7 +50,7 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
         // also how errors are handled
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadData(content, "text/html", "charset=UTF-8");
+        webView.loadUrl(String.format("file:///android_asset/%s", path));
 
         return view;
     }
