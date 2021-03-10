@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		237E421525F5FAF000FB39C0 /* SurveyJSThemingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */; };
-		237E421725F5FAF000FB39C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421625F5FAF000FB39C0 /* ContentView.swift */; };
+		237E421725F5FAF000FB39C0 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421625F5FAF000FB39C0 /* SurveyView.swift */; };
 		237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237E421825F5FAF100FB39C0 /* Assets.xcassets */; };
 		237E421C25F5FAF100FB39C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237E421B25F5FAF100FB39C0 /* Preview Assets.xcassets */; };
 		237E422A25F5FB8E00FB39C0 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422925F5FB8E00FB39C0 /* Survey.swift */; };
@@ -18,6 +18,9 @@
 		237E423C25F5FE6100FB39C0 /* index.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423625F5FE6000FB39C0 /* index.min.js */; };
 		237E424125F5FE6100FB39C0 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 237E423B25F5FE6100FB39C0 /* index.css */; };
 		237E424525F6020C00FB39C0 /* SurveyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E424425F6020C00FB39C0 /* SurveyRow.swift */; };
+		23ECFC6125F755E2009D313F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6025F755E2009D313F /* AppDelegate.swift */; };
+		23ECFC6525F83DC1009D313F /* font.css in Resources */ = {isa = PBXBuildFile; fileRef = 23ECFC6425F83DC1009D313F /* font.css */; };
+		23ECFC6725F84645009D313F /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 23ECFC6625F84645009D313F /* Font */; };
 		60D5EB8B25F737B20095B693 /* IMAGES in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8925F737B20095B693 /* IMAGES */; };
 		60D5EB8C25F737B20095B693 /* SURVEYS in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8A25F737B20095B693 /* SURVEYS */; };
 		60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8E25F742D80095B693 /* survey.jquery.min.js */; };
@@ -30,7 +33,7 @@
 /* Begin PBXFileReference section */
 		237E421125F5FAF000FB39C0 /* SurveyJS Theming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SurveyJS Theming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyJSThemingApp.swift; sourceTree = "<group>"; };
-		237E421625F5FAF000FB39C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		237E421625F5FAF000FB39C0 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		237E421825F5FAF100FB39C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		237E421B25F5FAF100FB39C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		237E421D25F5FAF100FB39C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +44,9 @@
 		237E423625F5FE6000FB39C0 /* index.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.min.js; sourceTree = "<group>"; };
 		237E423B25F5FE6100FB39C0 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		237E424425F6020C00FB39C0 /* SurveyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyRow.swift; sourceTree = "<group>"; };
+		23ECFC6025F755E2009D313F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23ECFC6425F83DC1009D313F /* font.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = font.css; path = ../../Assets/font.css; sourceTree = "<group>"; };
+		23ECFC6625F84645009D313F /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = ../../Assets/Font; sourceTree = "<group>"; };
 		60D5EB8925F737B20095B693 /* IMAGES */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IMAGES; path = ../../Assets/IMAGES; sourceTree = "<group>"; };
 		60D5EB8A25F737B20095B693 /* SURVEYS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SURVEYS; path = ../../Assets/SURVEYS; sourceTree = "<group>"; };
 		60D5EB8E25F742D80095B693 /* survey.jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = survey.jquery.min.js; path = ../../Assets/survey.jquery.min.js; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		237E421325F5FAF000FB39C0 /* SurveyJS Theming */ = {
 			isa = PBXGroup;
 			children = (
+				23ECFC6025F755E2009D313F /* AppDelegate.swift */,
 				237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */,
 				237E422625F5FB5300FB39C0 /* Models */,
 				237E422325F5FB0000FB39C0 /* Views */,
@@ -102,7 +109,7 @@
 		237E422325F5FB0000FB39C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				237E421625F5FAF000FB39C0 /* ContentView.swift */,
+				237E421625F5FAF000FB39C0 /* SurveyView.swift */,
 				237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */,
 				237E422B25F5FBC400FB39C0 /* SurveyListView.swift */,
 				237E424425F6020C00FB39C0 /* SurveyRow.swift */,
@@ -122,17 +129,27 @@
 		237E424325F5FEB200FB39C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23ECFC6625F84645009D313F /* Font */,
+				60D5EB8925F737B20095B693 /* IMAGES */,
 				60D5EB9125F742D80095B693 /* INTERVENTIONS */,
+				60D5EB8A25F737B20095B693 /* SURVEYS */,
+				237E423B25F5FE6100FB39C0 /* index.css */,
+				237E423625F5FE6000FB39C0 /* index.min.js */,
+				23ECFC4125F74C9E009D313F /* SurveyJS */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23ECFC4125F74C9E009D313F /* SurveyJS */ = {
+			isa = PBXGroup;
+			children = (
+				23ECFC6425F83DC1009D313F /* font.css */,
 				60D5EB9025F742D80095B693 /* jquery.min.js */,
 				60D5EB8F25F742D80095B693 /* survey_container.html */,
 				60D5EB8E25F742D80095B693 /* survey.jquery.min.js */,
 				60D5EB9225F742D80095B693 /* survey.min.css */,
-				60D5EB8925F737B20095B693 /* IMAGES */,
-				60D5EB8A25F737B20095B693 /* SURVEYS */,
-				237E423B25F5FE6100FB39C0 /* index.css */,
-				237E423625F5FE6000FB39C0 /* index.min.js */,
 			);
-			name = Resources;
+			name = SurveyJS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +217,10 @@
 				60D5EB9425F742D80095B693 /* survey_container.html in Resources */,
 				60D5EB9725F742D80095B693 /* survey.min.css in Resources */,
 				237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */,
+				23ECFC6725F84645009D313F /* Font in Resources */,
 				60D5EB9525F742D80095B693 /* jquery.min.js in Resources */,
 				60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */,
+				23ECFC6525F83DC1009D313F /* font.css in Resources */,
 				60D5EB9625F742D80095B693 /* INTERVENTIONS in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +237,8 @@
 				237E424525F6020C00FB39C0 /* SurveyRow.swift in Sources */,
 				237E423025F5FCC400FB39C0 /* SurveyDetail.swift in Sources */,
 				237E422C25F5FBC400FB39C0 /* SurveyListView.swift in Sources */,
-				237E421725F5FAF000FB39C0 /* ContentView.swift in Sources */,
+				237E421725F5FAF000FB39C0 /* SurveyView.swift in Sources */,
+				23ECFC6125F755E2009D313F /* AppDelegate.swift in Sources */,
 				237E421525F5FAF000FB39C0 /* SurveyJSThemingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.a2i2.SurveyJS-Theming";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.a2i2.SurveyJS-Theming";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

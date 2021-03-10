@@ -10,6 +10,9 @@
 
         <item name="android:colorButtonNormal">@color/colorAccent</item>
         <item name="android:buttonTint">@color/colorAccent</item>
+
+        <item name="fontFamily">@font/dmsans_font</item>
+        <item name="android:fontFamily">@font/dmsans_font</item>
     </style>
 
     <style name="AppTheme.FullscreenDialog" parent="AppTheme">

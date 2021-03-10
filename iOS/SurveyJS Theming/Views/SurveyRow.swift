@@ -6,6 +6,7 @@ struct SurveyRow: View {
     var body: some View {
         HStack {
             Text(survey.fileName)
+                .font(.customFont(forTextStyle: .body))
             Spacer()
         }
     }
