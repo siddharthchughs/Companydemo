@@ -1,10 +1,10 @@
 import Foundation
 
-struct Survey: Identifiable {
+struct Survey: Identifiable, NamedItem {
     let id = UUID()
     let path: URL
 
-    var fileName: String {
+    var name: String {
         path.lastPathComponent
     }
 
@@ -27,9 +27,10 @@ var surveys: [Survey] = {
             .map { URL(fileURLWithPath: $0, relativeTo: URL(fileURLWithPath: surveysDirecory)) }
             .map(Survey.init(path:))
             .sorted(by: { lhs, rhs in
-                lhs.fileName < rhs.fileName
+                lhs.name < rhs.name
             })
     } catch {
+        print(error)
         return []
     }
 }()
