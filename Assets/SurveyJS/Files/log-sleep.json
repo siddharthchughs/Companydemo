@@ -45,7 +45,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<image src='./IMAGES/SleepLog - 1488.svg' />"
+          "html": "<image src='./Images/SleepLog - 1488.svg' />"
         }
       ]
     }

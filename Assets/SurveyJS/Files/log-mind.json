@@ -44,7 +44,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<image src='./IMAGES/MindfulnessLog - 1530.svg' />"
+          "html": "<image src='./Images/MindfulnessLog - 1530.svg' />"
         }
       ]
     }
