@@ -24,10 +24,14 @@ For convenience, all assets used in the apps are located in the `/Assets` direct
 
 Subdirectories:
 
+- Common - Contains any common files used between interventions and surveys
 - Font - Contains the custom fonts
-- IMAGES - Contains the images used for the Surveys
-- INTERVENTIONS - Contains the subdirectories and files for interventions and modules
-- SURVEYS - Contains the SurveyJS JSON files
+- Interventions - Contains the subdirectories and files for interventions and modules
+  - Common - Contains any common files used between intervention files
+  - {Intervention-Name} - Each intervention has it's own directory, and subdirectories for modules if needed
+- SurveyJS - Contains SurveyJS related files
+  - Files - Contains SurveyJS JSON files
+  - Images - Contains the images used for the surveys
 
 ### Index.min.js and index.css
 
