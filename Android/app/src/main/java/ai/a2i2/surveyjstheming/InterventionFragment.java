@@ -50,9 +50,14 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
         // also how errors are handled
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.addJavascriptInterface(new InterventionWebInterface(this::interventionComplete), "AndroidBridge");
         webView.loadUrl(String.format("file:///android_asset/%s", path));
 
         return view;
+    }
+
+    private void interventionComplete(Void result) {
+        // Handle the completion of the intervention
     }
 
     /**
