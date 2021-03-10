@@ -29,11 +29,11 @@ Subdirectories:
 - INTERVENTIONS - Contains the subdirectories and files for interventions and modules
 - SURVEYS - Contains the SurveyJS JSON files
 
-### Index.min.js
+### Index.min.js and index.css
 
-You will note that the `index.min.js` file referenced in the `survey_container.html` is not in the `/Assets` directory. This file is unique to each platform as it includes specific JavaScript to handle the communication between the web views and the native applications.
+You will note that the `index.min.js` and `index.css` files referenced in the `survey_container.html` are not in the `/Assets` directory. These files are unique to each platform as it includes specific JavaScript to handle the communication between the web views and the native applications, and specific styling needs if necessary.
 
-This file can be found in each of the platforms own asset directories.
+These files can be found in each of the platforms own asset directories.
 
 ## Something not look quite right?
 
