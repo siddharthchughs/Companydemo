@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     // RecommendationContent.contents variable. The following list is ONLY used for this application.
     public static final Map<String, String> INTERVENTION_LIST = new HashMap<String, String>() {
         {
-            put("Sleep - Module 1", "/sleep/module-1/index.html");
+            put("Sleep - Module 1", "/Sleep/Module-1/index.html");
         }
     };
 
