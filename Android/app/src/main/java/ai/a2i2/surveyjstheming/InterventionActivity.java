@@ -6,14 +6,6 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentActivity;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-
 import static ai.a2i2.surveyjstheming.MainActivity.INTERVENTION_LIST;
 
 public class InterventionActivity extends FragmentActivity {
@@ -31,7 +23,7 @@ public class InterventionActivity extends FragmentActivity {
         toolbar.setTitle(interventionKey);
 
         String interventionPath = INTERVENTION_LIST.get(interventionKey);
-        createInterventionFragment("INTERVENTIONS" + interventionPath);
+        createInterventionFragment("Interventions" + interventionPath);
     }
 
     private void createInterventionFragment(final String indexPath) {

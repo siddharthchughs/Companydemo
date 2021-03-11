@@ -27,14 +27,14 @@ struct InterventionSection: Identifiable {
 }
 
 var interventions: [InterventionSection] = {
-    guard let dir = Bundle.main.path(forResource: "INTERVENTIONS", ofType: nil) else {
+    guard let dir = Bundle.main.path(forResource: "Interventions", ofType: nil) else {
         return []
     }
     let rootDir = URL(fileURLWithPath: dir)
 
     do {
         return try FileManager.default.contentsOfDirectory(atPath: dir)
-            .filter { $0 != "common" }
+            .filter { $0.lowercased() != "common" }
             .map { InterventionSection(name: $0, dir: URL(fileURLWithPath: $0, relativeTo: rootDir)) }
             .sorted(by: { lhs, rhs in
                 lhs.name < rhs.name

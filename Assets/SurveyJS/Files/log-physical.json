@@ -45,7 +45,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<image src='./IMAGES/PhysicalActivityLog - 1501.svg' />"
+          "html": "<image src='./Images/PhysicalActivityLog - 1501.svg' />"
         }
       ]
     }

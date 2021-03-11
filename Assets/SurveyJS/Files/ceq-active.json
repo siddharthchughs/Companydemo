@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/Physical Activity - Done - 1414.svg'/><p>Great work! The intro to Physical Activity for wellbeing is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Let's go</button>",
+  "completedHtml": "<image src='./Images/MoodMonitoring - Done - 1422.svg'/><p>Thanks for sharing your thoughts!</p><button type='button' onClick='dismissSurvey()'>Let's go</button>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./IMAGES/PhysicalActivity - Start - 1417.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Physical activity</b></p>\n<p>Over the next two weeks you'll learn achievable ways to get more active, like increasing your step count and the '7-minute workout'.</p>\n<p>We'll ask you to do something active each day.</p>"
+          "html": "<image src='./Images/MoodMonitoring - Start - 1423.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Mood monitoring</b></p>\n<p>Over the next two weeks, you'll continue to track your 'in the moment' fealings and coping strategies.</p>\n<p>We'll prompt you to log how you are feeling twice each day.</p>"
         }
       ]
     },

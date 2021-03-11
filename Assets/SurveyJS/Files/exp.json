@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/DisruptionsReport - Done - 1254.svg' /><p>Thanks 😊 You're almost done! One quick survey left, to tell us how you found the app.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<image src='./Images/DisruptionsReport - Done - 1254.svg' /><p>Thanks 😊 You're almost done! One quick survey left, to tell us how you found the app.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
   "pages": [
     {
       "name": ".EXP",

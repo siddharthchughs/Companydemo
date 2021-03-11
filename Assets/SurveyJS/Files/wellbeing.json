@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/WellbeingSurvey - Done - 1076.svg' /><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<image src='./Images/WellbeingSurvey - Done - 1076.svg' /><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button>",
   "pages": [
     {
       "name": ".WELLBEING",

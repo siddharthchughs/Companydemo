@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/YourFeedback - Done - 1264.svg' /><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<image src='./Images/YourFeedback - Done - 1264.svg' /><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
   "pages": [
     {
       "name": ".UX",
