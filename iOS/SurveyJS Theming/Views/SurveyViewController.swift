@@ -59,11 +59,11 @@ class SurveyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let url = Bundle.main.url(forResource: "survey_container", withExtension: "html") else {
+        guard let url = Bundle.main.url(forResource: "SurveyJS/survey_container", withExtension: "html") else {
             delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
             return
         }
-        webView.loadFileURL(url, allowingReadAccessTo: url)
+        webView.loadFileURL(url, allowingReadAccessTo: survey.rootDirectory)
     }
 
     private func loadSurvey() {

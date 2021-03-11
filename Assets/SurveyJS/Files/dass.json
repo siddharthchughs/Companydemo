@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/MoodSurvey - Done - 878.svg' /><p>Done! 👊 Thanks for completing the survey.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<image src='./Images/MoodSurvey - Done - 878.svg' /><p>Done! 👊 Thanks for completing the survey.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./IMAGES/MoodSurvey - Start - 1064.svg' /><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p>"
+          "html": "<image src='./Images/MoodSurvey - Start - 1064.svg' /><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p>"
         }
       ]
     },

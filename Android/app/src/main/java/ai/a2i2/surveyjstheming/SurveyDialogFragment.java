@@ -80,7 +80,7 @@ public class SurveyDialogFragment extends DialogFragment {
                 this::surveyComplete,
                 this::dismissSurvey), "AndroidBridge");
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/survey_container.html");
+        webView.loadUrl("file:///android_asset/SurveyJS/survey_container.html");
 
         toolbar = view.findViewById(R.id.toolbar);
         if (toolbar != null) {

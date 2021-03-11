@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./IMAGES/Mindfulness - Done - 1407.svg'/><p>Great work! An introduction to Mindfulness is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Let's go</button>",
+  "completedHtml": "<image src='./Images/SleepHygiene - Done - 1553.svg'/><p>Great work! The introduction to Sleep Hygiene is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./IMAGES/Mindfulness - Start - 1416.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Mindfulness</b></p>\n<p>Over the next two weeks, you'll learn about mindfulness: paying attention to the present moment, on purpose, without judgement.</p>\n<p>We'll ask you to practise one brief (3-5 min) mindfulness exercise each day.</p>"
+          "html": "<image src='./Images/SleepHygiene - Start - 1401.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Sleep hygiene</b></p>\n<p>Over the next two weeks, you'll learn practical strategies to optimise your sleep, like simple changes to your behaviour and environment.</p>\n<p>We'll ask you to practise the three most relevant strategies each day.</p>"
         }
       ]
     },

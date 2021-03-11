@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     // RecommendationContent.contents variable. The following list is ONLY used for this application.
     public static final Map<String, String> INTERVENTION_LIST = new HashMap<String, String>() {
         {
-            put("Sleep - Module 1", "/sleep/module-1/index.html");
+            put("Sleep - Module 1", "/Sleep/Module-1/index.html");
         }
     };
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> itemList = new ArrayList<>();
         AssetManager manager = getAssets();
         try {
-            String[] surveyFiles = manager.list("SURVEYS");
+            String[] surveyFiles = manager.list("SurveyJS/Files");
             Collections.addAll(itemList, surveyFiles);
         } catch (IOException e) {
             e.printStackTrace();
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Load the survey file content as a String and launch the survey dialog
                 try {
-                    InputStream inputStream = getApplicationContext().getAssets().open("SURVEYS/" + item.getText());
+                    InputStream inputStream = getApplicationContext().getAssets().open("SurveyJS/Files/" + item.getText());
                     StringBuilder textBuilder = new StringBuilder();
                     try (Reader reader = new BufferedReader(new InputStreamReader
                             (inputStream, Charset.forName(StandardCharsets.UTF_8.name())))) {
