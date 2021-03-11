@@ -34,7 +34,7 @@ var interventions: [InterventionSection] = {
 
     do {
         return try FileManager.default.contentsOfDirectory(atPath: dir)
-            .filter { $0 != "common" }
+            .filter { $0.lowercased() != "common" }
             .map { InterventionSection(name: $0, dir: URL(fileURLWithPath: $0, relativeTo: rootDir)) }
             .sorted(by: { lhs, rhs in
                 lhs.name < rhs.name
