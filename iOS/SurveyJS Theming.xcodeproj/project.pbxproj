@@ -53,7 +53,7 @@
 		237E423625F5FE6000FB39C0 /* index.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.min.js; sourceTree = "<group>"; };
 		237E423B25F5FE6100FB39C0 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		23ECFC6025F755E2009D313F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23ECFC6425F83DC1009D313F /* font.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = font.css; path = ../../Assets/Common/font.css; sourceTree = "<group>"; };
+		23ECFC6425F83DC1009D313F /* font.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = font.css; path = ../../Assets/SurveyJS/font.css; sourceTree = "<group>"; };
 		23ECFC6625F84645009D313F /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = ../../Assets/Font; sourceTree = "<group>"; };
 		23ECFC6825F8485B009D313F /* InterventionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionListView.swift; sourceTree = "<group>"; };
 		23ECFC6925F8485B009D313F /* InterventionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionView.swift; sourceTree = "<group>"; };

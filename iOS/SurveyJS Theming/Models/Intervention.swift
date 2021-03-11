@@ -27,7 +27,7 @@ struct InterventionSection: Identifiable {
 }
 
 var interventions: [InterventionSection] = {
-    guard let dir = Bundle.main.path(forResource: "INTERVENTIONS", ofType: nil) else {
+    guard let dir = Bundle.main.path(forResource: "Interventions", ofType: nil) else {
         return []
     }
     let rootDir = URL(fileURLWithPath: dir)
