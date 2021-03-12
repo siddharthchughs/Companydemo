@@ -58,6 +58,8 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
 
     private void interventionComplete(Void result) {
         // Handle the completion of the intervention
+        // Note: actual app would submit data to server
+        requireActivity().finish();
     }
 
     /**
