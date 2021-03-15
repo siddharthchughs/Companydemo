@@ -1,0 +1,303 @@
+{
+  "firstPageIsStarted": true,
+  "startSurveyText": "START",
+  "showPrevButton": false,
+  "showQuestionNumbers": "off",
+  "showProgressBar": "bottom",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "html",
+          "html": "<div class=\"mood_section\">\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_one.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_two.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_three.svg\" alt=\"image not found\"/>\n</div>\n</div>\n<div class=\"description_section\">\n<p>Please read each statement and choose the option which indicates how much the statement applied to you over the past week. There are no right or wrong answers. Don’t spend too much time on any statement.</p>\n\n</div>"
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "I found it hard to wind down.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": "I was aware of dryness of my mouth.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": "I couldn't seem to experience any positive feeling at all.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "I experienced breathing difficulty",
+          "description": "(e.g., excessively rapid breathing, breathlessness in the absence of physical exertion)",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": "I found it difficult to work up the initiative to do things.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question6",
+          "title": "I tended to over-react to situations.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question7",
+          "title": "I experienced trembling",
+          "description": "(e.g., in the hands)",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": "I felt that I was using a lot of nervous energy.",
+          "description": "(e.g., in the hands)",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": "I was worried about situations in which I might panic and make a fool of myself.",
+          "description": "(e.g., in the hands)",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question10",
+          "title": "I felt that I had nothing to look forward to.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question11",
+          "title": "I found myself getting agitated.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question12",
+          "title": "I found it difficult to relax.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question13",
+          "title": "I felt downhearted and blue.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question14",
+          "title": "I was intolerant of anything that kept me from getting on with what I was doing.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question15",
+          "title": "I felt I was close to panic.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question16",
+          "title": "I was unable to become enthusiastic about anything.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question17",
+          "title": "I felt I wasn’t worth much as a person.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question18",
+          "title": "I felt that I was rather touchy.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question19",
+          "title": "I was aware of the action of my heart in the absence of physical exertion",
+          "description": "(e.g., sense of heart rate increase, heart missing a beat)",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question20",
+          "title": "I felt scared without any good reason.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question21",
+          "title": "I felt that life was meaningless.",
+          "descriptionLocation": "underTitle",
+          "isRequired": true,
+          "choices": [
+            "Did not apply to me at all",
+            "Applied to me some degree, or some of the time",
+            "Applied to me a considerable degree, or a good part of the time ",
+            "Applied to me very much, or most of the time "
+          ]
+        }
+      ]
+    }
+  ],
+  "completedHtml": "<h4>Done! &#128074; Thanks for completing this survey. </h4>"
+}
