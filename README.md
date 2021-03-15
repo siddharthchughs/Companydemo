@@ -41,7 +41,7 @@ Take a look at the following blog post on [Debugging webviews on both Android an
 
 The [Web/index.html](./Web/index.html) allows you to view surveys in a desktop browser.
 
-To load a survey select the JSON file and "Load JSON". To load a new survey, refresh the page as the load form is hidden after load.
+To load a survey select the JSON file and "Load Survey". Complete the survey to load a new survey.
 
 ## Contributing
 
