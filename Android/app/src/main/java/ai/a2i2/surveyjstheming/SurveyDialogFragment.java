@@ -3,6 +3,7 @@ package ai.a2i2.surveyjstheming;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -81,6 +82,10 @@ public class SurveyDialogFragment extends DialogFragment {
                 this::dismissSurvey), "AndroidBridge");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/SurveyJS/survey_container.html");
+        if (0 != (getContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)
+                && BuildConfig.BUILD_TYPE.contains("debug")) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
 
         toolbar = view.findViewById(R.id.toolbar);
         if (toolbar != null) {

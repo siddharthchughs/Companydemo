@@ -19,13 +19,14 @@
 		237E422C25F5FBC400FB39C0 /* SurveyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422B25F5FBC400FB39C0 /* SurveyListView.swift */; };
 		237E423025F5FCC400FB39C0 /* SurveyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */; };
 		237E423425F5FE2000FB39C0 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E423225F5FE2000FB39C0 /* SurveyViewController.swift */; };
-		237E423C25F5FE6100FB39C0 /* index.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 237E423625F5FE6000FB39C0 /* index.min.js */; };
 		237E424125F5FE6100FB39C0 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 237E423B25F5FE6100FB39C0 /* index.css */; };
 		23ECFC6125F755E2009D313F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6025F755E2009D313F /* AppDelegate.swift */; };
 		23ECFC6525F83DC1009D313F /* font.css in Resources */ = {isa = PBXBuildFile; fileRef = 23ECFC6425F83DC1009D313F /* font.css */; };
 		23ECFC6725F84645009D313F /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 23ECFC6625F84645009D313F /* Font */; };
 		23ECFC6A25F8485B009D313F /* InterventionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6825F8485B009D313F /* InterventionListView.swift */; };
 		23ECFC6B25F8485B009D313F /* InterventionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6925F8485B009D313F /* InterventionView.swift */; };
+		60984DEB25FF0A120062272A /* survey_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 60984DE925FF0A120062272A /* survey_bridge.js */; };
+		60984DEC25FF0A120062272A /* styling.css in Resources */ = {isa = PBXBuildFile; fileRef = 60984DEA25FF0A120062272A /* styling.css */; };
 		60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8E25F742D80095B693 /* survey.jquery.min.js */; };
 		60D5EB9425F742D80095B693 /* survey_container.html in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB8F25F742D80095B693 /* survey_container.html */; };
 		60D5EB9525F742D80095B693 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EB9025F742D80095B693 /* jquery.min.js */; };
@@ -50,13 +51,14 @@
 		237E422B25F5FBC400FB39C0 /* SurveyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListView.swift; sourceTree = "<group>"; };
 		237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetail.swift; sourceTree = "<group>"; };
 		237E423225F5FE2000FB39C0 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
-		237E423625F5FE6000FB39C0 /* index.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.min.js; sourceTree = "<group>"; };
 		237E423B25F5FE6100FB39C0 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		23ECFC6025F755E2009D313F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23ECFC6425F83DC1009D313F /* font.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = font.css; path = ../../Assets/Common/font.css; sourceTree = "<group>"; };
 		23ECFC6625F84645009D313F /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = ../../Assets/Font; sourceTree = "<group>"; };
 		23ECFC6825F8485B009D313F /* InterventionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionListView.swift; sourceTree = "<group>"; };
 		23ECFC6925F8485B009D313F /* InterventionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionView.swift; sourceTree = "<group>"; };
+		60984DE925FF0A120062272A /* survey_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = survey_bridge.js; path = ../../Assets/SurveyJS/survey_bridge.js; sourceTree = "<group>"; };
+		60984DEA25FF0A120062272A /* styling.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styling.css; path = ../../Assets/SurveyJS/styling.css; sourceTree = "<group>"; };
 		60D5EB8E25F742D80095B693 /* survey.jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = survey.jquery.min.js; path = ../../Assets/SurveyJS/survey.jquery.min.js; sourceTree = "<group>"; };
 		60D5EB8F25F742D80095B693 /* survey_container.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = survey_container.html; path = ../../Assets/SurveyJS/survey_container.html; sourceTree = "<group>"; };
 		60D5EB9025F742D80095B693 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = ../../Assets/SurveyJS/jquery.min.js; sourceTree = "<group>"; };
@@ -149,7 +151,6 @@
 				60D5EBA725F98A7D0095B693 /* Interventions */,
 				23ECFC6625F84645009D313F /* Font */,
 				237E423B25F5FE6100FB39C0 /* index.css */,
-				237E423625F5FE6000FB39C0 /* index.min.js */,
 				23ECFC4125F74C9E009D313F /* SurveyJS */,
 			);
 			name = Resources;
@@ -158,6 +159,8 @@
 		23ECFC4125F74C9E009D313F /* SurveyJS */ = {
 			isa = PBXGroup;
 			children = (
+				60984DE925FF0A120062272A /* survey_bridge.js */,
+				60984DEA25FF0A120062272A /* styling.css */,
 				23ECFC6425F83DC1009D313F /* font.css */,
 				60D5EB9025F742D80095B693 /* jquery.min.js */,
 				60D5EB8F25F742D80095B693 /* survey_container.html */,
@@ -224,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237E423C25F5FE6100FB39C0 /* index.min.js in Resources */,
 				237E424125F5FE6100FB39C0 /* index.css in Resources */,
 				60D5EBAA25F98A7D0095B693 /* Interventions in Resources */,
 				237E421C25F5FAF100FB39C0 /* Preview Assets.xcassets in Resources */,
@@ -234,8 +236,10 @@
 				237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */,
 				23ECFC6725F84645009D313F /* Font in Resources */,
 				60D5EB9525F742D80095B693 /* jquery.min.js in Resources */,
+				60984DEB25FF0A120062272A /* survey_bridge.js in Resources */,
 				60D5EB9325F742D80095B693 /* survey.jquery.min.js in Resources */,
 				23ECFC6525F83DC1009D313F /* font.css in Resources */,
+				60984DEC25FF0A120062272A /* styling.css in Resources */,
 				60D5EBA925F98A7D0095B693 /* Common in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
