@@ -4,25 +4,40 @@ window.onload = () => {
      * The survey injection on Android is performed on load.
      */
     if ('AndroidBridge' in window) {
-        $("#surveyContainer").Survey({
-            model: new Survey.Model(JSON.parse(AndroidBridge.getSurveyJson())),
-            onComplete: function (result) {
-                AndroidBridge.onSurveyComplete(JSON.stringify(result.data))
-            }
-        });
+        injectSurvey(JSON.parse(AndroidBridge.getSurveyJson()));
     }
+}
+
+/**
+ * Add the survey model to the Survey.
+ */
+function injectSurvey(surveyJson) {
+    var survey = new Survey.Model(surveyJson);
+    $("#surveyContainer").Survey({
+        model: survey,
+        onComplete: function (e) {
+            submitSurvey(JSON.stringify(e.data));
+        }
+    })
 }
 
 /**
  * This function is used by the SurveyViewController to provide the JSON to the survey in iOS.
  */
 function loadSurveyJson(e) {
-    $("#surveyContainer").Survey({
-        model: new Survey.Model(JSON.parse(e)),
-        onComplete: function (e) {
-            webkit.messageHandlers.submitSurvey.postMessage(JSON.stringify(e.data));
-        }
-    })
+    injectSurvey(JSON.parse(e));
+}
+
+/**
+ * Submit data on survey completion.
+ */
+function submitSurvey(e) {
+    if ('AndroidBridge' in window) {
+        AndroidBridge.onSurveyComplete(e)
+    }
+    else {
+        webkit.messageHandlers.submitSurvey.postMessage(e);
+    }
 }
 
 /**
