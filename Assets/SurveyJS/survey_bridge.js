@@ -53,17 +53,7 @@ function dismissSurvey() {
 }
 
 /**
- * Indicate intervention has been completed.
+ * Make functions globally available in HTML files.
  */
-function interventionCompleted() {
-    if ('AndroidBridge' in window) {
-        AndroidBridge.onInterventionComplete();
-    }
-    else {
-        webkit.messageHandlers.onInterventionComplete.postMessage({})
-    }
-}
-
-window.loadSurveyJson = loadSurveyJson
-window.dismissSurvey = dismissSurvey
-window.interventionCompleted = interventionCompleted;
+window.loadSurveyJson = loadSurveyJson;
+window.dismissSurvey = dismissSurvey;
