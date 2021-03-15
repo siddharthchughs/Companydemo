@@ -1,0 +1,9 @@
+/* Specific styling of surveys */
+
+.sv_nav {
+  text-align: center;
+}
+
+.sv_nav > input[type="button"] {
+  float: none !important;
+}

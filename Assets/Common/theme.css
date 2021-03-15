@@ -1,0 +1,33 @@
+/* Base theme used for interventions and surveys. */
+
+html,
+body {
+  background-color: #f4f1ef !important;
+}
+
+button,
+input[type="button"] {
+  background-color: transparent !important;
+
+  border: 2px solid #d64204 !important;
+  box-sizing: border-box;
+  border-radius: 100px !important;
+
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  /* identical to box height, or 143% */
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  color: #d64204 !important;
+}
+
+button:active,
+input[type="button"]:active {
+  background-color: #d64204 !important;
+
+  color: #ffffff !important;
+}
