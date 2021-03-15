@@ -33,12 +33,6 @@ Subdirectories:
   - Files - Contains SurveyJS JSON files
   - Images - Contains the images used for the surveys
 
-### Index.min.js and index.css
-
-You will note that the `index.min.js` and `index.css` files referenced in the `survey_container.html` are not in the `/Assets` directory. These files are unique to each platform as it includes specific JavaScript to handle the communication between the web views and the native applications, and specific styling needs if necessary.
-
-These files can be found in each of the platforms own asset directories.
-
 ## Something not look quite right?
 
 Take a look at the following blog post on [Debugging webviews on both Android and iOS](https://blog.vuplex.com/debugging-webviews).
