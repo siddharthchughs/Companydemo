@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     Survey
         .StylesManager
-        .applyTheme();
+        .applyTheme("bootstrap");
 
     if (localStorage.getItem('active_survey')) {
         let json = localStorage.getItem('active_survey');
@@ -28,10 +28,12 @@ function toggleVisibility() {
     if (loadForm.style.display == "none") {
         loadForm.style.display = "block";
         surveyContainer.style.display = "none";
+        surveyContainer_addons.style.display = "none";
     }
     else {
         loadForm.style.display = "none";
         surveyContainer.style.display = "block";
+        surveyContainer_addons.style.display = "block";
     }
 }
 
@@ -44,7 +46,9 @@ function populateSurvey(json) {
         // Auto dismiss the survey if there is no completion screen
         survey.onComplete.add(() => { dismissSurvey() });
     }
-    $("#surveyContainer").Survey({ model: survey });
+    $("#surveyContainer").Survey({ model: survey, onCurrentPageChanged: doOnCurrentPageChanged });
+    surveySuccesCallBack(survey);
+    window.survey = survey
 }
 
 /**

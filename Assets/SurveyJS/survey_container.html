@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Survey</title>
 
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="survey.jquery.min.js"></script>
-    <link href="survey.min.css" type="text/css" rel="stylesheet"/>
-    <!-- Specific OS level styling -->
-    <link href="../index.css" type="text/css" rel="stylesheet"/> 
-    <!-- Common styling between interventions and surveys -->
-    <link href="../Common/font.css" type="text/css" rel="stylesheet"/>
-    <link href="../Common/theme.css" type="text/css" rel="stylesheet" />
-    <!-- Styling specific to surveys -->
-    <link href="./styling.css" type="text/css" rel="stylesheet">
+<head>
+  <title>Survey</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="survey.jquery.min.js"></script>
+  <!--slideUp animation-->
+  <script type="text/javascript" src="aos.js"></script>
+  <link href="survey.min.css" type="text/css" rel="stylesheet" />
+  <!-- Specific OS level styling -->
+  <link href="../index.css" type="text/css" rel="stylesheet" />
+  <!-- Common styling between interventions and surveys -->
+  <link href="../Common/font.css" type="text/css" rel="stylesheet" />
+  <link href="../Common/theme.css" type="text/css" rel="stylesheet" />
+  <!-- Styling specific to surveys -->
+  <link href="../SurveyJS/styling.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="../SurveyJS/index.js"></script>
+
 </head>
+
 <body>
-<div id="surveyContainer"></div>
-<script type="text/javascript" src="./index.js"></script>
-<script type="text/javascript" src="./survey_bridge.js"></script>
+  <div id="surveyContainer"></div>
+  <span id="surveyProgress"></span>
+  <div class="pagination">
+    <a id="surveyPrev" onclick="survey.prevPage()">
+      <img src="Images/arrow_up.svg" />
+    </a>
+    <a id="surveyNext" onclick="survey.nextPage()">
+      <img src="Images/arrow_down.svg" />
+    </a>
+  </div>
+  <div class="sv_complete_home">
+    <input type="button" onclick="dismissSurvey()" value="HOME" class="btn sv_start_btn" />
+  </div>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./survey_bridge.js"></script>
 </body>
+
 </html>

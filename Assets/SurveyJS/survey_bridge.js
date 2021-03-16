@@ -1,4 +1,4 @@
-Survey.StylesManager.applyTheme();
+Survey.StylesManager.applyTheme("bootstrap");
 window.onload = () => {
     /**
      * The survey injection on Android is performed on load.

@@ -11,7 +11,7 @@
       "elements": [
         {
           "type": "html",
-          "html": "<div class=\"mood_section\">\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_one.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_two.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"images/mood_svg_three.svg\" alt=\"image not found\"/>\n</div>\n</div>\n<div class=\"description_section\">\n<p>Please read each statement and choose the option which indicates how much the statement applied to you over the past week. There are no right or wrong answers. Don’t spend too much time on any statement.</p>\n\n</div>"
+          "html": "<div class=\"mood_section\">\n<div class=\"mood_icon\">\n<img src=\"./Images/mood_svg_one.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"./Images/mood_svg_two.svg\" alt=\"image not found\"/>\n</div>\n<div class=\"mood_icon\">\n<img src=\"./Images/mood_svg_three.svg\" alt=\"image not found\"/>\n</div>\n</div>\n<div class=\"description_section\">\n<p>Please read each statement and choose the option which indicates how much the statement applied to you <b>over the past week.</b> There are no right or wrong answers. Don’t spend too much time on any statement.</p>\n\n</div>"
         }
       ]
     },
