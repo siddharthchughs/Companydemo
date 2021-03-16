@@ -1,16 +1,21 @@
-Survey
-    .StylesManager
-    .applyTheme();
+// Target the SurveyJS Asset directory for access to images
+document.querySelector('base').href += '../Assets/SurveyJS/';
 
 let readBtn = document.getElementById("submitBtn");
 let loadForm = document.getElementById("loadForm");
 let surveyContainer = document.getElementById("surveyContainer");
 
-if (localStorage.getItem('active_survey')) {
-    let json = localStorage.getItem('active_survey');
-    populateSurvey(json);
-    toggleVisibility();
-}
+window.addEventListener('DOMContentLoaded', () => {
+    Survey
+    .StylesManager
+    .applyTheme();
+
+    if (localStorage.getItem('active_survey')) {
+        let json = localStorage.getItem('active_survey');
+        populateSurvey(json);
+        toggleVisibility();
+    }
+});
 
 /**
  * Toggel visibility of the form and survey. The form will be visible when the survey is not, and visa versa.
