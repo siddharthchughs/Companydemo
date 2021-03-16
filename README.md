@@ -37,6 +37,12 @@ Subdirectories:
 
 Take a look at the following blog post on [Debugging webviews on both Android and iOS](https://blog.vuplex.com/debugging-webviews).
 
+## Web view
+
+The [Web/index.html](./Web/index.html) allows you to view surveys in a desktop browser.
+
+To load a survey select the JSON file and "Load Survey". Complete the survey to load a new survey.
+
 ## Contributing
 
 Contributions are most welcome. Before submitting an issue or pull request, please familiarise yourself with the [Contribution Guidelines](./CONTRIBUTING.md).
