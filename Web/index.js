@@ -1,14 +1,18 @@
-// Target the SurveyJS Asset directory for access to images
-document.querySelector('base').href += '../Assets/SurveyJS/';
-
-let readBtn = document.getElementById("submitBtn");
-let loadForm = document.getElementById("loadForm");
-let surveyContainer = document.getElementById("surveyContainer");
+var loadForm;
+var surveyContainer;
 
 window.addEventListener('DOMContentLoaded', () => {
+    // Target the SurveyJS Asset directory for access to images
+    document.querySelector('base').href += '../Assets/SurveyJS/';
+
+    let readBtn = document.getElementById("submitBtn");
+    readBtn.onclick = loadSelectedFile
+    loadForm = document.getElementById("loadForm");
+    surveyContainer = document.getElementById("surveyContainer");
+
     Survey
-    .StylesManager
-    .applyTheme();
+        .StylesManager
+        .applyTheme();
 
     if (localStorage.getItem('active_survey')) {
         let json = localStorage.getItem('active_survey');
@@ -62,5 +66,3 @@ function dismissSurvey() {
     localStorage.clear();
     toggleVisibility();
 }
-
-readBtn.onclick = loadSelectedFile
