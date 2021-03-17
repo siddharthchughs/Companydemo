@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/DailyCheckin - Done - 1126.svg'/><p>All done! Thanks for checking in with us. See you soon.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/DailyCheckin - Done - 1126.svg'/></div><div class='description_section'><p>All done! Thanks for checking in with us. See you soon.</p><button type='button' onClick='dismissSurvey()'>Home</button></p>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./Images/DailyCheckin - Start - 1120.svg'/><p>We've got a few questions about your current feelings and behaviours. The survey will take 1-2 minutes.</p>\n<p>Please complete the questions as soon as possible. This helps us to get more accurate data to understand how young people like you have been experiencing daily life.</p>\n<p>Incomplete surveys will expire in one hour.</p>"
+          "html": "<div class='image_section'><image src='./Images/DailyCheckin - Start - 1120.svg'/></div><div class='description_section'><p>We've got a few questions about your current feelings and behaviours. The survey will take 1-2 minutes.</p>\n<p>Please complete the questions as soon as possible. This helps us to get more accurate data to understand how young people like you have been experiencing daily life.</p>\n<p>Incomplete surveys will expire in one hour.</p></div>"
         }
       ]
     },
@@ -456,7 +456,12 @@
       ]
     }
   ],
+  "showPageTitles": false,
   "showQuestionNumbers": "off",
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false,
   "startSurveyText": "Start",
   "completeText": "Next",
   "firstPageIsStarted": true

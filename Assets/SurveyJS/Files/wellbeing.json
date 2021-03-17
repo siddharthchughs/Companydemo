@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/WellbeingSurvey - Done - 1076.svg' /><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/WellbeingSurvey - Done - 1076.svg' /></div><div class='description_section'><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".WELLBEING",
@@ -81,6 +81,11 @@
       ]
     }
   ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
   "showProgressBar": "bottom",
-  "progressBarType": "questions"
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false
 }

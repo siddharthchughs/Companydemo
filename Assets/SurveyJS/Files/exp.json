@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/DisruptionsReport - Done - 1254.svg' /><p>Thanks 😊 You're almost done! One quick survey left, to tell us how you found the app.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/DisruptionsReport - Done - 1254.svg' /></div><div class='description_section'><p>Thanks 😊 You're almost done! One quick survey left, to tell us how you found the app.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".EXP",
@@ -119,5 +119,11 @@
       ]
     }
   ],
-  "showProgressBar": "bottom"
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
+  "showProgressBar": "bottom",
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false
 }
