@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/ChangeSurvey - Done - 992.svg' /><p>Thanks so much! You've finished the mid questionnaires and Part 2 of Vibe Up is now unlocked.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/ChangeSurvey - Done - 992.svg' /></div><div class='description_section'><p>Thanks so much! You've finished the mid questionnaires and Part 2 of Vibe Up is now unlocked.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<image src='./Images/ChangeSurvey - Start - 985.svg' /><p>Each statement describes what a person might think when starting a new self-help programme.<p><p>Please indicate the extent to which you agree or disagree with each statement in terms of what you think <b>right now.</b></p>"
+          "html": "<div class='image_section'><image src='./Images/ChangeSurvey - Start - 985.svg' /></div><div class='description_section'><p>Each statement describes what a person might think when starting a new self-help programme.<p><p>Please indicate the extent to which you agree or disagree with each statement in terms of what you think <b>right now.</b></p></div>"
         }
       ]
     },
@@ -227,8 +227,13 @@
       ]
     }
   ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
   "showProgressBar": "bottom",
   "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false,
   "startSurveyText": "Start",
   "firstPageIsStarted": true
 }
