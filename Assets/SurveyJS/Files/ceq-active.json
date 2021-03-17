@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/MoodMonitoring - Done - 1422.svg'/><p>Thanks for sharing your thoughts!</p><button type='button' onClick='dismissSurvey()'>Let's go</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/MoodMonitoring - Done - 1422.svg'/></div><div class='description_section'><p>Thanks for sharing your thoughts!</p><button type='button' onClick='dismissSurvey()'>Let's go</button></div>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./Images/MoodMonitoring - Start - 1423.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Mood monitoring</b></p>\n<p>Over the next two weeks, you'll continue to track your 'in the moment' fealings and coping strategies.</p>\n<p>We'll prompt you to log how you are feeling twice each day.</p>"
+          "html": "<div class='image_section'><image src='./Images/MoodMonitoring - Start - 1423.svg'/></div><div class='description_section'><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Mood monitoring</b></p>\n<p>Over the next two weeks, you'll continue to track your 'in the moment' fealings and coping strategies.</p>\n<p>We'll prompt you to log how you are feeling twice each day.</p></div>"
         }
       ]
     },
@@ -76,6 +76,13 @@
       ]
     }
   ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
+  "showProgressBar": "bottom",
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false,
   "startSurveyText": "Got it",
   "firstPageIsStarted": true
 }

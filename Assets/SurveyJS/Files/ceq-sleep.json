@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/SleepHygiene - Done - 1553.svg'/><p>Great work! The introduction to Sleep Hygiene is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/SleepHygiene - Done - 1553.svg'/></div><div class='description_section'><p>Great work! The introduction to Sleep Hygiene is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".STARTER",
@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<image src='./Images/SleepHygiene - Start - 1401.svg'/><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Sleep hygiene</b></p>\n<p>Over the next two weeks, you'll learn practical strategies to optimise your sleep, like simple changes to your behaviour and environment.</p>\n<p>We'll ask you to practise the three most relevant strategies each day.</p>"
+          "html": "<div class='image_section'><image src='./Images/SleepHygiene - Start - 1401.svg'/></div><div class='description_section'><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Sleep hygiene</b></p>\n<p>Over the next two weeks, you'll learn practical strategies to optimise your sleep, like simple changes to your behaviour and environment.</p>\n<p>We'll ask you to practise the three most relevant strategies each day.</p></div>"
         }
       ]
     },
@@ -76,6 +76,13 @@
       ]
     }
   ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
+  "showProgressBar": "bottom",
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false,
   "startSurveyText": "Got it",
   "firstPageIsStarted": true
 }
