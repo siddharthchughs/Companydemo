@@ -1,10 +1,5 @@
 /* Specific styling of surveys */
 
-@import url("../SurveyJS/aos.min.css");
-body {
-  font-family: "DM Sans", sans-serif;
-  background: #f4f1ef;
-}
 .panel-body {
   padding: 30px 30px 95px 30px;
   overflow: hidden;
@@ -24,11 +19,11 @@ body {
   font-weight: 400;
   color: #000000;
 }
-.mood_section {
+.image_section {
   text-align: center;
   margin-top: 20px;
 }
-.mood_section .mood_icon img {
+.image_section .image_icon img {
   height: auto;
   width: 102.53px;
   object-fit: contain;
@@ -55,7 +50,7 @@ body {
   background: none;
   border: none;
   border-radius: 0px;
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   left: 25px;
   right: 25px;
@@ -118,17 +113,17 @@ body {
   font-size: 28px;
   line-height: 34px;
   color: #404040;
-  margin-top: 22px;
+  margin: 0px !important;
 }
-.sv_qstn h5::before {
-  content: "Over the past week...";
+.sv_p_title{
+  margin: 0px !important;
+  padding: 0px !important;
   font-size: 16px;
   line-height: 24px;
   color: #808080;
-  position: absolute;
-  top: 0px;
   font-weight: 400;
 }
+
 .sv_qcbc.form-inline {
   margin-top: 80px;
 }
@@ -188,45 +183,39 @@ body {
   text-decoration: none;
   margin-left: 22px;
 }
-.sv_complete::after {
-  background-image: url("./Images/complete_svg.svg");
-  width: 205.2px;
-  height: 197.7px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 35%;
-  bottom: 50%;
-}
-.sv_circle_img::before {
-  content: url("./Images/shadow_svg.svg");
-  position: absolute;
-  bottom: 35%;
-  left: 50%;
-  transform: translate(-50%);
-}
-.sv_complete::before {
-  height: 181px;
-}
-.sv_complete h4 {
-  position: absolute;
-  bottom: 100px;
+.footer_home_btn {
+  position: fixed;
+  bottom: 0;
   z-index: 1;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  padding: 25px;
+  border-radius: 30px 30px 0px 0px;
+}
+.footer_home_btn button {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+.footer_home_btn h4 {
+  margin-bottom: 25px;
   font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.25px;
   color: #404040;
 }
-.sv_complete_home {
-  position: fixed;
-  bottom: 25px;
-  z-index: 10;
-  width: 100%;
-  padding: 0px 25px;
+.sv_complete_img {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+.sv_complete_img img {
+  padding: 15px;
 }
 .alert-danger {
   font-size: 16px;
@@ -258,4 +247,52 @@ span.sv_q_required_text {
   width: 20px;
   position: relative;
   top: 3px;
+}
+
+.log-time-section {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  background: #f4f1ef;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0px 30px 50px;
+}
+.log-time-section button {
+  width: 100%;
+  padding: 14px;
+}
+.log-time-section button:focus {
+  outline: none;
+}
+.table {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+}
+.table tr {
+  column-count: 2;
+}
+.table tr td {
+  border-top: none !important;
+}
+.table tr td span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #808080;
+  text-transform: uppercase;
+}
+.table tr td input {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  height: auto;
+  padding: 12px 12px;
+  letter-spacing: 4px;
+  border: none;
+  color: #808080;
+  background: #ffffff;
+  border-radius: 100px;
 }

@@ -31,3 +31,11 @@ input[type="button"]:active {
 
   color: #ffffff !important;
 }
+
+
+#surveyPrev{
+  content: url('./arrow_up.svg');
+}
+#surveyNext{
+  content: url('./arrow_down.svg');
+}

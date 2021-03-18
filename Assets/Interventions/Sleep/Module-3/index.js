@@ -1,18 +1,5 @@
-Survey.StylesManager.applyTheme("bootstrap");
-
-function doOnCurrentPageChanged(survey) {
-  document.getElementById("surveyProgress").innerText =
-    " " +
-    (survey.currentPageNo + 1) +
-    " of " +
-    survey.visiblePageCount +
-    " " +
-    "complete";
-  if (document.getElementById("surveyPageNo"))
-    document.getElementById("surveyPageNo").value = survey.currentPageNo;
-}
 var json = {
-  "completedHtml": "<div class='sv_last_image_section'><image class=\"center_align_img\" src='./03_SleepEnvironment_313.svg'/></div>",
+  "completedHtml": "<div class='sv_last_image_section'><image class=\"center_align_img\" src='./03_SleepEnvironment_313.svg'/></div>\n <div class=\"sv_complete_home\">\n<div class=\"sv_complete_description\">\n <p>Congrats, you’ve finished another module!<p> \n<p>Keep logging your sleep, and check back soon for the final module 😊</p>\n </div>\n<input type=\"button\" onclick=\"interventionCompleted()\" value=\"HOME\" class=\"btn sv_home_btn\" />\n </div>",
   "pages": [
     {
       "name": "page1",
@@ -88,31 +75,5 @@ $("#surveyElement").Survey({
   onCurrentPageChanged: doOnCurrentPageChanged,
 });
 doOnCurrentPageChanged(survey);
-
-
-survey.onAfterRenderPage.add(function (survey, options) {
-  $("#surveyProgress, .pagination").show();
-});
- survey.onCurrentPageChanged.add(function (sender) {
-  if(survey.isLastPage) {
-    $("#surveyComplete").show();
-    $("#surveyNext").hide();
-  }
-}); 
-
-survey.onComplete.add(function () {
-  $("#surveyProgress, .pagination").hide();
-  $(".sv_complete_home").show();
-  $(".panel-body").addClass("module2_complete_height")
-});
-
-$("#surveyPrev").on("click", function () {
-  $("#surveyNext").show();
-  $("#surveyComplete").hide();
-});
-
-$(document).ready(function(){
-  $("#surveyNext").show();
-  $(".sv_complete_home, #surveyComplete").hide();
-})
+interventionSuccessCallBack(survey);
 

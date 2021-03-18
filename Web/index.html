@@ -20,18 +20,11 @@
       <button id="submitBtn">Load survey</button>
     </div>
     <div id="surveyContainer"></div>
-    <div id="surveyContainer_addons">
+    <div id="surveyContainer_addons" style="display: none;">
       <span id="surveyProgress"></span>
       <div class="pagination">
-        <a id="surveyPrev" onclick="survey.prevPage()">
-          <img src="../Assets/SurveyJS/Images/arrow_up.svg" />
-        </a>
-        <a id="surveyNext" onclick="survey.nextPage()">
-          <img src="../Assets/SurveyJS/Images/arrow_down.svg" />
-        </a>
-      </div>
-      <div class="sv_complete_home">
-        <input type="button" onclick="dismissSurvey()" value="HOME" class="btn sv_start_btn"/>
+        <a id="surveyPrev" onclick="surveyPrev()"></a>
+        <a id="surveyNext" onclick="surveyNext()"></a>
       </div>
     </div>
   </body>

@@ -1,5 +1,6 @@
 var loadForm;
 var surveyContainer;
+var surveyContainer_addons;
 
 window.addEventListener('DOMContentLoaded', () => {
     // Target the SurveyJS Asset directory for access to images

@@ -19,25 +19,15 @@ function surveySuccesCallBack(survey){
 
   $(document).ready(function () {
     if (survey.firstPageIsStarted) {
-      $(
-        "#surveyProgress, .pagination, .arrow_close_section, .sv_complete_home"
-      ).hide();
+      $("#surveyProgress, .pagination").hide();
     }
   });
 
-
   survey.onAfterRenderPage.add(function (survey, options) {
-    $("#surveyProgress, .pagination, .arrow_close_section").show();
-    $(".sv-logo--left, .sv_complete_home").hide();
+    $("#surveyProgress, .pagination, #surveyContainer_addons").show();
   });
 
-  survey.onCurrentPageChanged.add(function (sender) {
-    $(".sv_row").attr({
-      "data-aos": "slide-down",
-      "data-aos-duration": "1000",
-      "data-aos-easing": "linear",
-    });
-    $(".panel-body > div:first-child").addClass("slideUp_row");
+  survey.onCurrentPageChanged.add(function (sender) { 
     $(":input").each(function () {
       if ($(this).is("input[type=radio]")) {
         $(".sv_next_btn").hide();
@@ -52,23 +42,29 @@ function surveySuccesCallBack(survey){
       }
     });
   });
+  
   survey.onComplete.add(function () {
-    $("#surveyProgress, .pagination, .arrow_close_section").hide();
-    $(".panel-body.card-block.mt-4").addClass("sv_complete");
-    $(".sv_container").addClass("sv_circle_img");
-    $(".sv_complete_home").show();
+    $("#surveyProgress, .pagination").hide();
   });
+
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
 }
 
-$.ajax({
-  type: "GET",
-  url: "./Files/mood-survey.json",
-  crossDomain: true,
-  success: function (data) {
-     window.survey = new Survey.Model(data);
-    surveySuccesCallBack(survey);
-  },
-});
+
+function surveyPrev () {
+  survey.prevPage();
+}
+
+function surveyNext () {
+  if (survey.isLastPage) {
+    survey.completeLastPage();
+  }else{
+    survey.nextPage();
+  }
+}
+
+function surveyComplete(){
+  survey.completeLastPage();
+}

@@ -44,14 +44,14 @@
         },
         {
           "type": "html",
-          "name": "image",
-          "html": "<image src='./Images/SleepLog - 1488.svg' />"
-        }
+          "name": "question3",
+          "html": "<dive class=\"log-time-section\">\n<div>\n<img src=\"./Images/SleepLog - 1488.svg\"/>\n</div>\n<button class=\"log-time\" onclick=\"completeLastPage()\">log time</button>\n\n</div>"
+         }
       ]
     }
   ],
   "showCompletedPage": false,
   "showQuestionNumbers": "off",
   "questionErrorLocation": "bottom",
-  "completeText": "Log time"
+  "showNavigationButtons":false
 }

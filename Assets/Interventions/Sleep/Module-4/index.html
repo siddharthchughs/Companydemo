@@ -14,26 +14,12 @@
     <script type="text/javascript" src="../../Common/intervention_bridge.js"></script>
 </head>
 <body>
-    <div id="surveyElement" style="display:inline-block;width:100%;"></div>
+    <div id="surveyElement"></div>
     <span id="surveyProgress"></span>
     <div class="pagination">
-        <a id="surveyPrev" onclick="survey.prevPage()">
-            <img src="./arrow_up.svg" />
-        </a>
-        <a id="surveyNext" onclick="survey.nextPage()">
-            <img src="./arrow_down.svg" />
-        </a>
-        <a id="surveyComplete" onclick="survey.completeLastPage()">
-            <img src="./arrow_down.svg" />
-        </a>
+        <a id="surveyPrev" onclick="surveyPrev()"></a>
+        <a id="surveyNext" onclick="surveyNext()"></a>
     </div>
-    <div class="sv_complete_home">
-        <div class="sv_complete_description">
-            <p>That’s a wrap! Great job finishing Module 4.<p> 
-            <p>We hope the stategies help - keep logging your sleep and we’ll track your progress.</p>
-        </div>
-        <input type="button" onclick="interventionCompleted()" value="HOME" class="btn sv_home_btn" />
-    </div>
-    <script src="./module-4.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
 </body>
 </html>
