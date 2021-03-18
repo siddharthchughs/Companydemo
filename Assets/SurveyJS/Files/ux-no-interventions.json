@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<image src='./Images/YourFeedback - Done - 1264.svg' /><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button>",
+  "completedHtml": "<div class='image_section'><image src='./Images/YourFeedback - Done - 1264.svg' /></div><div class='description_section'><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".UX",
@@ -140,6 +140,11 @@
       ]
     }
   ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "off",
   "showProgressBar": "bottom",
-  "progressBarType": "questions"
+  "progressBarType": "questions",
+  "questionsOnPageMode": "questionPerPage",
+  "goNextPageAutomatic": true,
+  "showPrevButton": false
 }
