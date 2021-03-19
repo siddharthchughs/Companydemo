@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<div class='image_section'><image src='./Images/MoodSurvey - Start - 1064.svg' /></div><div class='description_section'><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p></div>"
+          "html": "<div class='image_section'><div class='image_icon'><img src='./Images/mood_svg_one.svg' alt='image not found'/></div><div class='image_icon'><img src='./Images/mood_svg_two.svg' alt='image not found'/></div><div class='image_icon'><img src='./Images/mood_svg_three.svg' alt='image not found'/></div></div><div class='description_section'><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p></div>"
         }
       ]
     },
