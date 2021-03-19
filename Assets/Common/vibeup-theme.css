@@ -34,8 +34,8 @@ input[type="button"]:active {
 
 
 #surveyPrev{
-  content: url('./arrow_up.svg');
+  content: url('./img/arrow_up.svg');
 }
 #surveyNext{
-  content: url('./arrow_down.svg');
+  content: url('./img/arrow_down.svg');
 }

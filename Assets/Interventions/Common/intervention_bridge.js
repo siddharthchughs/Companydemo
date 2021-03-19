@@ -1,9 +1,10 @@
 function interventionCompleted() {
-    if ('AndroidBridge' in window) {
+    if (window.AndroidBridge) {
         AndroidBridge.onInterventionComplete();
-    }
-    else {
+    } else if (window.webkit) {
         webkit.messageHandlers.onInterventionComplete.postMessage({})
+    } else {
+        console.log('Intervention completed');
     }
 }
 window.interventionCompleted = interventionCompleted;

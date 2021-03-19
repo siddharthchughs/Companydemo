@@ -1,4 +1,4 @@
-var json = {
+var surveyData = {
   "completedHtml": "<div class='sv_last_image_section'><image class=\"center_align_img\" src='./04_DailyActivites_413.svg'/></div>\n<div class=\"sv_complete_home\">\n <div class=\"sv_complete_description\">\n  <p>That’s a wrap! Great job finishing Module 4.<p> \n<p>We hope the stategies help - keep logging your sleep and we’ll track your progress.</p>\n </div>\n <input type=\"button\" onclick=\"interventionCompleted()\" value=\"HOME\" class=\"btn sv_home_btn\" />\n </div>",
   "pages": [
     {
@@ -68,11 +68,3 @@ var json = {
   "questionsOnPageMode": "questionPerPage",
   "goNextPageAutomatic": true,
 };
-
-window.survey = new Survey.Model(json);
-$("#surveyElement").Survey({
-  model: survey,
-  onCurrentPageChanged: doOnCurrentPageChanged,
-});
-doOnCurrentPageChanged(survey);
-interventionSuccessCallBack(survey);

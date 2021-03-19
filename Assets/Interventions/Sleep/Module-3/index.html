@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script type="text/javascript" src="../../../SurveyJS/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../SurveyJS/survey.jquery.min.js"></script>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- Library dependancies -->
+    <script src="../../../Common/jquery.min.js"></script>
+    <script src="../../../Common/surveyjs/survey.jquery.min.js"></script>
     <!-- Common styling of interventions -->
     <link href="../../Common/styling.css" type="text/css" rel="stylesheet" />
     <!-- Common styling of interventions AND surveys -->
     <link href="../../../Common/font.css" type="text/css" rel="stylesheet" />
-    <link href="../../../Common/theme.css" type="text/css" rel="stylesheet" />
-    <link href="../../../SurveyJS/survey.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="../../Common/index.js"></script>
-    <script type="text/javascript" src="../../Common/intervention_bridge.js"></script>
-</head>
-<body>
+    <link
+      href="../../../Common/vibeup-theme.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="../../../Common/surveyjs/survey.css" rel="stylesheet" />
+    <!-- Page scripts  -->
+    <script src="../../Common/intervention_bridge.js"></script>
+    <script src="survey-data.js" type="text/javascript"></script>
+    <script
+      src="../../../Common/pages/content-survey.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
     <div id="surveyElement"></div>
-    <span id="surveyProgress"></span>
     <div class="pagination">
-        <a id="surveyPrev" onclick="surveyPrev()"></a>
-        <a id="surveyNext" onclick="surveyNext()"></a>
+      <span id="surveyProgress"></span>
+      <a id="surveyPrev"></a>
+      <a id="surveyNext"></a>
     </div>
-    <script src="./index.js" type="text/javascript"></script>
-</body>
+  </body>
 </html>

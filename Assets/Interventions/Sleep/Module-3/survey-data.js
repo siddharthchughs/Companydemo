@@ -1,5 +1,5 @@
-var json = {
-  "completedHtml": "<div class='sv_last_image_section'><image class=\"center_align_img\" src='./03_SleepEnvironment_313.svg'/></div>\n <div class=\"sv_complete_home\">\n<div class=\"sv_complete_description\">\n <p>Congrats, you’ve finished another module!<p> \n<p>Keep logging your sleep, and check back soon for the final module 😊</p>\n </div>\n<input type=\"button\" onclick=\"interventionCompleted()\" value=\"HOME\" class=\"btn sv_home_btn\" />\n </div>",
+var surveyData = {
+  "completedHtml": "<div class='sv_last_image_section'><image class=\"center_align_img\" src='./03_SleepEnvironment_313.svg'/></div>\n <div class=\"sv_complete_home\">\n<div class=\"sv_complete_description\">\n <p>Congrats, you've finished another module!<p> \n<p>Keep logging your sleep, and check back soon for the final module 😊</p>\n </div>\n<input type=\"button\" onclick=\"interventionCompleted()\" value=\"HOME\" class=\"btn sv_home_btn\" />\n </div>",
   "pages": [
     {
       "name": "page1",
@@ -68,12 +68,4 @@ var json = {
   "questionsOnPageMode": "questionPerPage",
   "goNextPageAutomatic": true,
 };
-
-window.survey = new Survey.Model(json);
-$("#surveyElement").Survey({
-  model: survey,
-  onCurrentPageChanged: doOnCurrentPageChanged,
-});
-doOnCurrentPageChanged(survey);
-interventionSuccessCallBack(survey);
 
