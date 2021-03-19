@@ -5,6 +5,7 @@ window.onload = () => {
      */
     if ('AndroidBridge' in window) {
         injectSurvey(JSON.parse(AndroidBridge.getSurveyJson()));
+        $(".pagination, #surveyProgress").hide();
     }
 }
 
@@ -13,6 +14,12 @@ window.onload = () => {
  */
 function injectSurvey(surveyJson) {
     var survey = new Survey.Model(surveyJson);
+    $("#surveyContainer").Survey({
+        model: survey,
+        onCurrentPageChanged: doOnCurrentPageChanged
+        });
+       window.survey = survey;
+       surveySuccesCallBack(survey);
     $("#surveyContainer").Survey({
         model: survey,
         onComplete: function (e) {
