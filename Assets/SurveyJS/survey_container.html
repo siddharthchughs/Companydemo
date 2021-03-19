@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Survey</title>
 
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="survey.jquery.min.js"></script>
-    <link href="survey.min.css" type="text/css" rel="stylesheet"/>
-    <!-- Specific OS level styling -->
-    <link href="../index.css" type="text/css" rel="stylesheet"/> 
-    <!-- Common styling between interventions and surveys -->
-    <link href="../Common/font.css" type="text/css" rel="stylesheet"/>
-    <link href="../Common/theme.css" type="text/css" rel="stylesheet" />
-    <!-- Styling specific to surveys -->
-    <link href="./styling.css" type="text/css" rel="stylesheet">
+<head>
+  <title>Survey</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <script type="text/javascript" src="../Common/jquery.min.js"></script>
+  <script type="text/javascript" src="../Common/surveyjs/survey.jquery.min.js"></script>
+  <!--slideUp animation-->
+  <link href="../Common/surveyjs/survey.css" type="text/css" rel="stylesheet" />
+  <!-- Specific OS level styling -->
+  <link href="../index.css" type="text/css" rel="stylesheet" />
+  <!-- Common styling between interventions and surveys -->
+  <link href="../Common/font.css" type="text/css" rel="stylesheet" />
+  <link href="../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
+  <!-- Styling specific to surveys -->
+  <link href="../Common/surveyjs/survey.css" type="text/css" rel="stylesheet">
+  <link href="../Common/surveyjs/vibeup-surveyjs.css" type="text/css" rel="stylesheet">
+
 </head>
+
 <body>
-<div id="surveyContainer"></div>
-<script type="text/javascript" src="./index.js"></script>
-<script type="text/javascript" src="./survey_bridge.js"></script>
+  <div id="surveyContainer"></div>
+  <span id="surveyProgress"></span>
+  <div class="pagination">
+    <a id="surveyPrev" onclick="surveyPrev()"></a>
+    <a id="surveyNext" onclick="surveyNext()"></a>
+  </div>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./survey_bridge.js"></script>
 </body>
+
 </html>

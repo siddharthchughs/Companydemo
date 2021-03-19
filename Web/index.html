@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>SurveyJS Theming</title>
     <meta name="viewport" content="width=device-width" />
     <base href="." />
     <script type="text/javascript" src="./index.js" defer></script>
-    <script type="text/javascript" src="../Assets/SurveyJS/jquery.min.js"></script>
-    <script type="text/javascript" src="../Assets/SurveyJS/survey.jquery.min.js"></script>
-    <link rel="stylesheet" href="../Assets/SurveyJS/survey.min.css" />
-    <link rel="stylesheet" href="../Assets/SurveyJS/styling.css">
-    <link rel="stylesheet" href="../Assets/Common/font.css">
-    <link rel="stylesheet" href="../Assets/Common/theme.css">
-</head>
+    <script type="text/javascript" src="../Assets/Common/jquery.min.js"></script>
+    <script type="text/javascript" src="../Assets/Common/surveyjs/survey.jquery.min.js"></script>
+    <script type="text/javascript" src="../Assets/SurveyJS/index.js"></script>
+    <link rel="stylesheet" href="../Assets/Common/surveyjs/survey.css" />
+    <link rel="stylesheet" href="../Assets/Common/surveyjs/vibeup-surveyjs.css" />
+    <link rel="stylesheet" href="../Assets/Common/font.css" />
+    <link rel="stylesheet" href="../Assets/Common/vibeup-theme.css" />
+  </head>
 
-<body>
+  <body>
     <div id="loadForm">
-        <input type="file" id="file-input" />
-        <button id="submitBtn">Load survey</button>
+      <input type="file" id="file-input" />
+      <button id="submitBtn">Load survey</button>
     </div>
     <div id="surveyContainer"></div>
-</body>
-
+    <div id="surveyContainer_addons" style="display: none;">
+      <span id="surveyProgress"></span>
+      <div class="pagination">
+        <a id="surveyPrev" onclick="surveyPrev()"></a>
+        <a id="surveyNext" onclick="surveyNext()"></a>
+      </div>
+    </div>
+  </body>
 </html>
