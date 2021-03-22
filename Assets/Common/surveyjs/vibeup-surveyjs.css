@@ -252,10 +252,10 @@ span.sv_q_required_text {
   bottom: 0px;
   text-transform: uppercase;
 }
-.log-time-section .log-time_img {
+.log-time-section .log-time-img {
   height: 220px;
 }
-.log-time-section .log-time_img img {
+.log-time-section .log-time-img img {
   position: absolute;
   left: 50%;
   right: 0;

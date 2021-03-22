@@ -45,13 +45,13 @@
         {
           "type": "html",
           "name": "question3",
-          "html": "<dive class=\"log-time-section\">\n<div class=\"log-time_img\">\n<img src=\"./Images/SleepLog - 1488.svg\"/>\n</div>\n<button class=\"log-time\" onclick=\"surveyComplete()\">log time</button>\n\n</div>"
-         }
+          "html": "<dive class=\"log-time-section\">\n<div class=\"log-time-img\">\n<img src=\"./Images/SleepLog - 1488.svg\"/>\n</div>\n<button class=\"log-time\" onclick=\"surveyComplete()\">log time</button>\n\n</div>"
+        }
       ]
     }
   ],
   "showCompletedPage": false,
   "showQuestionNumbers": "off",
   "questionErrorLocation": "bottom",
-  "showNavigationButtons":false
+  "showNavigationButtons": false
 }
