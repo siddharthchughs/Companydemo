@@ -14,14 +14,15 @@ function doOnCurrentPageChanged(survey) {
     document.getElementById("surveyPageNo").value = survey.currentPageNo;
 }
 
-function surveySuccesCallBack(survey){
-  doOnCurrentPageChanged(survey);
-
+function surveySuccesCallback(survey) {
   $(document).ready(function () {
-    if (survey.firstPageIsStarted) {
-      $("#surveyProgress, .pagination").hide();
+    if (survey.firstPageIsStarted || survey.isLastPage) {
+      // If the first page is a starter page, or is the last page, then hide the progress navigation
+      hideNavigation();
     }
   });
+  
+  doOnCurrentPageChanged(survey);
 
   survey.onAfterRenderPage.add(function (survey, options) {
     $("#surveyProgress, .pagination, #surveyContainer_addons").show();
@@ -44,7 +45,7 @@ function surveySuccesCallBack(survey){
   });
   
   survey.onComplete.add(function () {
-    $("#surveyProgress, .pagination").hide();
+    hideNavigation();
   });
 
   Survey.surveyLocalization.locales[
@@ -52,6 +53,9 @@ function surveySuccesCallBack(survey){
   ].requiredError = "Please enter a response.";
 }
 
+function hideNavigation() {
+  $("#surveyProgress, .pagination").hide();
+}
 
 function surveyPrev () {
   survey.prevPage();

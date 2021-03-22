@@ -5,7 +5,6 @@ window.onload = () => {
      */
     if ('AndroidBridge' in window) {
         injectSurvey(JSON.parse(AndroidBridge.getSurveyJson()));
-        $(".pagination, #surveyProgress").hide();
     }
 }
 
@@ -16,16 +15,13 @@ function injectSurvey(surveyJson) {
     var survey = new Survey.Model(surveyJson);
     $("#surveyContainer").Survey({
         model: survey,
-        onCurrentPageChanged: doOnCurrentPageChanged
-        });
-       window.survey = survey;
-       surveySuccesCallBack(survey);
-    $("#surveyContainer").Survey({
-        model: survey,
+        onCurrentPageChanged: doOnCurrentPageChanged,
         onComplete: function (e) {
             submitSurvey(JSON.stringify(e.data));
         }
-    })
+    });
+    surveySuccesCallback(survey);
+    window.survey = survey;
 }
 
 /**
