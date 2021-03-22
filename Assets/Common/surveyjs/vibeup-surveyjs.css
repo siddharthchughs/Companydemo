@@ -248,7 +248,6 @@ span.sv_q_required_text {
 .log-time-section button {
   width: 100%;
   padding: 15px;
-  position: absolute;
   bottom: 0px;
   text-transform: uppercase;
 }
@@ -259,7 +258,7 @@ span.sv_q_required_text {
   position: absolute;
   left: 50%;
   right: 0;
-  bottom: 53px;
+  bottom: 54px;
   transform: translate(-50%);
 }
 .log-time-section button:focus {
