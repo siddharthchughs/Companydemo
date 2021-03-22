@@ -118,7 +118,7 @@
   color: #404040;
   margin: 0px !important;
 }
-.sv_p_title{
+.sv_p_title {
   margin: 0px !important;
   padding: 0px !important;
   font-size: 16px;
@@ -235,7 +235,7 @@ span.sv_q_required_text {
   transform: translateY(100%);
 }
 .glyphicon.glyphicon-exclamation-sign {
-  content: url("./Images/error.svg");
+  content: url("../img/error.svg");
   height: 20px;
   width: 20px;
   position: relative;
@@ -252,10 +252,10 @@ span.sv_q_required_text {
   bottom: 0px;
   text-transform: uppercase;
 }
-.log-time-section .log-time_img{
+.log-time-section .log-time_img {
   height: 220px;
 }
-.log-time-section .log-time_img img{
+.log-time-section .log-time_img img {
   position: absolute;
   left: 50%;
   right: 0;
