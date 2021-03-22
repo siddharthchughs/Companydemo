@@ -233,6 +233,11 @@
   padding: 0px 0px 8px 0px;
   margin-bottom: 0px;
   top: 100px;
+  text-align: center;
+}
+/* If alert appears after table then remove top. Used in log time surveys */
+.table + .alert-danger {
+  top: 0px;
 }
 .has-error .radio {
   color: #000000;
@@ -252,7 +257,7 @@ span.sv_q_required_text {
   height: 20px;
   width: 20px;
   position: relative;
-  top: 3px;
+  top: 4px;
 }
 
 .log-time-section {
