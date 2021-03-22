@@ -20,12 +20,15 @@ function surveySuccesCallback(survey) {
       // If the first page is a starter page, or is the last page, then hide the progress navigation
       hideNavigation();
     }
+    else{
+      showNavigation();
+    }
   });
   
   doOnCurrentPageChanged(survey);
 
   survey.onAfterRenderPage.add(function (survey, options) {
-    $("#surveyProgress, .pagination, #surveyContainer_addons").show();
+    showNavigation();
   });
 
   survey.onCurrentPageChanged.add(function (sender) { 
@@ -51,6 +54,10 @@ function surveySuccesCallback(survey) {
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
+}
+
+function showNavigation(){
+  $("#surveyProgress, .pagination, #surveyContainer_addons").show();
 }
 
 function hideNavigation() {
