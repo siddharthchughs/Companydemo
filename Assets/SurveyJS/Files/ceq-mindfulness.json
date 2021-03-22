@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<div class='image_section'><image src='./Images/Mindfulness - Done - 1407.svg'/></div><div class='description_section'><p>Great work! An introduction to Mindfulness is ready for you now.</p><button type='button' onClick='dismissSurvey()'>Let's go</button></div>",
+  "completedHtml": "<div class='sv_complete_img'><img src='./Images/Mindfulness - Done - 1407.svg'/></div><div class='footer_home_btn'><h4>Great work! An introduction to Mindfulness is ready for you now.</h4><button type='button' onClick='dismissSurvey()'>home</button></div>",
   "pages": [
     {
       "name": ".STARTER",
@@ -19,30 +19,16 @@
           "name": "CEQ-Panel1",
           "elements": [
             {
-              "type": "radiogroup",
+              "type": "rating",
               "name": "CEQ1",
               "title": "Right now, how logical does the idea of using this app to improve your distress seem to you?",
               "isRequired": true,
-              "choices": [
-                {
-                  "value": "1",
-                  "text": "1 - Not at all logical"
-                },
-                "2",
-                "3",
-                "4",
-                {
-                  "value": "5",
-                  "text": "5 - Somewhat logical"
-                },
-                "6",
-                "7",
-                "8",
-                {
-                  "value": "9",
-                  "text": "9 - Very logical"
-                }
-              ]
+              "rateMax": 9
+            },
+            {
+              "type": "html",
+              "name": "caption",
+              "html": "<div class='rating_caption_section'><p>Not at <br/>all logical</p><p>Somewhat <br/>logical</p><p>Very <br/>logical</p></div>"
             }
           ],
           "title": "In the next two questions we would like you to indicate how much you believe, right now, that this self-help app will help improve your feelings of distress."

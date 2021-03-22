@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<div class='image_section'><image src='./Images/ChangeSurvey - Done - 992.svg' /></div><div class='description_section'><p>Thanks so much! You've finished the mid questionnaires and Part 2 of Vibe Up is now unlocked.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
+  "completedHtml": "<div class='sv_complete_img'><img src='./Images/ChangeSurvey - Done - 992.svg'/></div><div class='footer_home_btn'><h4>Thanks so much! You've finished the mid questionnaires, so Part 2 of Vibe Up will unlock tomorrow.</h4><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".STARTER",

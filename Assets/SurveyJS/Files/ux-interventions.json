@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<div class='image_section'><image src='./Images/YourFeedback - Done - 1264.svg' /></div><div class='description_section'><p>Thanks for your feedback!</p><p>And congratulations, you've completed the study! We've loved having you on board.</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
+  "completedHtml": "<div class='sv_complete_img'><img src='./Images/YourFeedback - Done - 1264.svg'/></div><div class='footer_home_btn'><h4><p>Thanks for your feedback!</p>And congratulations, you've completed the study! We've loved having you on board.</h4><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".UX",

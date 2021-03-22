@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     Survey
         .StylesManager
         .applyTheme("bootstrap");
-
     if (localStorage.getItem('active_survey')) {
         let json = localStorage.getItem('active_survey');
         populateSurvey(json);
