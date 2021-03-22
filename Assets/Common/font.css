@@ -40,6 +40,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url(./fonts/glyphicons_halflings_regular.ttf) format("truetype"),
+    url(./fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
+      format("svg");
+}
+
 * {
   font-family: "DMSans";
 }
