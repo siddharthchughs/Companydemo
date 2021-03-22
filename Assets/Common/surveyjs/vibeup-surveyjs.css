@@ -23,7 +23,7 @@
   text-align: center;
   margin-top: 20px;
 }
-.image_section img{
+.image_section img {
   height: max-content;
 }
 .image_section .image_icon img {
@@ -48,7 +48,7 @@
   letter-spacing: 0.25px;
   color: #404040;
 }
-.description_section h1{
+.description_section h1 {
   font-weight: normal;
   font-size: 22px;
   line-height: 28px;
@@ -127,7 +127,7 @@
   line-height: 34px;
   color: #404040;
   margin: 0px !important;
-  font-weight:normal;
+  font-weight: normal;
 }
 .sv_p_title {
   margin: 0px !important;
@@ -141,7 +141,8 @@
 .sv_qcbc.form-inline {
   margin-top: 100px;
 }
-.btn.sv_next_btn, .sv_complete_btn {
+.btn.sv_next_btn,
+.sv_complete_btn {
   display: none !important;
 }
 
@@ -287,7 +288,7 @@ span.sv_q_required_text {
 .table tr td {
   border-top: none !important;
 }
-.table tr td .form-control{
+.table tr td .form-control {
   margin-top: 0px;
 }
 .table tr td span {
@@ -329,7 +330,8 @@ span.sv_q_required_text {
 .rating_caption_section p:nth-child(3) {
   text-align: end;
 }
-.btn-group, .form-control {
+.btn-group,
+.form-control {
   margin-top: 100px;
 }
 .btn-group {
@@ -354,20 +356,20 @@ span.sv_q_required_text {
   border: none;
 }
 
-.form-control{
+.form-control {
   border: none;
   height: 40px;
   border-radius: 5px;
   box-shadow: none;
 }
-.form-control:focus{
+.form-control:focus {
   box-shadow: none;
 }
-.wellbeing_Caption{
+.wellbeing_Caption {
   column-count: 2;
 }
 
-.sv_qstn .checkbox label{
+.sv_qstn .checkbox label {
   margin-bottom: 20px;
   padding-left: 35px;
   font-weight: normal;
@@ -397,7 +399,7 @@ input[type="checkbox"]:before {
 }
 
 input[type="checkbox"]:checked:before {
-  background: #D64204;
+  background: #d64204;
   border: none;
 }
 
@@ -409,6 +411,7 @@ input[type="checkbox"]:checked:after {
   background: #fff;
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
   transform: rotate(45deg);
 }

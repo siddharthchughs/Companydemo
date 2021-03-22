@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<div class='sv_complete_img'><img src='./Images/MoodMonitoring - Done - 1422.svg'/></div><div class='footer_home_btn'><h4>Great work! An introduction to Mindfulness is ready for you now.</h4><button type='button' onClick='dismissSurvey()'>home</button></div>",
+  "completedHtml": "<div class='sv_complete_img'><img src='./Images/Mindfulness - Done - 1407.svg'/></div><div class='footer_home_btn'><h4>Great work! An introduction to Mindfulness is ready for you now.</h4><button type='button' onClick='dismissSurvey()'>home</button></div>",
   "pages": [
     {
       "name": ".STARTER",
