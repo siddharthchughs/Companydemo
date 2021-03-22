@@ -48,7 +48,7 @@ function populateSurvey(json) {
         survey.onComplete.add(() => { dismissSurvey() });
     }
     $("#surveyContainer").Survey({ model: survey, onCurrentPageChanged: doOnCurrentPageChanged });
-    surveySuccesCallBack(survey);
+    surveySuccesCallback(survey);
     window.survey = survey
 }
 
