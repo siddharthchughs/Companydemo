@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-<head>
-  <title>Survey</title>
+    <script src="../Common/jquery.min.js"></script>
+    <script src="../Common/surveyjs/survey.jquery.min.js"></script>
+    <script type="text/javascript" src="../Common/showdown.min.js"></script>
 
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <script type="text/javascript" src="../Common/jquery.min.js"></script>
-  <script type="text/javascript" src="../Common/surveyjs/survey.jquery.min.js"></script>
-  <script type="text/javascript" src="../Common/showdown.min.js"></script>
-  <!--slideUp animation-->
-  <link href="../Common/surveyjs/survey.css" type="text/css" rel="stylesheet" />
-  <!-- Specific OS level styling -->
-  <link href="../index.css" type="text/css" rel="stylesheet" />
-  <!-- Common styling between interventions and surveys -->
-  <link href="../Common/font.css" type="text/css" rel="stylesheet" />
-  <link href="../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
-  <!-- Styling specific to surveys -->
-  <link href="../Common/surveyjs/survey.css" type="text/css" rel="stylesheet">
-  <link href="../Common/surveyjs/vibeup-surveyjs.css" type="text/css" rel="stylesheet">
-</head>
+    <!-- embed context provided by container -->
+    <script src="/embed-context.js"></script>
+    <script src="survey-container.js"></script>
 
-<body>
-  <div id="surveyContainer"></div>
-  <span id="surveyProgress"></span>
-  <div class="pagination" style="display: none;">
-    <a id="surveyPrev" onclick="surveyPrev()"></a>
-    <a id="surveyNext" onclick="surveyNext()"></a>
-  </div>
-  <script type="text/javascript" src="./index.js"></script>
-  <script type="text/javascript" src="./survey_bridge.js"></script>
-</body>
+    <link href="../Common/font.css" rel="stylesheet" />
+    <link href="../Common/vibeup-theme.css" rel="stylesheet" />
 
+    <link href="../Common/surveyjs/survey.css" rel="stylesheet" />
+    <link href="../Common/surveyjs/vibeup-surveyjs.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="surveyElement"></div>
+    <div class="pagination" style="display: none">
+      <span id="surveyProgress"></span>
+      <a id="surveyPrev"></a>
+      <a id="surveyNext"></a>
+    </div>
+  </body>
 </html>
