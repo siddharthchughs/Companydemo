@@ -49,10 +49,8 @@ function setElapsedTime() {
 function getAudioLength() {
   var audio = document.getElementById("audio-component");
   var totalTime = audio.duration;
-  console.log(audio.duration);
   let formattedTime = convertToMMSS(totalTime);
 
-  document.getElementById("total-time").innerHTML = formattedTime;
-  console.log(formattedTime);
+  document.getElementById("total-time").innerHTML = formattedTime == "NaN:NaN" ? "00:00" : formattedTime;
 }
 
