@@ -1,0 +1,47 @@
+body {
+  background-color: green; /* for contrast during development */
+}
+.audio-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 140px;
+  width: 325px;
+  border-radius: 20px;
+}
+audio {
+  width: 325px;
+  height: 90px;
+}
+
+.base-scrubber-rectangle {
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-scrubber-rectangle {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: -4px;
+}
+
+.controls-container {
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#time-displays-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #808080;
+  font-size: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+div > p {
+  margin: 0 0 0 0;
+}
