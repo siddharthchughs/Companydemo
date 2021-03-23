@@ -44,7 +44,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<image src='./Images/MindfulnessLog - 1530.svg' />"
+          "html": "<div class='log-time-section'><div class='log-time-img'><img src='./Images/MindfulnessLog - 1530.svg'/></div><button class='log-time' onclick='surveyComplete()'>log time</button></div>"
         }
       ]
     }
@@ -52,5 +52,5 @@
   "showCompletedPage": false,
   "showQuestionNumbers": "off",
   "questionErrorLocation": "bottom",
-  "completeText": "Log time"
+  "showNavigationButtons": false
 }

@@ -1,5 +1,5 @@
 {
-  "completedHtml": "<div class='image_section'><image src='./Images/WellbeingSurvey - Done - 1076.svg' /></div><div class='description_section'><p>Got it! Thanks for doing the survey 👏</p><button type='button' onClick='dismissSurvey()'>Home</button></div>",
+  "completedHtml": "<div class='sv_complete_img'><img src='./Images/WellbeingSurvey - Done - 1076.svg'/></div><div class='footer_home_btn'><h4>Got it! Thanks for doing the survey 👏</h4><button type='button' onClick='dismissSurvey()'>Home</button></div>",
   "pages": [
     {
       "name": ".WELLBEING",
@@ -71,9 +71,12 @@
               "title": "During the past week, how mindful have you been?",
               "isRequired": true,
               "rateMin": 0,
-              "rateMax": 4,
-              "minRateDescription": "Not at all mindful",
-              "maxRateDescription": "Extremely mindful"
+              "rateMax": 4
+            },
+            {
+              "type": "html",
+              "name": "caption",
+              "html": "<div class='rating_caption_section wellbeing_Caption'><p>Not at all <br/> mindful </p><p><p>Extremely <br/> mindful</p></div>"
             }
           ],
           "title": "Mindfulness is a practice where you intentionally focus your attention on what you're experiencing in the present moment, with an attitude of openness and non-judgment."

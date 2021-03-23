@@ -45,7 +45,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<image src='./Images/PhysicalActivityLog - 1501.svg' />"
+          "html": "<div class='log-time-section'><div class='log-time-img'><img src='./Images/PhysicalActivityLog - 1501.svg'/></div><button class='log-time' onclick='surveyComplete()'>log time</button></div>"
         }
       ]
     }
@@ -53,5 +53,5 @@
   "showCompletedPage": false,
   "showQuestionNumbers": "off",
   "questionErrorLocation": "bottom",
-  "completeText": "Log time"
+  "showNavigationButtons": false
 }
