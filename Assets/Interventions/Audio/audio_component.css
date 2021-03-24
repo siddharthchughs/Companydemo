@@ -7,24 +7,24 @@ body {
   width: 325px;
   border-radius: 20px;
 }
-audio {
+.audio-container audio {
   width: 325px;
   height: 90px;
 }
 
-.base-scrubber-rectangle {
+.audio-container .base-scrubber-rectangle {
   display: flex;
   justify-content: center;
 }
 
-.controls-container {
+.audio-container .controls-container {
   padding-top: 28px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-#time-displays-container {
+.audio-container .time-displays-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,11 +35,11 @@ audio {
   padding-bottom: 12px;
 }
 
-div > p {
+.audio-container div > p {
   margin: 0 0 0 0;
 }
 
-#progress-bar {
+.audio-container .progress-bar {
   background-color: #D64204;
   height: 4px;
   width: 0px;
@@ -50,7 +50,7 @@ div > p {
   z-index: 0;
 }
 
-#progress-bar-dot {
+.audio-container .progress-bar-dot {
   position: absolute;
   z-index: 1;
   padding-left: 6px;
