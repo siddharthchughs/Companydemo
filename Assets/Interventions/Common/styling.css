@@ -133,49 +133,44 @@ img.center_align_img {
   padding: 25px;
 }
 
-
 /* Faq section styles */
-.faq_container{
-  padding: 0px !important;
-  height: 100%;
+.faq_container {
+  padding: 20px 0 0 !important;
+  height: 100vh;
 }
 
-.faq_list_section{
+.faq_list_section {
   background: #fff;
   border-radius: 30px 30px 0px 0px;
-  margin-top: 30px;
   padding: 30px 20px;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100%;
 }
 
-.faq_list_section ul{
+.faq_list_section ul {
   padding-left: 0px;
 }
 
-.faq_list_section ul li{
+.faq_list_section ul li {
   list-style: none;
-  border-bottom: 1px solid #BFBFBF;
+  border-bottom: 1px solid #bfbfbf;
 }
 
-.faq_list_section ul li a{
+.faq_list_section ul li a {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: #000000;
   text-decoration: none;
-  display: block;
+  display: flex;
   padding: 18px 0px;
+  justify-content: space-between;
 }
-.faq_list_section ul li a span{
+
+.faq_list_section ul li a span {
   padding: 0px 22px 0px 0px;
 }
 
-.faq_list_section ul li a img{
-  float: right;
-}
-
-.faq_title h4{
+.faq_title h4 {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -183,14 +178,14 @@ img.center_align_img {
   margin-bottom: 24px;
 }
 
-.faq_body p{
+.faq_body p {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   color: #404040;
   margin: 0 0 15px;
 }
-.faq_body p a{
+.faq_body p a {
   text-decoration: underline;
-  color: #D64204;
+  color: #d64204;
 }
