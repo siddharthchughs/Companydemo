@@ -1,6 +1,7 @@
 var isPlaying = false;
 const SKIP_REWIND_TIME = 15;
 const MAX_BAR_WIDTH = 305;
+let randomLoad = true;
 
 // look for better way to do this
 setTimeout(getAudioLength, 200);
@@ -65,5 +66,34 @@ function setAudioOverlayPosition() {
 
   document.getElementById("progress-bar-dot").style.transform = transformString;
   document.getElementById("progress-bar").style.width = widthString;
+}
+
+// included for the moment until we have the mindfulness intevention completed
+function setRandomAudioFile() {
+  if (randomLoad) {
+    var audio = document.getElementById("audio-component");
+    audio.src = getRandomAudioFile();
+    randomLoad = false;
+  }
+}
+
+function getRandomAudioFile() {
+  var videoList = [
+    "../../Common/Audio/Mindful breathing - female.mp4",
+    "../../Common/Audio/Mindful breathing - male.mp4",
+    "../../Common/Audio/Mindful walking - female.mp4",
+    "../../Common/Audio/Mindful walking - male.mp4",
+    "../../Common/Audio/Mindful eating - female.mp4",
+    "../../Common/Audio/Mindful eating - male.mp4",
+    "../../Common/Audio/Body Scan - female.mp4",
+    "../../Common/Audio/Body Scan - male.mp4",
+    "../../Common/Audio/Unhooking from thoughts - female.mp4",
+    "../../Common/Audio/Unhooking from thoughts - male.mp4"
+  ]
+
+  var index = Math.floor(Math.random() * videoList.length)
+  var url = videoList[index];
+
+  return url;
 }
 
