@@ -74,7 +74,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS1",
-          "visibleIf": "{PANAS0} = ['upset']",
+          "visibleIf": "{PANAS0} contains 'upset'",
           "title": "To what extent do you feel upset right now?",
           "isRequired": true,
           "choices": [
@@ -103,7 +103,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS2",
-          "visibleIf": "{PANAS0} = ['hostile']",
+          "visibleIf": "{PANAS0} contains 'hostile'",
           "title": "To what extent do you feel hostile right now?",
           "isRequired": true,
           "choices": [
@@ -132,7 +132,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS3",
-          "visibleIf": "{PANAS0} = ['alert']",
+          "visibleIf": "{PANAS0} contains 'alert'",
           "title": "To what extent do you feel alert right now?",
           "isRequired": true,
           "choices": [
@@ -161,7 +161,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS4",
-          "visibleIf": "{PANAS0} = ['ashamed']",
+          "visibleIf": "{PANAS0} contains 'ashamed'",
           "title": "To what extent do you feel ashamed right now?",
           "isRequired": true,
           "choices": [
@@ -190,7 +190,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS5",
-          "visibleIf": "{PANAS0} = ['inspired']",
+          "visibleIf": "{PANAS0} contains 'inspired'",
           "title": "To what extent do you feel inspired right now?",
           "isRequired": true,
           "choices": [
@@ -219,7 +219,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS6",
-          "visibleIf": "{PANAS0} = ['nervous']",
+          "visibleIf": "{PANAS0} contains 'nervous'",
           "title": "To what extent do you feel nervous right now?",
           "isRequired": true,
           "choices": [
@@ -248,7 +248,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS7",
-          "visibleIf": "{PANAS0} = ['determined']",
+          "visibleIf": "{PANAS0} contains 'determined'",
           "title": "To what extent do you feel determined right now?",
           "isRequired": true,
           "choices": [
@@ -277,7 +277,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS8",
-          "visibleIf": "{PANAS0} = ['attentive']",
+          "visibleIf": "{PANAS0} contains 'attentive'",
           "title": "To what extent do you feel attentive right now?",
           "isRequired": true,
           "choices": [
@@ -306,7 +306,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS9",
-          "visibleIf": "{PANAS0} = ['afraid']",
+          "visibleIf": "{PANAS0} contains 'afraid'",
           "title": "To what extent do you feel afraid right now?",
           "isRequired": true,
           "choices": [
@@ -335,7 +335,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS10",
-          "visibleIf": "{PANAS0} = ['active']",
+          "visibleIf": "{PANAS0} contains 'active'",
           "title": "To what extent do you feel active right now?",
           "isRequired": true,
           "choices": [
@@ -364,7 +364,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS11",
-          "visibleIf": "{PANAS0} = ['hopeless']",
+          "visibleIf": "{PANAS0} contains 'hopeless'",
           "title": "To what extent do you feel hopeless right now?",
           "isRequired": true,
           "choices": [
@@ -393,7 +393,7 @@
         {
           "type": "radiogroup",
           "name": "PANAS12",
-          "visibleIf": "{PANAS0} = ['calm']",
+          "visibleIf": "{PANAS0} contains 'calm'",
           "title": "To what extent do you feel calm right now?",
           "isRequired": true,
           "choices": [
@@ -448,6 +448,7 @@
           "type": "comment",
           "name": "BHV2",
           "visibleIf": "{BHV1} >= 2",
+          "placeHolder": "Enter your response",
           "title": "What is it that you are likely to do?",
           "description": "We don't actively monitor responses to this question, but help is always available if you need it.",
           "requiredIf": "{BHV1} >= 2",
