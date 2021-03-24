@@ -48,7 +48,7 @@ function surveyStarted(survey) {
 }
 
 function surveyComplete(survey) {
-  EmbedContext.sendMessage("Survey complete", { data: survey.data });
+  EmbedContext.sendMessage("Survey completed", survey.data);
 
   // Hide navigation buttons when survey over and possibly
   // showing completion screen.

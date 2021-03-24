@@ -44,7 +44,7 @@
         },
         {
           "type": "html",
-          "name": "image",
+          "name": "html",
           "html": "<div class=\"log-time-section\">\n<div class=\"log-time-img\">\n<img src=\"./Images/SleepLog - 1488.svg\"/>\n</div>\n<button class=\"log-time\" onclick=\"survey.completeLastPage()\">log time</button>\n\n</div>"
         }
       ]
