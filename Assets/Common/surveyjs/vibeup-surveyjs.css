@@ -420,3 +420,9 @@ input[type="checkbox"]:checked:after {
     4px -6px 0 white, 4px -8px 0 white;
   transform: rotate(45deg);
 }
+
+textarea.form-control{
+  border: 1px solid #BFBFBF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
