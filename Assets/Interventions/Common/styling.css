@@ -167,6 +167,9 @@ img.center_align_img {
   display: block;
   padding: 18px 0px;
 }
+.faq_list_section ul li a span{
+  padding: 0px 22px 0px 0px;
+}
 
 .faq_list_section ul li a img{
   float: right;
