@@ -3,8 +3,11 @@ const SKIP_REWIND_TIME = 15;
 const MAX_BAR_WIDTH = 305;
 
 // look for better way to do this
-setInterval(setElapsedTime, 200);
 setTimeout(getAudioLength, 200);
+
+// update the audio progress bar position every 200ms
+setInterval(setElapsedTime, 200);
+setInterval(setAudioOverlayPosition, 200);
 
 function togglePlay() {
   var audio = document.getElementById("audio-component");
@@ -52,5 +55,15 @@ function getAudioLength() {
   let formattedTime = convertToMMSS(totalTime);
 
   document.getElementById("total-time").innerHTML = formattedTime == "NaN:NaN" ? "00:00" : formattedTime;
+}
+
+function setAudioOverlayPosition() {
+  let audio = document.getElementById("audio-component");
+  let currentPosition = Math.floor(audio.currentTime / audio.duration * MAX_BAR_WIDTH);
+  let widthString = currentPosition.toString() + "px";
+  let transformString = "translateX(" + currentPosition + "px)";
+
+  document.getElementById("progress-bar-dot").style.transform = transformString;
+  document.getElementById("progress-bar").style.width = widthString;
 }
 

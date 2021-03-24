@@ -17,13 +17,6 @@ audio {
   justify-content: center;
 }
 
-.overlay-scrubber-rectangle {
-  display: flex;
-  justify-content: center;
-  border-radius: 20px;
-  margin-top: -4px;
-}
-
 .controls-container {
   padding-top: 28px;
   display: flex;
@@ -44,4 +37,22 @@ audio {
 
 div > p {
   margin: 0 0 0 0;
+}
+
+#progress-bar {
+  background-color: #D64204;
+  height: 4px;
+  width: 0px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: -4px;
+  position: absolute;
+  z-index: 0;
+}
+
+#progress-bar-dot {
+  position: absolute;
+  z-index: 1;
+  padding-left: 6px;
+  margin-top: -12px;
 }
