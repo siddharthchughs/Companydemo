@@ -1,7 +1,7 @@
 var isPlaying = false;
-const SKIP_REWIND_TIME = 15;
-const MAX_BAR_WIDTH = 305;
-let randomLoad = true;
+var SKIP_REWIND_TIME = 15;
+var MAX_BAR_WIDTH = 305;
+var randomLoad = true;
 
 // look for better way to do this
 setTimeout(getAudioLength, 200);
@@ -27,9 +27,10 @@ function rewindBack() {
 }
 
 function convertToMMSS(seconds) {
-  let cleanedMinutes = Math.floor(seconds / 60).toString().padStart(2, '0');
-  let cleanedSeconds = Math.floor(seconds - (cleanedMinutes * 60)).toString().padStart(2, '0');
-  return `${cleanedMinutes}:${cleanedSeconds}`;
+  var cleanedMinutes = Math.floor(seconds / 60).toString().padStart(2, '0');
+  var cleanedSeconds = Math.floor(seconds - (cleanedMinutes * 60)).toString().padStart(2, '0');
+  var formattedString = cleanedMinutes + ":" + cleanedSeconds;
+  return formattedString;
 }
 
 function skipForward() {
@@ -45,7 +46,7 @@ function skipForward() {
 function setElapsedTime() {
   var audio = document.getElementById("audio-component");
   var elapsedTime = audio.currentTime;
-  let formattedTime =  convertToMMSS(elapsedTime);
+  var formattedTime =  convertToMMSS(elapsedTime);
 
   document.getElementById("start-time").innerHTML = formattedTime
 }
@@ -53,16 +54,16 @@ function setElapsedTime() {
 function getAudioLength() {
   var audio = document.getElementById("audio-component");
   var totalTime = audio.duration;
-  let formattedTime = convertToMMSS(totalTime);
+  var formattedTime = convertToMMSS(totalTime);
 
   document.getElementById("total-time").innerHTML = formattedTime == "NaN:NaN" ? "00:00" : formattedTime;
 }
 
 function setAudioOverlayPosition() {
-  let audio = document.getElementById("audio-component");
-  let currentPosition = Math.floor(audio.currentTime / audio.duration * MAX_BAR_WIDTH);
-  let widthString = currentPosition.toString() + "px";
-  let transformString = "translateX(" + currentPosition + "px)";
+  var audio = document.getElementById("audio-component");
+  var currentPosition = Math.floor(audio.currentTime / audio.duration * MAX_BAR_WIDTH);
+  var widthString = currentPosition.toString() + "px";
+  var transformString = "translateX(" + currentPosition + "px)";
 
   document.getElementById("progress-bar-dot").style.transform = transformString;
   document.getElementById("progress-bar").style.width = widthString;
