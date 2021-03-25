@@ -467,5 +467,5 @@
   "startSurveyText": "Start",
   "completeText": "Next",
   "firstPageIsStarted": true,
-  "questionNavigationUiType":"TYPE_1"
+  "questionNavigationUiType": "NO_PROGRESS_BAR"
 }

@@ -433,7 +433,7 @@ textarea.form-control {
 }
 
 /* Daily Check survey styles */
-.panas_panel_footer {
+.no_progress_bar {
   right: 0;
   padding: 0px 80px;
   left: 0;
@@ -444,11 +444,11 @@ textarea.form-control {
   width: 100%;
 }
 
-.panas_panel_footer a {
+.no_progress_bar a {
   margin-left: 0px;
   height: 14px;
 }
-.panas_panel_footer::after {
+.no_progress_bar::after {
   display: block;
   content: "";
   height: 99px;

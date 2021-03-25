@@ -46,10 +46,10 @@ function populateSurvey(json) {
         // Auto dismiss the survey if there is no completion screen
         survey.onComplete.add(() => { dismissSurvey() });
     }
-    window.survey = survey;
-    setCustomProperties(survey, JSON.parse(json));
     $("#surveyContainer").Survey({ model: survey, onCurrentPageChanged: doOnCurrentPageChanged });
+    setCustomProperties(survey, JSON.parse(json));
     surveySuccesCallback(survey);
+    window.survey = survey;
 }
 
 

@@ -57,20 +57,27 @@ function surveySuccesCallback(survey) {
   ].requiredError = "Please enter a response.";
 }
 
-// Added Custom Property in json "questionNavigationUiType"
-
+/**
+ * Add additional properties to the Survey object.
+ * 
+ * @param survey - Survey object
+ * @param json - Survey JSON object
+ */
 function setCustomProperties(survey, json) {
   if (json.questionNavigationUiType) {
     survey.setPropertyValue("questionNavigationUiType", json.questionNavigationUiType);
   }
 }
 
-// navigationUi changes using custom property
-
-function navigationUiApply(survey){ 
-  if(survey.getPropertyValue("questionNavigationUiType")){
+/**
+ * Apply navigation property changes to the survey layout.
+ * 
+ * @param survey - Survey object
+ */
+function navigationUiApply(survey) {
+  if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
     $("#surveyProgress").hide();
-    $(".pagination").addClass("panas_panel_footer");
+    $(".pagination").addClass("no_progress_bar");
   }
 }
 
