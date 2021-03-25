@@ -389,3 +389,9 @@ img.center_align_img {
   text-decoration: underline;
   color: #808080;
 }
+
+@media (max-width: 600px){
+  .sv_qstn, .sv_row{
+    min-width: 100% !important;
+  }
+}
