@@ -44,7 +44,7 @@
         {
           "type": "html",
           "name": "image",
-          "html": "<div class='log-time-section'><div class='log-time-img'><img src='./Images/MindfulnessLog - 1530.svg'/></div><button class='log-time' onclick='surveyComplete()'>log time</button></div>"
+          "html": "<div class='log-time-section'><div class='log-time-img'><img src='./Images/MindfulnessLog - 1530.svg'/></div><button class='log-time' onclick='survey.completeLastPage()'>log time</button></div>"
         }
       ]
     }

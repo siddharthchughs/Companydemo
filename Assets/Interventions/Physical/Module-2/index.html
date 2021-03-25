@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!-- Library dependancies -->
+  <script src="../../../Common/jquery.min.js"></script>
+  <script src="../../../Common/bootstrap.min.js"></script>
+  <!-- Common styling of interventions -->
+  <link href="../../Common/styling.css" type="text/css" rel="stylesheet" />
+  <!-- Common styling of interventions AND surveys -->
+  <link href="../../../Common/font.css" type="text/css" rel="stylesheet" />
+  <link href="../../../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
+  <link href="../../../Common/surveyjs/survey.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper center-block">
+      <div class="title">
+        <h5>Choose one thing you can do today to increase your physical activity.</h5>
+      </div>
+      <div class="panel_group" id="accordion" role="tablist" aria-multiselectable="true">
+       
+        <!--increase your steps-->
+
+        <div class="panel panel_default">
+          <div class="panel_heading" role="tab" id="headingOne">
+            <h6 class="panel_title">
+              <a role="button" data-toggle="collapse" target="_blank" data-parent="#accordion" href="#collapseOne"
+                aria-expanded="false" aria-controls="collapseOne">
+                  <div>
+                    <img src="./01_walking.svg"/>
+                    <p>Increase your steps </p><br/>
+                    <p class="panel_caption">Throughout the day</p>
+                  </div>
+              </a>
+
+            </h6>
+          </div>
+          <div id="collapseOne" class="panel_collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel_body">
+              <p class="panel_description">For example, get off the bus one stop early, walk instead of driving, go outside on your lunchbreak, or do a lap of the house between study tasks.</p>
+              <div class="choose_section">
+                  <a href="./increase-steps.html">choose</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Workout-->
+
+        <div class="panel panel_default">
+          <div class="panel_heading" role="tab" id="headingTwo">
+            <h6 class="panel_title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                <div>
+                  <img src="./02_stopwatch.svg"/>
+                  <p>7-minute workout </p><br/>
+                  <p class="panel_caption">follow the video</p>
+                </div>
+              </a>
+            </h6>
+          </div>
+          <div id="collapseTwo" class="panel_collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel_body">
+              <p class="panel_description">An effective high-intensity circuit training workout. You just need a little space and a sturdy chair.</p>
+              <div class="choose_section">
+                <a href="./7m-workout.html">choose</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Other Activity-->
+
+        <div class="panel panel_default">
+          <div class="panel_heading" role="tab" id="headingThree">
+            <h6 class="panel_title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                <div>
+                  <img src="./03_bike.svg"/>
+                  <p>Other activity</p><br/>
+                  <p class="panel_caption">30 minutes </p>
+                </div>
+              </a>
+            </h6>
+          </div>
+          <div id="collapseThree" class="panel_collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel_body">
+              <p class="panel_description">For example, go for a walk or bike ride, dance, do some gardening, play sport, kick a footy at the park, or do push ups during TV ad breaks.</p>
+              <div class="choose_section">
+                <a href="./other-activity.html">choose</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Rest Day-->
+        
+        <div class="panel panel_default">
+          <div class="panel_heading" role="tab" id="headingFour">
+            <h6 class="panel_title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                <div>
+                  <img src="./04_sunset.svg"/>
+                  <p>Rest day</p><br/>
+                  <p class="panel_caption">Try again tomorrow  </p>
+                </div>
+              </a>
+            </h6>
+          </div>
+          <div id="collapseFour" class="panel_collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel_body">
+              <p class="panel_description">Rest days give your body time to recover from intense activity. You can do some gentle activity or make a plan for getting active tomorrow. </p>
+              <div class="choose_section">
+                <a href="./rest-day.html">choose</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instruction_block">
+          <a href="../Module-1/index.html">Review the introduction</a>
+      </div>
+    </div>
+  </div>
+  <script src="./survey-data.js" type="text/javascript"></script>
+</body>
+
+</html>

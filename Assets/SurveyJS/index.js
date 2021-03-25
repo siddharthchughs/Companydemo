@@ -36,9 +36,11 @@ function surveySuccesCallback(survey) {
       if ($(this).is("input[type=radio]")) {
         $(".sv_next_btn").hide();
       } else if ($(this).is("input[type=checkbox]")) {
+        $("#surveyProgress").hide();
         $(".btn.sv_next_btn").show();
+        
       } else if ($(this).is("input[type=text]")) {
-        $("..btn.sv_next_btn").show();
+        $(".btn.sv_next_btn").show();
       } else if ($(this).is("textarea[type=text]")) {
         $(".btn.sv_next_btn").show();
       } else if (survey.isLastPage) {
