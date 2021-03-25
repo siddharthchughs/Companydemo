@@ -46,10 +46,13 @@ function populateSurvey(json) {
         // Auto dismiss the survey if there is no completion screen
         survey.onComplete.add(() => { dismissSurvey() });
     }
+    window.survey = survey;
+    setCustomProperties(survey, JSON.parse(json));
     $("#surveyContainer").Survey({ model: survey, onCurrentPageChanged: doOnCurrentPageChanged });
     surveySuccesCallback(survey);
-    window.survey = survey
 }
+
+
 
 /**
  * Load the selected JSON file and populate the survey.

@@ -29,6 +29,7 @@ function surveySuccesCallback(survey) {
 
   survey.onAfterRenderPage.add(function (survey, options) {
     showNavigation();
+    navigationUiApply(survey);
   });
 
   survey.onCurrentPageChanged.add(function (sender) { 
@@ -36,9 +37,7 @@ function surveySuccesCallback(survey) {
       if ($(this).is("input[type=radio]")) {
         $(".sv_next_btn").hide();
       } else if ($(this).is("input[type=checkbox]")) {
-        $("#surveyProgress").hide();
         $(".btn.sv_next_btn").show();
-        
       } else if ($(this).is("input[type=text]")) {
         $(".btn.sv_next_btn").show();
       } else if ($(this).is("textarea[type=text]")) {
@@ -56,6 +55,23 @@ function surveySuccesCallback(survey) {
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
+}
+
+// Added Custom Property in json "questionNavigationUiType"
+
+function setCustomProperties(survey, json) {
+  if (json.questionNavigationUiType) {
+    survey.setPropertyValue("questionNavigationUiType", json.questionNavigationUiType);
+  }
+}
+
+// navigationUi cahnges using custom property
+
+function navigationUiApply(survey){ 
+  if(survey.getPropertyValue("questionNavigationUiType")){
+    $("#surveyProgress").hide();
+    $(".pagination").addClass("panas_panel_footer");
+  }
 }
 
 function showNavigation(){
