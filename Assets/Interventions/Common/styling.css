@@ -213,19 +213,20 @@ img.center_align_img {
 }
 .panel_title > a,
 .panel_title > a:active {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 20px 20px;
   text-decoration: none;
+  align-items: center;
+  position: relative;
 }
 
 .panel_title > a:focus,
 .panel_title > a:hover {
   text-decoration: none;
 }
-.panel_heading a:before {
+.panel_heading a::after {
   content: url("../Physical/Module-2/expand_arrow.svg");
-  float: right;
-  margin-top: 15px;
 }
 
 .title {
@@ -259,13 +260,15 @@ img.center_align_img {
   display: inline-block;
 }
 .panel_title a .panel_caption {
-  margin-left: 48px;
-  margin-top: -7px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #4d4d4d;
   font-weight: normal;
   font-size: 10px;
+  margin-bottom: 0;
+  position: absolute;
+  left: 68px;
+  top: 42px;
 }
 .panel_title a img {
   height: 35px;
