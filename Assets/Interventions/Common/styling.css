@@ -161,15 +161,12 @@ img.center_align_img {
   line-height: 22px;
   color: #000000;
   text-decoration: none;
-  display: block;
   padding: 18px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 .faq_list_section ul li a span {
   padding: 0px 22px 0px 0px;
-}
-
-.faq_list_section ul li a img {
-  float: right;
 }
 
 .faq_title h4 {
