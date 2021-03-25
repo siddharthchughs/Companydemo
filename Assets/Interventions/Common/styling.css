@@ -135,17 +135,15 @@ img.center_align_img {
 
 /* Faq section styles */
 .faq_container {
-  padding: 0px !important;
-  height: 100%;
+  padding: 20px 0 0 !important;
+  height: 100vh;
 }
 
 .faq_list_section {
   background: #fff;
   border-radius: 30px 30px 0px 0px;
-  margin-top: 30px;
   padding: 30px 20px;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 .faq_list_section ul {
