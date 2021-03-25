@@ -65,7 +65,7 @@ function setCustomProperties(survey, json) {
   }
 }
 
-// navigationUi cahnges using custom property
+// navigationUi changes using custom property
 
 function navigationUiApply(survey){ 
   if(survey.getPropertyValue("questionNavigationUiType")){
