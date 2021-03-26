@@ -78,6 +78,7 @@ function navigationUiApply(survey) {
   if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
     $("#surveyProgress").hide();
     $(".pagination").addClass("no_progress_bar");
+    $(".panel-footer").addClass("no_progress_footer_position");
   }
 }
 

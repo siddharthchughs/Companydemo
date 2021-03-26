@@ -457,3 +457,7 @@ textarea.form-control {
   left: 50%;
   transform: translate(-50%);
 }
+
+.no_progress_footer_position{
+  position:absolute;
+}
