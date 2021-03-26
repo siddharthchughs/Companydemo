@@ -1,0 +1,89 @@
+/*
+ * Play Button Styles
+ * ------------------
+ * Including animation states
+ */
+
+.play-button .play {
+  fill: white;
+  stroke: white;
+  opacity: 0;
+  stroke-width: 2.66667;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.play-button .pause {
+  fill: white;
+  opacity: 0;
+}
+.play-button[data-state="start"] .play,
+.play-button[data-state="play"] .play {
+  opacity: 1;
+}
+.play-button[data-state="pause"] .pause {
+  opacity: 1;
+}
+.play-button .glow {
+  animation: play-button-throb 2s ease-in-out infinite alternate-reverse;
+  transform-origin: 50% 50%;
+  opacity: 0.25;
+  fill: #f0a282;
+}
+.play-button .border {
+  fill: #f0a282;
+}
+.play-button .icon {
+  transform-origin: 50% 50%;
+}
+
+/* prettier-ignore */
+@media all {
+  .play-button[data-state="pause"] .icon { animation: play-button-spin 0.2s ease-in-out forwards; }
+  .play-button[data-state="pause"] .border { animation: play-button-spin-shade 0.2s linear forwards; }
+  .play-button[data-state="pause"] .play { animation: play-button-hide 0.2s linear forwards; }
+  .play-button[data-state="pause"] .pause { animation: play-button-show 0.2s linear forwards; }
+  
+  .play-button[data-state="play"] .icon { animation: play-button-spin-back 0.2s ease-in-out forwards; }
+  .play-button[data-state="play"] .border { animation: play-button-spin-shade-back 0.2s linear forwards; }
+  .play-button[data-state="play"] .play { animation: play-button-show 0.2s linear forwards; }
+  .play-button[data-state="play"] .pause { animation: play-button-hide 0.2s linear forwards; }
+
+  @keyframes play-button-throb {
+    from { transform: scale(0.80); }
+    to   { transform: scale(1); }
+  }
+  @keyframes play-button-spin {
+    from { transform: rotateY(0); }
+    to   { transform: rotateY(180deg); }
+  }
+  @keyframes play-button-spin-back {
+    from { transform: rotateY(180deg); }
+    to   { transform: rotateY(0); }
+  }
+  @keyframes play-button-show {
+    0%    { opacity: 0; }
+    50%   { opacity: 0; }
+    50.1% { opacity: 1; }
+    100%  { opacity: 1; }
+  }
+  @keyframes play-button-hide {
+    0%    { opacity: 1; }
+    50%   { opacity: 1; }
+    50.1% { opacity: 0; }
+    100%  { opacity: 0; }
+  }
+  @keyframes play-button-spin-shade {
+    0%    { filter: brightness(100%); }
+    35%   { filter: brightness(120%); }
+    50%   { filter: brightness(100%); }
+    50.1% { filter: brightness( 80%); }
+    100%  { filter: brightness(100%); }
+  }
+  @keyframes play-button-spin-shade-back {
+    0%    { filter: brightness(100%); }
+    35%   { filter: brightness(120%); }
+    50%   { filter: brightness(100%); }
+    50.1% { filter: brightness( 80%); }
+    100%  { filter: brightness(100%); }
+  }
+}
