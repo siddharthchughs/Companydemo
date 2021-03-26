@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<div class='image_section'><image src='./Images/SleepHygiene - Start - 1401.svg'/></div><div class='description_section'><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Sleep hygiene</b></p>\n<p>Over the next two weeks, you'll learn practical strategies to optimise your sleep, like simple changes to your behaviour and environment.</p>\n<p>We'll ask you to practise the three most relevant strategies each day.</p></div>"
+          "html": "<div class='image_section'><image class='img_fit' src='./Images/SleepHygiene - Start - 1401.svg'/></div><div class='description_section'><h1>Welcome to the next phase of the study</h1>\n<p>The intervention you have been allocated to is: <b>Sleep hygiene</b></p>\n<p>Over the next two weeks, you'll learn practical strategies to optimise your sleep, like simple changes to your behaviour and environment.</p>\n<p>We'll ask you to practise the three most relevant strategies each day.</p></div>"
         }
       ]
     },
