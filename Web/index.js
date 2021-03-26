@@ -47,9 +47,12 @@ function populateSurvey(json) {
         survey.onComplete.add(() => { dismissSurvey() });
     }
     $("#surveyContainer").Survey({ model: survey, onCurrentPageChanged: doOnCurrentPageChanged });
+    setCustomProperties(survey, JSON.parse(json));
     surveySuccesCallback(survey);
-    window.survey = survey
+    window.survey = survey;
 }
+
+
 
 /**
  * Load the selected JSON file and populate the survey.
