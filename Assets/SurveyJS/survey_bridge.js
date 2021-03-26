@@ -20,6 +20,7 @@ function injectSurvey(surveyJson) {
             submitSurvey(JSON.stringify(e.data));
         }
     });
+    setCustomProperties(survey, surveyJson)
     surveySuccesCallback(survey);
     window.survey = survey;
 }

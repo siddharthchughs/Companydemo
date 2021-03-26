@@ -29,6 +29,7 @@ function surveySuccesCallback(survey) {
 
   survey.onAfterRenderPage.add(function (survey, options) {
     showNavigation();
+    navigationUiApply(survey);
   });
 
   survey.onCurrentPageChanged.add(function (sender) { 
@@ -36,9 +37,7 @@ function surveySuccesCallback(survey) {
       if ($(this).is("input[type=radio]")) {
         $(".sv_next_btn").hide();
       } else if ($(this).is("input[type=checkbox]")) {
-        $("#surveyProgress").hide();
         $(".btn.sv_next_btn").show();
-        
       } else if ($(this).is("input[type=text]")) {
         $(".btn.sv_next_btn").show();
       } else if ($(this).is("textarea[type=text]")) {
@@ -56,6 +55,31 @@ function surveySuccesCallback(survey) {
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
+}
+
+/**
+ * Add additional properties to the Survey object.
+ * 
+ * @param survey - Survey object
+ * @param json - Survey JSON object
+ */
+function setCustomProperties(survey, json) {
+  if (json.questionNavigationUiType) {
+    survey.setPropertyValue("questionNavigationUiType", json.questionNavigationUiType);
+  }
+}
+
+/**
+ * Apply navigation property changes to the survey layout.
+ * 
+ * @param survey - Survey object
+ */
+function navigationUiApply(survey) {
+  if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
+    $("#surveyProgress").hide();
+    $(".pagination").addClass("no_progress_bar");
+    $(".panel-footer").addClass("no_progress_footer_position");
+  }
 }
 
 function showNavigation(){

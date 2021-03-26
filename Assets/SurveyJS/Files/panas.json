@@ -452,7 +452,8 @@
           "title": "What is it that you are likely to do?",
           "description": "We don't actively monitor responses to this question, but help is always available if you need it.",
           "requiredIf": "{BHV1} >= 2",
-          "maxLength": 512
+          "maxLength": 512,
+          "rows": 5
         }
       ]
     }
@@ -465,5 +466,6 @@
   "showPrevButton": false,
   "startSurveyText": "Start",
   "completeText": "Next",
-  "firstPageIsStarted": true
+  "firstPageIsStarted": true,
+  "questionNavigationUiType": "NO_PROGRESS_BAR"
 }
