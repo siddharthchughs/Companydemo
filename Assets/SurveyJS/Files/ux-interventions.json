@@ -93,7 +93,7 @@
         {
           "type": "radiogroup",
           "name": "UX6",
-          "title": "Activities or actions suggested by the app were new for me.",
+          "title": "Activities or actions suggested by the app <b>were new</b> for me.",
           "isRequired": true,
           "choices": [
             { "value": "1", "text": "Strongly disagree" },
@@ -106,7 +106,7 @@
         {
           "type": "radiogroup",
           "name": "UX7",
-          "title": "In the past two weeks, I have put into practice activities or actions suggested by the app.",
+          "title": "<b>In the past two weeks,</b> I have put into practice activities or actions suggested by the app.",
           "isRequired": true,
           "choices": [
             { "value": "1", "text": "Strongly disagree" },
@@ -119,7 +119,7 @@
         {
           "type": "radiogroup",
           "name": "UX8",
-          "title": "I intend in the future to put into practice activities or actions suggested by the app.",
+          "title": "I <b>intend in the future</b> to put into practice activities or actions suggested by the app.",
           "isRequired": true,
           "choices": [
             { "value": "1", "text": "Strongly disagree" },

@@ -21,7 +21,7 @@
             {
               "type": "rating",
               "name": "CEQ1",
-              "title": "Right now, how logical does the idea of using this app to improve your distress seem to you?",
+              "title": "<b>Right now,</b> how logical does the idea of using this app to improve your distress seem to you?",
               "isRequired": true,
               "rateMax": 9
             },
@@ -40,7 +40,7 @@
             {
               "type": "dropdown",
               "name": "CEQ6",
-              "title": "By the end of the study, how much improvement in your distress do you really feel will have occurred?",
+              "title": "<b>By the end of the study,</b> how much improvement in your distress do you really <b>feel</b> will have occurred?",
               "isRequired": true,
               "choices": [
                 "0%",

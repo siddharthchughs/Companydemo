@@ -17,7 +17,7 @@
         {
           "type": "checkbox",
           "name": "PANAS0",
-          "title": "How do you feel right now?",
+          "title": "How do you feel <b>right now?</b>",
           "description": "Please select all that apply. Click 'Next' if none apply.",
           "choices": [
             {
@@ -191,7 +191,7 @@
           "type": "radiogroup",
           "name": "PANAS5",
           "visibleIf": "{PANAS0} contains 'inspired'",
-          "title": "To what extent do you feel inspired right now?",
+          "title": "To what extent do you feel <b>inspired</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -278,7 +278,7 @@
           "type": "radiogroup",
           "name": "PANAS8",
           "visibleIf": "{PANAS0} contains 'attentive'",
-          "title": "To what extent do you feel attentive right now?",
+          "title": "To what extent do you feel <b>attentive</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -423,7 +423,7 @@
           "type": "radiogroup",
           "name": "BHV1",
           "visibleIf": "{PANAS0} notempty",
-          "title": "How likely are you to do something specifically as a result of how you feel right now?",
+          "title": "How likely are you to do something specifically as a result of how you feel <b>right now?</b>",
           "isRequired": true,
           "choices": [
             {

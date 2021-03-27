@@ -52,10 +52,21 @@ function surveySuccesCallback(survey) {
     hideNavigation();
   });
 
+//Create showdown markdown converter
+
+  var converter = new showdown.Converter();
+  survey.onTextMarkdown.add(function (survey, options) { debugger
+    var str = converter.makeHtml(options.text);
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    options.html = str;
+  });
+
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
 }
+
 
 /**
  * Add additional properties to the Survey object.
