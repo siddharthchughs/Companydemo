@@ -1,0 +1,54 @@
+body {
+  background-color: green; /* for contrast during development */
+}
+.audio-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 140px;
+  width: 325px;
+  border-radius: 20px;
+}
+.audio-container audio {
+  width: 325px;
+  height: 90px;
+}
+
+.audio-container .base-scrubber-rectangle {
+  display: flex;
+  justify-content: center;
+}
+
+.audio-container .controls-container {
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.audio-container .time-displays-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #808080;
+  font-size: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.audio-container .progress-bar {
+  background-color: #D64204;
+  height: 4px;
+  width: 0px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: -4px;
+  position: absolute;
+  z-index: 0;
+}
+
+.audio-container .progress-bar-dot {
+  position: absolute;
+  z-index: 1;
+  padding-left: 6px;
+  margin-top: -12px;
+}

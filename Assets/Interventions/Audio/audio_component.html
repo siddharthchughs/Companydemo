@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <script src="audio_component.js"></script>
+  <link href="audio_component.css" rel="stylesheet" />
+</head>
+<html>
+  <div id="audio-container" class="audio-container">
+    <audio
+      id="audio-component"
+      src="../../Common/Audio/Mindful breathing - female.mp4"
+      onloadstart="setRandomAudioFile()"
+    >
+        Your browser does not support HTML audio
+    </audio>
+    <div class="controls-container">
+      <!--rewind svg-->
+      <div onclick="rewindBack()">
+        <img src="../../../Assets/Common/img/rewind_button.svg">
+        </div>
+      <!--play button svg-->
+      <div onclick="togglePlay()">
+        <img src="../../../Assets/Common/img/play_button.svg">
+      </div>
+      <!--forward svg-->
+      <div onclick="skipForward()">
+        <img src="../../../Assets/Common/img/skip_button.svg">
+      </div>
+    </div>
+    <div id="time-displays-container" class="time-displays-container">
+      <div id="start-time"></div>
+      <div id="total-time"></div>
+    </div>
+    <!--audio scrubber [WIP]-->
+    <div id="progress-bar-base" class="base-scrubber-rectangle">
+      <!-- base rectangle svg-->
+      <img src="../../../Assets/Common/img/progress-bar-base.svg">
+    </div>
+    <!--red overlay rectangle and position dot svg-->
+    <div id="progress-bar" class="progress-bar"></div>
+    <div id="progress-bar-dot" class="progress-bar-dot">
+      <img src="../../../Assets/Common/img/progress-bar-dot.svg">
+    </div>
+  </div>
+  </div>
+</html>
