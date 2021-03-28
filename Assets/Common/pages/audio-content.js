@@ -7,13 +7,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    var el = document.querySelector('.audio-player');
+    var el = document.querySelector('.vu-audio-player');
     // wire up audio player
     AudioPlayer.create(el);
-
-    // show alert when audio player completes
-    el.addEventListener('ended', function (e) { 
-        alert('finished!');
-    });
 
 });

@@ -12,23 +12,29 @@ AudioPlayer = {
     var ap = Object.create(this);
     ap.el = el;
     el.AudioPlayer = ap;
-    ap.audio = el.querySelector('audio');
-    ap.currentTimeEl = el.querySelector('.time-display .current');
-    ap.totalTimeEl = el.querySelector('.time-display .total');
+    ap.audio = el.querySelector("audio");
+    ap.currentTimeEl = el.querySelector(".time-display .time-current");
+    ap.totalTimeEl = el.querySelector(".time-display .time-total");
 
-    ap.audio.addEventListener('loadedmetadata', this.showTotalTime.bind(ap));
-    ap.audio.addEventListener('ended', this.ended.bind(ap));
+    ap.audio.addEventListener("loadedmetadata", this.showTotalTime.bind(ap));
+    ap.audio.addEventListener("ended", this.ended.bind(ap));
 
     // todo: replace with call to EmbedContext
-    ap.gender = Math.random() < 0.5 ? 'male' : 'female';
+    ap.gender = Math.random() < 0.5 ? "male" : "female";
     ap.audio.src = el.dataset[ap.gender];
 
     // Wire up controls
-    el.querySelector('.play').addEventListener('click', this.togglePlay.bind(ap));
-    el.querySelector('.back').addEventListener('click', this.back.bind(ap));
-    el.querySelector('.forward').addEventListener('click', this.forward.bind(ap));
+    el.querySelector(".ap-play").addEventListener(
+      "click",
+      this.togglePlay.bind(ap)
+    );
+    el.querySelector(".ap-back").addEventListener("click", this.back.bind(ap));
+    el.querySelector(".ap-fwd").addEventListener(
+      "click",
+      this.forward.bind(ap)
+    );
 
-    ap.audio.addEventListener('timeupdate', this.timeupdate.bind(ap));
+    ap.audio.addEventListener("timeupdate", this.timeupdate.bind(ap));
 
     return ap;
   },
@@ -36,18 +42,18 @@ AudioPlayer = {
   togglePlay: function () {
     if (this.audio.paused) {
       this.audio.play();
-      this.el.querySelector('.play-button').dataset.state = 'pause';
+      this.el.querySelector(".play-button").dataset.state = "pause";
     } else {
       this.audio.pause();
-      this.el.querySelector('.play-button').dataset.state = 'play'
+      this.el.querySelector(".play-button").dataset.state = "play";
     }
   },
 
   ended: function () {
-    this.el.querySelector('.play-button').dataset.state = 'play';
+    this.el.querySelector(".play-button").dataset.state = "play";
     // emit ended event
-    this.el.dispatchEvent(new Event('ended'));
-    this.el.classList.add('finished');
+    this.el.dispatchEvent(new Event("ended"));
+    this.el.classList.add("finished");
   },
 
   back: function () {
@@ -69,12 +75,15 @@ AudioPlayer = {
   timeupdate: function (event) {
     // todo: clamp updates to 1/s
     this.currentTimeEl.innerText = convertToMMSS(this.audio.currentTime);
-    this.el.style.setProperty("--progress-proportion", this.audio.currentTime / this.audio.duration);
+    this.el.style.setProperty(
+      "--progress-proportion",
+      this.audio.currentTime / this.audio.duration
+    );
   },
 
   showTotalTime: function (event) {
     this.totalTimeEl.innerText = convertToMMSS(this.audio.duration);
-  }
+  },
 };
 
 function convertToMMSS(seconds) {
@@ -90,23 +99,3 @@ function convertToMMSS(seconds) {
   return formattedString;
 }
 
-function getAudioLength() {
-  var audio = document.getElementById("audio-component");
-  var totalTime = audio.duration;
-  var formattedTime = convertToMMSS(totalTime);
-
-  document.getElementById("total-time").innerHTML =
-    formattedTime == "NaN:NaN" ? "00:00" : formattedTime;
-}
-
-function setAudioOverlayPosition() {
-  var audio = document.getElementById("audio-component");
-  var currentPosition = Math.floor(
-    (audio.currentTime / audio.duration) * MAX_BAR_WIDTH
-  );
-  var widthString = currentPosition.toString() + "px";
-  var transformString = "translateX(" + currentPosition + "px)";
-
-  document.getElementById("progress-bar-dot").style.transform = transformString;
-  document.getElementById("progress-bar").style.width = widthString;
-}
