@@ -1,7 +1,8 @@
 /*
  * Survey Container
  * ----------------
- *  JavaScript specific for surveys
+ * JavaScript specific for surveys
+ * todo: wrap in IIFE to scope functions
  */
 
 // Configure SurveyJS library
@@ -12,7 +13,8 @@ Survey.surveyLocalization.locales[
 
 // loadSurvey will be called by the container
 function loadSurvey(json) {
-  let survey = new Survey.Model(json);
+
+  var survey = new Survey.Model(JSON.parse(json));
 
   // Auto dismiss the survey if there is no completion screen
   if (!json.includes("completedHtml")) {
@@ -41,14 +43,13 @@ function loadSurvey(json) {
 }
 
 function surveyStarted(survey) {
-  EmbedContext.sendMessage("Survey started", {});
-
-  // Show navigation buttons when survey started
+  EmbedContext.sendMessage("surveyStarted", {});
+  // Page doesn't change when survey started
   showNavigation();
 }
 
 function surveyComplete(survey) {
-  EmbedContext.sendMessage("Survey completed", survey.data);
+  EmbedContext.sendMessage("surveyCompleted", survey.data);
 
   // Hide navigation buttons when survey over and possibly
   // showing completion screen.
@@ -56,6 +57,13 @@ function surveyComplete(survey) {
 }
 
 function onCurrentPageChanged(survey) {
+  // Show navigation whenever page changes to catch pages
+  // with no 'starting' state
+  if (survey.state === 'running') {
+    showNavigation();
+    console.log('showing navigation');
+  }
+
   document.getElementById("surveyProgress").innerText =
     " " +
     (survey.currentPageNo + 1) +
@@ -112,7 +120,7 @@ function surveyNext() {
 
 // Clean up and remove SurveyJS survey
 function dismissSurvey() {
-  EmbedContext.sendMessage("Survey dismissed", {});
+  EmbedContext.sendMessage("surveyDismiss", {});
   delete window.survey;
   $("#surveyElement").html("");
 }

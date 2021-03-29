@@ -107,11 +107,19 @@ public class SurveyDialogFragment extends DialogFragment {
             JSONObject obj = new JSONObject(messageJson);
             String key = obj.getString("key");
             switch (key) {
-                case "Survey dismissed":
-                    dismiss();
+                case "surveyStarted":
+                    Log.i(TAG, String.format("User has started survey"));
                     break;
-                case "Survey completed":
+                case "pageChanged":
+                    Log.i(TAG, String.format("User navigated to page %s", obj.getString("message")));
+                    break;
+                case "surveyCompleted":
+                    Log.i(TAG, String.format("User has completed survey:\n%s", obj.getString("message")));
                     surveyComplete(obj.getString("message"));
+                    break;
+                case "surveyDismiss":
+                    Log.i(TAG, String.format("User has dismissed survey"));
+                    dismiss();
                     break;
                 default:
                     Log.i(TAG, String.format("Message type %s not yet implemented!", key));
