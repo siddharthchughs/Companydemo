@@ -445,9 +445,6 @@ img.center_align_img {
   font-size: 18px;
   line-height: 24px;
 }
-.moreServices_block a .glyphicon-new-window {
-  color: #d64204;
-}
 .panel_body.getHelp_panel_body {
   border-top: 0px;
   padding: 5px 20px 30px 20px;
@@ -458,11 +455,7 @@ img.center_align_img {
 .get_contact_info > div:last-child {
   margin-bottom: 0px;
 }
-.get_contact_info > div span a,
-.get_contact_info > div span a .glyphicon {
-  color: #d64204;
-  font-weight: bold;
-}
+
 .get_contact_info > div span.chat {
   line-height: 24px;
 }
