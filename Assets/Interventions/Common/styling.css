@@ -455,7 +455,10 @@ img.center_align_img {
 .get_contact_info > div:last-child {
   margin-bottom: 0px;
 }
-
+.get_contact_info > div span a {
+  color: #d64204;
+  font-weight: bold;
+}
 .get_contact_info > div span.chat {
   line-height: 24px;
 }
