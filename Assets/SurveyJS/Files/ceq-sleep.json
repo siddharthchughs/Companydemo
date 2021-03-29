@@ -70,5 +70,6 @@
   "goNextPageAutomatic": true,
   "showPrevButton": false,
   "startSurveyText": "Got it",
-  "firstPageIsStarted": true
+  "firstPageIsStarted": true,
+  "questionNavigationUiType":"CEQ"
 }
