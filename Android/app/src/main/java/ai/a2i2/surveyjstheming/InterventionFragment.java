@@ -3,6 +3,9 @@ package ai.a2i2.surveyjstheming;
 import android.annotation.SuppressLint;
 import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -15,8 +18,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class InterventionFragment extends Fragment implements View.OnKeyListener {
 
+    private static final String TAG = InterventionFragment.class.getSimpleName();
     private static final String ARG_PATH = "content";
     private String path;
     private WebView webView;
@@ -50,8 +57,8 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
         // required otherwise will redirect user to Chrome (or other internet app)
         // also how errors are handled
         webView.setWebViewClient(new WebViewClient());
+        webView.addJavascriptInterface(new InterventionWebInterface(this::handleMessage), "AndroidBridge");
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.addJavascriptInterface(new InterventionWebInterface(this::interventionComplete), "AndroidBridge");
         webView.loadUrl(String.format("file:///android_asset/%s", path));
 
         if (0 != (requireContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)
@@ -62,10 +69,33 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
         return view;
     }
 
-    private void interventionComplete(Void result) {
-        // Handle the completion of the intervention
-        // Note: actual app would submit data to server
-        requireActivity().finish();
+    private void handleMessage(String messageJson) {
+        try {
+            JSONObject obj = new JSONObject(messageJson);
+            String key = obj.getString("key");
+            switch (key) {
+                case "interventionStarted":
+                    Log.i(TAG, String.format("User has started intervention"));
+                    break;
+                case "pageChanged":
+                    Log.i(TAG, String.format("User navigated to page %s", obj.getString("message")));
+                    break;
+                case "interventionCompleted":
+                    Log.i(TAG, String.format("User has completed survey:\n%s", obj.getString("message")));
+                    // todo: handle intervention data
+                    break;
+                case "interventionDismiss":
+                    Log.i(TAG, String.format("User has dismissed survey"));
+                    // Handle the completion of the intervention
+                    // Note: actual app would submit data to server
+                    requireActivity().finish();
+                    break;
+                default:
+                    Log.i(TAG, String.format("Message type %s not yet implemented!", key));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

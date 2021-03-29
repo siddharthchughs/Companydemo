@@ -32,7 +32,7 @@ function onCurrentPageChanged(survey) {
 
 function surveyComplete(survey) {
   // todo: Check for completion html and send surveyCompletedAndDismiss
-  EmbedContext.sendMessage("surveyCompleted", survey.data);
+  EmbedContext.sendMessage("interventionCompleted", survey.data);
 
   // Hide navigation buttons when survey over and possibly
   // showing completion screen.
@@ -55,7 +55,7 @@ function surveyNext() {
 
 // Clean up and remove SurveyJS survey
 function interventionCompleted() {
-  EmbedContext.sendMessage("surveyDismiss", {});
+  EmbedContext.sendMessage("interventionDismiss", {});
   delete window.survey;
   $("#surveyElement").html("");
 }

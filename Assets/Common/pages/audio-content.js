@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
   AudioPlayer.create(el);
 
   // Should this hold off until first play?
-  EmbedContext.sendMessage("surveyStarted", {});
+  EmbedContext.sendMessage("interventionStarted", {});
 
   // todo: messages for skip, pause, play
 
   el.addEventListener("ended", function (e) {
-    EmbedContext.sendMessage("surveyCompleted", {});
+    EmbedContext.sendMessage("interventionCompleted", {});
   });
 
   document
     .querySelector(".audio-content-dismiss")
     .addEventListener("click", function (e) {
-      EmbedContext.sendMessage("surveyDismiss", {});
+      EmbedContext.sendMessage("interventionDismiss", {});
     });
 });
