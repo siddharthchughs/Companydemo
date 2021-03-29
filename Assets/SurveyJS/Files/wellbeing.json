@@ -7,7 +7,7 @@
         {
           "type": "rating",
           "name": "PAVS1",
-          "title": "In the past week, on how many days did you engage in moderate to strenuous exercise?",
+          "title": "In the past <b>week,</b> on how many <b>days</b> did you engage in moderate to strenuous exercise?",
           "description": "Moderate exercise means that you are breathing hard enough that, while you might be able to talk, singing would not be possible.\n\nStrenuous exercise means being out of breath enough that you can’t talk.",
           "isRequired": true,
           "rateMin": 0,
@@ -18,7 +18,7 @@
           "name": "PAVS2",
           "visible": false,
           "visibleIf": "{PAVS1} > 0 and {PAVS1} <= 7",
-          "title": "On average, how many minutes did each session of moderate to strenuous exercise last for?",
+          "title": "On average, how many <b>minutes</b> did each session of moderate to strenuous exercise last for?",
           "requiredIf": "{PAVS1} > 0 and {PAVS1} <= 7",
           "requiredErrorText": "Invalid value provided",
           "validators": [
@@ -40,7 +40,7 @@
           "type": "radiogroup",
           "name": "PSQI6",
           "visibleIf": "{PAVS1} <= 0",
-          "title": "During the past week, how would you rate your sleep quality overall?",
+          "title": "During the past <b>week,</b> how would you rate your sleep quality overall?",
           "isRequired": true,
           "choices": [
             {
@@ -68,7 +68,7 @@
             {
               "type": "rating",
               "name": "MIND1",
-              "title": "During the past week, how mindful have you been?",
+              "title": "During the past <b>week,</b> how mindful have you been?",
               "isRequired": true,
               "rateMin": 0,
               "rateMax": 4
