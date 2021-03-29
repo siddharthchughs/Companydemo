@@ -1,0 +1,7 @@
+.finish-slide-up {
+  transform: translateY(100%);
+  transition: transform 0.2s;
+}
+.finished ~ .finish-slide-up {
+  transform: translateY(0);
+}

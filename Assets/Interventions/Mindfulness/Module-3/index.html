@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>Body Scan</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="data:;base64,=" />
+
+  <link href="../../../Common/surveyjs/survey.css" rel="stylesheet" />
+  <link href="../../Common/styling.css" rel="stylesheet" />
+  <link href="../../../Common/vibeup-theme.css" rel="stylesheet" />
+
+  <!-- todo: import embed context when merged -->
+  <!-- todo: when live server merged <script src="../../../Common/Lottie/lottie-player.js"></script> -->
+  <script src="../../../Common/audio/audio-player.js"></script>
+  <script src="../../../Common/pages/audio-content.js"></script>
+
+  <link href="../../../Common/audio/audio-player.css" rel="stylesheet" />
+  <link href="../../../Common/audio/play-button-style.css" rel="stylesheet" />
+  <link href="../../../Common/finish-slide-up.css" rel="stylesheet" />
+  <style>
+    /* prettier-ignore */
+    @media all {html, body { margin: 0; padding: 0; height: 100%; } * { box-sizing: border-box; }}
+  </style>
+</head>
+<html>
+  <div
+    class="vu-audio-player"
+    data-male="Body scan - male.mp4"
+    data-female="Body scan - female.mp4"
+  >
+    <img class="ap-bg" src="../Common/Sprout_Meditation_Character_FA.gif" />
+    <!-- <lottie-player 
+      src="../../../Common/characters/STAGE24+MAIN.lottie"  
+      background="transparent"  speed="1"  
+      style="width: 300px; height: 300px;"  loop  autoplay
+    ></lottie-player> -->
+    <div class="ap-panel">
+      <div class="ap-controls">
+        <audio></audio>
+        <button class="ap-back">
+          <img src="../../../Common/img/rewind_button.svg" />
+        </button>
+        <button class="ap-play">
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            class="play-button"
+            data-state="start"
+          >
+            <circle class="glow" cx="30" cy="30" r="30" />
+            <g class="icon">
+              <circle class="border" cx="30" cy="30" r="22" />
+              <path class="play" d="M27 21.793L36 29.293L27 36.793V21.793Z" />
+              <g class="pause">
+                <rect x="21" y="22" width="7" height="16" rx="1.3" />
+                <rect x="32" y="22" width="7" height="16" rx="1.3" />
+              </g>
+            </g>
+          </svg>
+        </button>
+        <button class="ap-fwd">
+          <img src="../../../Common/img/skip_button.svg" />
+        </button>
+      </div>
+      <div class="ap-prog">
+        <div class="time-display">
+          <div class="time-current">00:00</div>
+          <div class="time-total">00:00</div>
+        </div>
+        <div class="prog-bar">
+          <div class="prog-amount"></div>
+          <div class="prog-thumb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sv_complete_home finish-slide-up">
+    <div class="sv_complete_description">
+      <h4>Well done!</h4>
+      <p>
+        Mindfulness is like a muscle that strengthens with practice – so take a
+        moment to thank yourself for practicing today!
+      </p>
+      <p>
+        If you experienced discomfort or felt anxious when tuning into your
+        body, <b>you’re not alone</b>. <b>Check out the FAQs</b> for tips.
+      </p>
+      <p>
+        Remember, you can practise mindfulness informally throughout your day,
+        too.
+      </p>
+    </div>
+    <!-- todo: change to embed context call -->
+    <input
+      type="button"
+      onclick="console.log('completed')"
+      value="HOME"
+      class="btn sv_home_btn"
+    />
+  </div>
+</html>

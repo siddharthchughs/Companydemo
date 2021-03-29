@@ -52,10 +52,23 @@ function surveySuccesCallback(survey) {
     hideNavigation();
   });
 
+  // The following converter allows for Markdown to be used within titles and descriptions of questions.
+  // https://surveyjs.io/Examples/Library?id=survey-markdown-radiogroup&platform=jQuery&theme=default#content-js
+  var converter = new showdown.Converter();
+  survey.onTextMarkdown.add(function (survey, options) {
+    // Convert markdown text to html
+    var str = converter.makeHtml(options.text);
+    // Strip leading and trailing <p></p> tags from the string
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    options.html = str;
+  });
+
   Survey.surveyLocalization.locales[
     Survey.surveyLocalization.defaultLocale
   ].requiredError = "Please enter a response.";
 }
+
 
 /**
  * Add additional properties to the Survey object.
