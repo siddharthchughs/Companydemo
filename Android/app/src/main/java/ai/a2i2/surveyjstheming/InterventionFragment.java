@@ -1,6 +1,7 @@
 package ai.a2i2.surveyjstheming;
 
 import android.annotation.SuppressLint;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -52,6 +53,11 @@ public class InterventionFragment extends Fragment implements View.OnKeyListener
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new InterventionWebInterface(this::interventionComplete), "AndroidBridge");
         webView.loadUrl(String.format("file:///android_asset/%s", path));
+
+        if (0 != (requireContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)
+                && BuildConfig.BUILD_TYPE.contains("debug")) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
 
         return view;
     }

@@ -36,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
     public static final Map<String, String> INTERVENTION_LIST = new HashMap<String, String>() {
         {
             put("Sleep - Module 1", "/Sleep/Module-1/index.html");
+            put("Sleep - Module 2", "/Sleep/Module-2/index.html");
+            put("Sleep - Module 3", "/Sleep/Module-3/index.html");
+            put("Sleep - Module 4", "/Sleep/Module-4/index.html");
+            put("Sleep - FAQ", "/Sleep/FAQ/index.html");
+            put("Mindfulness - Module 1", "/Mindfulness/Module-1/index.html");
+            put("Mindfulness - Module 2", "/Mindfulness/Module-2/index.html");
+            put("Mindfulness - Module 3", "/Mindfulness/Module-3/index.html");
+            put("Mindfulness - Module 4", "/Mindfulness/Module-4/index.html");
+            put("Mindfulness - Module 5", "/Mindfulness/Module-5/index.html");
+            put("Mindfulness - FAQ", "/Mindfulness/FAQ/index.html");
+            put("Physical - Module 1", "/Physical/Module-1/index.html");
+            put("Physical - Module 2", "/Physical/Module-2/index.html");
+            put("Physical - FAQ", "/Physical/FAQ/index.html");
         }
     };
 
@@ -80,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         INTERVENTION_LIST.forEach((key, value) -> {
             itemList.add(key);
         });
+        Collections.sort(itemList);
         return itemList;
     }
 
