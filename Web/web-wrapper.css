@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.web-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-form {
+    display: flex;
+    justify-items: stretch;
+}
+.loading-form > * {
+    flex-grow: 1;
+}
+
+.survey-frame {
+    width: 100%;
+    flex-grow: 1;
+    border: 0;
+}

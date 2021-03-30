@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interventions Theming</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,=" />
+    <script>
+      /*
+       * Interventions Web Wrapper
+       * -------------------------
+       * Container for testing intervention container from a desktop
+       * web browser. Needs to be run in the live-server or CORS will
+       * not allow the survey container frame to be accessed.
+       */
+
+      // Watch for messages from frame
+      window.addEventListener("message", (e) => {
+        console.log(e);
+      });
+
+      var prefix = "project/Assets/Interventions/";
+
+      // Load intervention into frame
+      document.addEventListener("DOMContentLoaded", () => {
+        function loadFrame() {
+          var URL = document.querySelector(".intervention-file")
+            .selectedOptions[0].value;
+          document
+            .querySelector(".survey-frame")
+            .setAttribute("src", prefix + URL);
+        }
+
+        document
+          .querySelector(".load-button")
+          .addEventListener("click", loadFrame);
+      });
+    </script>
+    <link rel="stylesheet" href="web-wrapper.css" />
+  </head>
+
+  <body>
+    <div class="web-wrapper">
+      <div class="loading-form">
+        <select class="intervention-file">
+          <option value="Sleep/Module-1/index.html">Sleep Module 1</option>
+          <option value="Sleep/Module-2/index.html">Sleep Module 2</option>
+          <option value="Sleep/Module-3/index.html">Sleep Module 3</option>
+          <option value="Sleep/Module-4/index.html">Sleep Module 4</option>
+          <option value="Mindfulness/Module-1/index.html">Mindfulness Module 1</option>
+          <option value="Mindfulness/Module-2/index.html">Mindfulness Module 2</option>
+          <option value="Mindfulness/Module-3/index.html">Mindfulness Module 3</option>
+          <option value="Mindfulness/Module-4/index.html">Mindfulness Module 4</option>
+          <option value="Mindfulness/Module-5/index.html">Mindfulness Module 5</option>
+        </select>
+        <button class="load-button">Load survey</button>
+      </div>
+      <iframe class="survey-frame"></iframe>
+    </div>
+  </body>
+</html>

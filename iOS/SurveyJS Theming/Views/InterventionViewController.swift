@@ -7,7 +7,10 @@ protocol InterventionViewControllerDelegate: AnyObject {
 }
 
 class InterventionViewController: UIViewController {
-    private static let completeMessageName = "onInterventionComplete"
+    private static let startMessageName = "interventionStarted"
+    private static let pageMessageName = "pageChanged"
+    private static let completedMessageName = "interventionCompleted"
+    private static let dismissMessageName = "interventionDismiss"
 
     weak var delegate: InterventionViewControllerDelegate?
 
@@ -31,7 +34,10 @@ class InterventionViewController: UIViewController {
 
         let config = WKWebViewConfiguration()
         config.userContentController = WKUserContentController()
-        config.userContentController.add(self, name: Self.completeMessageName)
+        config.userContentController.add(self, name: Self.startMessageName)
+        config.userContentController.add(self, name: Self.pageMessageName)
+        config.userContentController.add(self, name: Self.completedMessageName)
+        config.userContentController.add(self, name: Self.dismissMessageName)
 
         webView = WKWebView(frame: .zero, configuration: config)
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -59,10 +65,11 @@ extension InterventionViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         os_log(.info, "Received %s message back from web view", message.name)
         switch message.name {
-        case Self.completeMessageName:
+        case Self.dismissMessageName:
             delegate?.interventionViewControllerDidFinish(self)
+        // todo: handle pageChanged, interventionStarted, interventionCompleted messages
         default:
-            break // nothing to do
+            break // todo: send unknown message to support?
         }
     }
 }

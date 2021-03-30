@@ -25,10 +25,17 @@ function onCurrentPageChanged(survey) {
     "complete";
   if (document.getElementById("surveyPageNo"))
     document.getElementById("surveyPageNo").value = survey.currentPageNo;
+  
+  // Send message to context that page has changed
+  EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
 }
 
 function surveyComplete(survey) {
-  // todo: add call to embed context to send survey completion message
+  // todo: Check for completion html and send surveyCompletedAndDismiss
+  EmbedContext.sendMessage("interventionCompleted", survey.data);
+
+  // Hide navigation buttons when survey over and possibly
+  // showing completion screen.
   $("#surveyProgress, .pagination").hide();
 }
 
@@ -44,4 +51,11 @@ function surveyNext() {
   } else {
     survey.nextPage();
   }
+}
+
+// Clean up and remove SurveyJS survey
+function interventionCompleted() {
+  EmbedContext.sendMessage("interventionDismiss", {});
+  delete window.survey;
+  $("#surveyElement").html("");
 }

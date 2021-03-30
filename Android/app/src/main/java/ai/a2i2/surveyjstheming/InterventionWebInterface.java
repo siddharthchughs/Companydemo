@@ -6,14 +6,14 @@ import java.util.function.Consumer;
 
 public class InterventionWebInterface {
 
-    public final Consumer<Void> completionHandler;
+    public final Consumer<String> sendMessageHandler;
 
-    public InterventionWebInterface(final Consumer<Void> completionHandler) {
-        this.completionHandler = completionHandler;
+    public InterventionWebInterface(final Consumer<String> sendMessageHandler) {
+        this.sendMessageHandler = sendMessageHandler;
     }
 
     @JavascriptInterface
-    public void onInterventionComplete() {
-        completionHandler.accept(null);
+    public void onSendMessage(String messageJson) {
+        sendMessageHandler.accept(messageJson);
     }
 }

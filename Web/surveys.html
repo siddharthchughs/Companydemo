@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SurveyJS Theming</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,=" />
+    <script>
+      /*
+       * Survey Web Wrapper
+       * ------------------
+       * Container for testing survey container from a desktop web
+       * browser. Needs to be run in the live-server or CORS will
+       * not allow the survey container frame to be accessed.
+       *
+       * todo: add current survey and survey progress to local storage
+       */
+
+      // Watch for messages from frame
+      window.addEventListener("message", (e) => {
+        console.log(e);
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("submitBtn")
+          .addEventListener("click", loadSelectedFile);
+      });
+
+      /**
+       * Populate the survey container with the json object.
+       */
+      function populateSurvey(json) {
+        document.querySelector(".survey-frame").contentWindow.loadSurvey(json);
+      }
+
+      /**
+       * Load the selected JSON file and populate the survey.
+       */
+      function loadSelectedFile() {
+        let file = document.querySelector("#file-input").files[0];
+        if (!file) {
+          alert("Please select a survey JSON file");
+          return;
+        }
+
+        let reader = new FileReader();
+        reader.addEventListener("load", function (e) {
+          var json = e.target.result;
+          populateSurvey(json);
+        });
+        reader.readAsText(file);
+      }
+    </script>
+    <link rel="stylesheet" href="web-wrapper.css" />
+  </head>
+
+  <body>
+    <div class="web-wrapper">
+      <div class="loading-form">
+        <input type="file" id="file-input" />
+        <button id="submitBtn">Load survey</button>
+      </div>
+      <iframe
+        class="survey-frame"
+        src="project/Assets/SurveyJS/survey_container.html"
+      ></iframe>
+    </div>
+  </body>
+</html>
