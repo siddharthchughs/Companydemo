@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<div class='image_section'><image src='./Images/DailyCheckin - Start - 1120.svg'/></div><div class='description_section'><p>We've got a few questions about your current feelings and behaviours. The survey will take 1-2 minutes.</p>\n<p>Please complete the questions as soon as possible. This helps us to get more accurate data to understand how young people like you have been experiencing daily life.</p>\n<p>Incomplete surveys will expire in one hour.</p></div>"
+          "html": "<div class='image_section'><image class='img_fit' src='./Images/DailyCheckin - Start - 1120.svg'/></div><div class='description_section'><p>We've got a few questions about your current feelings and behaviours. The survey will take 1-2 minutes.</p>\n<p>Please complete the questions as soon as possible. This helps us to get more accurate data to understand how young people like you have been experiencing daily life.</p>\n<p>Incomplete surveys will expire in one hour.</p></div>"
         }
       ]
     },
