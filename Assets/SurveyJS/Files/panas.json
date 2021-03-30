@@ -75,7 +75,7 @@
           "type": "radiogroup",
           "name": "PANAS1",
           "visibleIf": "{PANAS0} contains 'upset'",
-          "title": "To what extent do you feel upset right now?",
+          "title": "To what extent do you feel <b>upset</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -104,7 +104,7 @@
           "type": "radiogroup",
           "name": "PANAS2",
           "visibleIf": "{PANAS0} contains 'hostile'",
-          "title": "To what extent do you feel hostile right now?",
+          "title": "To what extent do you feel <b>hostile</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -133,7 +133,7 @@
           "type": "radiogroup",
           "name": "PANAS3",
           "visibleIf": "{PANAS0} contains 'alert'",
-          "title": "To what extent do you feel alert right now?",
+          "title": "To what extent do you feel <b>alert</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -162,7 +162,7 @@
           "type": "radiogroup",
           "name": "PANAS4",
           "visibleIf": "{PANAS0} contains 'ashamed'",
-          "title": "To what extent do you feel ashamed right now?",
+          "title": "To what extent do you feel <b>ashamed</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -220,7 +220,7 @@
           "type": "radiogroup",
           "name": "PANAS6",
           "visibleIf": "{PANAS0} contains 'nervous'",
-          "title": "To what extent do you feel nervous right now?",
+          "title": "To what extent do you feel <b>nervous</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -249,7 +249,7 @@
           "type": "radiogroup",
           "name": "PANAS7",
           "visibleIf": "{PANAS0} contains 'determined'",
-          "title": "To what extent do you feel determined right now?",
+          "title": "To what extent do you feel <b>determined</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -307,7 +307,7 @@
           "type": "radiogroup",
           "name": "PANAS9",
           "visibleIf": "{PANAS0} contains 'afraid'",
-          "title": "To what extent do you feel afraid right now?",
+          "title": "To what extent do you feel <b>afraid</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -336,7 +336,7 @@
           "type": "radiogroup",
           "name": "PANAS10",
           "visibleIf": "{PANAS0} contains 'active'",
-          "title": "To what extent do you feel active right now?",
+          "title": "To what extent do you feel <b>active</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -365,7 +365,7 @@
           "type": "radiogroup",
           "name": "PANAS11",
           "visibleIf": "{PANAS0} contains 'hopeless'",
-          "title": "To what extent do you feel hopeless right now?",
+          "title": "To what extent do you feel <b>hopeless</b> right now?",
           "isRequired": true,
           "choices": [
             {
@@ -394,7 +394,7 @@
           "type": "radiogroup",
           "name": "PANAS12",
           "visibleIf": "{PANAS0} contains 'calm'",
-          "title": "To what extent do you feel calm right now?",
+          "title": "To what extent do you feel <b>calm</b> right now?",
           "isRequired": true,
           "choices": [
             {
