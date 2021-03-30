@@ -20,6 +20,7 @@ function loadSurvey(json) {
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
+    onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
     onTextMarkdown: convertMarkdownToHtml,
@@ -36,7 +37,6 @@ function loadSurvey(json) {
 
   // Add survey to the global context for access
   window.survey = survey;
-
   if (survey.firstPageIsStarted || survey.isLastPage) {
     // If the first page is a starter page, or is the last page, then hide the progress navigation
     hideNavigation();
@@ -44,8 +44,12 @@ function loadSurvey(json) {
   else{
     showNavigation();
   }
-  
 }
+
+function surveyRender(survey) {
+  showNavigation();
+  navigationUiApply(survey);
+};
 
 function surveyStarted(survey) {
   EmbedContext.sendMessage("surveyStarted", {});
@@ -91,7 +95,6 @@ function onCurrentPageChanged(survey) {
 
   // Send message to context that page has changed
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
-  navigationUiApply(survey);
 }
 
 function hideNavigation() {
