@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       window.addEventListener("load", function () {
         if (typeof loadSurvey === "function") {
-          loadSurvey(window.AndroidBridge?.getSurveyJson());
+          loadSurvey(window.AndroidBridge.getSurveyJson());
         }
       });
       return {

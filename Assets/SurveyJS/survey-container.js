@@ -13,8 +13,8 @@ Survey.surveyLocalization.locales[
 
 // loadSurvey will be called by the container
 function loadSurvey(json) {
-
-  var survey = new Survey.Model(JSON.parse(json));
+  var jsonObj = JSON.parse(json);
+  var survey = new Survey.Model(jsonObj);
 
   // Auto dismiss the survey if there is no completion screen
   if (!json.includes("completedHtml")) {
@@ -37,6 +37,10 @@ function loadSurvey(json) {
 
   // Initialise progress text before page is changed
   onCurrentPageChanged(survey);
+  // Set any custom properties defined in the JSON object
+  setCustomProperties(survey, jsonObj);
+  // Convert any Markdown to HTML
+  convertMarkdownToHtml(survey)
 
   // Add survey to the global context for access
   window.survey = survey;
@@ -46,6 +50,7 @@ function surveyStarted(survey) {
   EmbedContext.sendMessage("surveyStarted", {});
   // Page doesn't change when survey started
   showNavigation();
+  navigationUiApply(survey);
 }
 
 function surveyComplete(survey) {
@@ -57,13 +62,6 @@ function surveyComplete(survey) {
 }
 
 function onCurrentPageChanged(survey) {
-  // Show navigation whenever page changes to catch pages
-  // with no 'starting' state
-  if (survey.state === 'running') {
-    showNavigation();
-    console.log('showing navigation');
-  }
-
   document.getElementById("surveyProgress").innerText =
     " " +
     (survey.currentPageNo + 1) +
@@ -123,4 +121,45 @@ function dismissSurvey() {
   EmbedContext.sendMessage("surveyDismiss", {});
   delete window.survey;
   $("#surveyElement").html("");
+}
+
+/**
+ * Add additional properties to the Survey object.
+ * 
+ * @param survey - Survey object
+ * @param jsonObj - Survey JSON object
+ */
+function setCustomProperties(survey, jsonObj) {
+  if (jsonObj.questionNavigationUiType) {
+    survey.setPropertyValue("questionNavigationUiType", jsonObj.questionNavigationUiType);
+  }
+}
+
+/**
+ * Apply navigation property changes to the survey layout.
+ * 
+ * @param survey - Survey object
+ */
+function navigationUiApply(survey) {
+  if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
+    $("#surveyProgress").hide();
+    $(".pagination").addClass("no_progress_bar");
+    $(".panel-footer").addClass("no_progress_footer_position");
+  }
+}
+
+/**
+ * The following converter allows for Markdown to be used within titles and descriptions of questions.
+ * https://surveyjs.io/Examples/Library?id=survey-markdown-radiogroup&platform=jQuery&theme=default#content-js
+ */
+function convertMarkdownToHtml(survey) {
+  var converter = new showdown.Converter();
+  survey.onTextMarkdown.add(function (survey, options) {
+    // Convert markdown text to html
+    var str = converter.makeHtml(options.text);
+    // Strip leading and trailing <p></p> tags from the string
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    options.html = str;
+  });
 }
