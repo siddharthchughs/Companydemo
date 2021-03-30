@@ -130,6 +130,9 @@ function dismissSurvey() {
  * @param jsonObj - Survey JSON object
  */
 function setCustomProperties(survey, jsonObj) {
+  if (typeof jsonObj === 'string') {
+    jsonObj = JSON.parse(jsonObj);
+  }
   if (jsonObj.questionNavigationUiType) {
     survey.setPropertyValue("questionNavigationUiType", jsonObj.questionNavigationUiType);
   }
