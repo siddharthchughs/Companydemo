@@ -29,6 +29,7 @@ function loadSurvey(json) {
     onCurrentPageChanged: onCurrentPageChanged,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
+    onTextMarkdown: convertMarkdownToHtml,
   });
 
   // Wire up next/prev buttons
@@ -39,8 +40,6 @@ function loadSurvey(json) {
   onCurrentPageChanged(survey);
   // Set any custom properties defined in the JSON object
   setCustomProperties(survey, jsonObj);
-  // Convert any Markdown to HTML
-  convertMarkdownToHtml(survey)
 
   // Add survey to the global context for access
   window.survey = survey;
