@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Video Player</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,=" />
+
+    <!-- when run through live-server -->
+    <script src="../project/Assets/Common/embed-context.js"></script>
+    <script src="../project/Assets/Common/video/video-player.js"></script>
+    <link
+      href="../project/Assets/Common/video/video-player.css"
+      rel="stylesheet"
+    />
+
+    <script>
+      /*
+       * Video Player Test Page
+       * ----------------------
+       * Full screen video player test page
+       */
+      document.addEventListener("DOMContentLoaded", function () {
+        var el = document.querySelector(".vu-video-player");
+        // wire up audio player
+        var vp = VideoPlayer.create(el);
+
+        // todo: messages for skip, pause, play
+        el.addEventListener("ended", function (e) {
+          EmbedContext.sendMessage("interventionCompleted", {});
+          vp.hide();
+        });
+
+        document
+          .querySelector(".show-btn")
+          .addEventListener("click", function (e) {
+            EmbedContext.sendMessage("interventionStarted", {});
+            vp.show();
+          });
+      });
+    </script>
+    <style>
+      /*
+       * Test Page styling
+       */
+      /* prettier-ignore */
+      @media all { html, body { margin: 0; padding: 0; } * { box-sizing: border-box; } }
+
+      body {
+        /* To test scrolling */
+        height: 200vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="show-btn">Show Video</button>
+    <div class="vu-video-player" data-visibility="hide">
+      <video
+        controls
+        controlsList="nodownload nofullscreen noremoteplayback"
+        playsinline
+      >
+        <source
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        />
+      </video>
+      <div class="controls">
+        <!-- <button class="close">Close</button>
+        <button class="play">Play</button>
+        <button class="skip">Fwd</button>
+        <button class="rev">Back</button> -->
+      </div>
+      <!-- <div class="progress-bar">
+        <div class="progress"></div>
+        <div class="thumb"></div>
+      </div> -->
+    </div>
+  </body>
+</html>
