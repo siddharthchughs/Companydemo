@@ -19,15 +19,16 @@ struct Survey: Identifiable, NamedItem {
 }
 
 var surveys: [Survey] = {
-    guard let surveysDirectory = Bundle.main.path(forResource: "SurveyJS/Files", ofType: nil) else {
+    guard let surveysPath = Bundle.main.path(forResource: "Assets/SurveyJS", ofType: nil) else {
         return []
     }
-    let rootDirectory = Bundle.main.bundlePath
+    let surveysURL = URL(fileURLWithPath: surveysPath)
+    let surveysFileURL = surveysURL.appendingPathComponent("Files")
 
     do {
-        return try FileManager.default.contentsOfDirectory(atPath: surveysDirectory)
-            .map { URL(fileURLWithPath: $0, relativeTo: URL(fileURLWithPath: surveysDirectory)) }
-            .map { Survey(path: $0, rootDirectory: URL(fileURLWithPath: rootDirectory)) }
+        return try FileManager.default.contentsOfDirectory(atPath: surveysFileURL.path)
+            .map { URL(fileURLWithPath: $0, relativeTo: surveysFileURL) }
+            .map { Survey(path: $0, rootDirectory: surveysURL) }
             .sorted(by: { lhs, rhs in
                 lhs.name < rhs.name
             })

@@ -48,7 +48,7 @@ class SurveyViewController: UIViewController {
         config.userContentController.add(self, name: Self.dismissMessageName)
 
         webView = WKWebView(frame: .zero, configuration: config)
-        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        webView.translatesAutoresizingMaskIntoConstraints = false
         webView.navigationDelegate = self
         view.addSubview(webView)
 
@@ -63,7 +63,7 @@ class SurveyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let url = Bundle.main.url(forResource: "SurveyJS/survey_container", withExtension: "html") else {
+        guard let url = Bundle.main.url(forResource: "Assets/SurveyJS/survey_container", withExtension: "html") else {
             delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
             return
         }
@@ -120,9 +120,9 @@ extension SurveyViewController: WKScriptMessageHandler {
             }
         case Self.dismissMessageName:
             delegate?.surveyViewController(self, didFinishWithResult: .success(()))
-        // todo: handle pageChanged and surveyStarted messages
+        // TODO: handle pageChanged and surveyStarted messages
         default:
-            break // todo: send unknown message to support?
+            break // TODO: send unknown message to support?
         }
     }
 }
