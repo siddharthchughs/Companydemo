@@ -6,7 +6,7 @@ struct SurveyView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SurveyView_Previews: PreviewProvider {
     static var previews: some View {
         SurveyView()
     }

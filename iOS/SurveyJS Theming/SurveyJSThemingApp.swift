@@ -5,6 +5,21 @@ struct SurveyJSThemingApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State private var selectedTab = 0
 
+    var title: String {
+        switch selectedTab {
+        case 0: return "Surveys"
+        case 1: return "Interventions"
+        default: return "Get Help"
+        }
+    }
+
+    var displayMode: NavigationBarItem.TitleDisplayMode {
+        if selectedTab == 2 {
+            return .inline
+        }
+        return .automatic
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -15,14 +30,22 @@ struct SurveyJSThemingApp: App {
                                 .font(.customFont(forTextStyle: .callout))
                         }
                         .tag(0)
+
                     InterventionView()
                         .tabItem {
                             Label("Interventions", systemImage: selectedTab == 1 ? "lightbulb.fill" : "lightbulb")
                                 .font(.customFont(forTextStyle: .callout))
                         }
                         .tag(1)
+
+                    GetHelpView()
+                        .tabItem {
+                            Label("Get Help", systemImage: "lifepreserver")
+                                .font(.customFont(forTextStyle: .callout))
+                        }
+                        .tag(2)
                 }
-                .navigationTitle(selectedTab == 0 ? "Surveys" : "Interventions")
+                .navigationBarTitle(title, displayMode: displayMode)
             }
         }
     }

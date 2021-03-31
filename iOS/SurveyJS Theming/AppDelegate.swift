@@ -13,7 +13,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithDefaultBackground()
         standardAppearance.titleTextAttributes = [.font: UIFont.customFont(forTextStyle: .headline, weight: .bold)]
-        UINavigationBar.appearance().scrollEdgeAppearance = standardAppearance
+        UINavigationBar.appearance().standardAppearance = standardAppearance
 
         let scrollEdgeAppearance = UINavigationBarAppearance()
         scrollEdgeAppearance.configureWithTransparentBackground()

@@ -12,6 +12,8 @@
 		232035B525F89611004CD468 /* InterventionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232035B425F89611004CD468 /* InterventionDetail.swift */; };
 		232035B725F8A1A9004CD468 /* InterventionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232035B625F8A1A9004CD468 /* InterventionViewController.swift */; };
 		236BB59E26144E7A0040731E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 236BB59D26144E7A0040731E /* Assets */; };
+		236BB5A0261450DB0040731E /* GetHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BB59F261450DB0040731E /* GetHelpView.swift */; };
+		236BB5A22614512B0040731E /* GetHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BB5A12614512B0040731E /* GetHelpViewController.swift */; };
 		237E421525F5FAF000FB39C0 /* SurveyJSThemingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */; };
 		237E421725F5FAF000FB39C0 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421625F5FAF000FB39C0 /* SurveyView.swift */; };
 		237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237E421825F5FAF100FB39C0 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		232035B425F89611004CD468 /* InterventionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionDetail.swift; sourceTree = "<group>"; };
 		232035B625F8A1A9004CD468 /* InterventionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionViewController.swift; sourceTree = "<group>"; };
 		236BB59D26144E7A0040731E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
+		236BB59F261450DB0040731E /* GetHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHelpView.swift; sourceTree = "<group>"; };
+		236BB5A12614512B0040731E /* GetHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHelpViewController.swift; sourceTree = "<group>"; };
 		237E421125F5FAF000FB39C0 /* SurveyJS Theming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SurveyJS Theming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyJSThemingApp.swift; sourceTree = "<group>"; };
 		237E421625F5FAF000FB39C0 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				237E421D25F5FAF100FB39C0 /* Info.plist */,
+				23ECFC6025F755E2009D313F /* AppDelegate.swift */,
 				237E421825F5FAF100FB39C0 /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
@@ -86,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				236BB59D26144E7A0040731E /* Assets */,
-				23ECFC6025F755E2009D313F /* AppDelegate.swift */,
 				237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */,
 				237E422625F5FB5300FB39C0 /* Models */,
 				237E421A25F5FAF100FB39C0 /* Preview Content */,
@@ -107,6 +111,8 @@
 		237E422325F5FB0000FB39C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				236BB59F261450DB0040731E /* GetHelpView.swift */,
+				236BB5A12614512B0040731E /* GetHelpViewController.swift */,
 				232035B425F89611004CD468 /* InterventionDetail.swift */,
 				23ECFC6825F8485B009D313F /* InterventionListView.swift */,
 				23ECFC6925F8485B009D313F /* InterventionView.swift */,
@@ -207,9 +213,11 @@
 				237E423025F5FCC400FB39C0 /* SurveyDetail.swift in Sources */,
 				237E422C25F5FBC400FB39C0 /* SurveyListView.swift in Sources */,
 				237E421725F5FAF000FB39C0 /* SurveyView.swift in Sources */,
+				236BB5A0261450DB0040731E /* GetHelpView.swift in Sources */,
 				232035B725F8A1A9004CD468 /* InterventionViewController.swift in Sources */,
 				23ECFC6125F755E2009D313F /* AppDelegate.swift in Sources */,
 				237E421525F5FAF000FB39C0 /* SurveyJSThemingApp.swift in Sources */,
+				236BB5A22614512B0040731E /* GetHelpViewController.swift in Sources */,
 				23ECFC6B25F8485B009D313F /* InterventionView.swift in Sources */,
 				232035B525F89611004CD468 /* InterventionDetail.swift in Sources */,
 			);
