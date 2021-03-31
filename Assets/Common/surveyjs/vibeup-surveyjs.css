@@ -532,10 +532,6 @@ textarea.form-control {
   transform: translate(-50%);
 }
 
-.no_progress_footer_position {
-  position: absolute;
-}
-
 .sv_p_container {
   min-width: 100% !important;
 }
