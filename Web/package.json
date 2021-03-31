@@ -1,0 +1,13 @@
+{
+  "name": "web-embed-context",
+  "version": "0.0.1",
+  "description": "A web embed context for VibeUp app",
+  "scripts": {
+    "surveys": "live-server --mount=/project:../ --port=9999 --open=surveys.html",
+    "interventions": "live-server --mount=/project:../ --port=9999 --open=interventions.html"
+  },
+  "author": "A2I2",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

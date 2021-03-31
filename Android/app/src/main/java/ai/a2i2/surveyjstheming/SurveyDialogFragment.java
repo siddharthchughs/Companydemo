@@ -7,6 +7,7 @@ import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +23,12 @@ import androidx.fragment.app.DialogFragment;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class SurveyDialogFragment extends DialogFragment {
     private static final String SURVEY_JSON = "survey_json";
+    private static final String TAG = SurveyDialogFragment.class.getSimpleName();
 
     private Toolbar toolbar;
     private WebView webView;
@@ -77,9 +82,7 @@ public class SurveyDialogFragment extends DialogFragment {
 
         webView = view.findViewById(R.id.web_view);
         webView.setWebViewClient(new WebViewClient());
-        webView.addJavascriptInterface(new SurveyWebInterface(surveyJson,
-                this::surveyComplete,
-                this::dismissSurvey), "AndroidBridge");
+        webView.addJavascriptInterface(new SurveyWebInterface(surveyJson, this::handleMessage), "AndroidBridge");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/SurveyJS/survey_container.html");
         if (0 != (getContext().getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)
@@ -92,6 +95,37 @@ public class SurveyDialogFragment extends DialogFragment {
             toolbar.setNavigationIcon(AppCompatResources.getDrawable(requireContext(), R.drawable.ic_close_black_24dp));
             toolbar.setTitle("Survey title");
             toolbar.setNavigationOnClickListener(v -> exitSurvey());
+        }
+    }
+
+    /**
+     * Handle messages passed by the JavaScript embed context.
+     * @param messageJson - { key: key, message: message } message JSON
+     */
+    private void handleMessage(String messageJson) {
+        try {
+            JSONObject obj = new JSONObject(messageJson);
+            String key = obj.getString("key");
+            switch (key) {
+                case "surveyStarted":
+                    Log.i(TAG, String.format("User has started survey"));
+                    break;
+                case "pageChanged":
+                    Log.i(TAG, String.format("User navigated to page %s", obj.getString("message")));
+                    break;
+                case "surveyCompleted":
+                    Log.i(TAG, String.format("User has completed survey:\n%s", obj.getString("message")));
+                    surveyComplete(obj.getString("message"));
+                    break;
+                case "surveyDismiss":
+                    Log.i(TAG, String.format("User has dismissed survey"));
+                    dismiss();
+                    break;
+                default:
+                    Log.i(TAG, String.format("Message type %s not yet implemented!", key));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 

@@ -39,9 +39,20 @@ Take a look at the following blog post on [Debugging webviews on both Android an
 
 ## Web view
 
-The [Web/index.html](./Web/index.html) allows you to view surveys in a desktop browser.
+In the web folder are wrappers for interventions and surveys. They must be
+loaded in the [live-server](https://www.npmjs.com/package/live-server) to
+be able to update the survey container. To run the live-server it must be
+installed using npm.
 
-To load a survey select the JSON file and "Load Survey". Complete the survey to load a new survey.
+```npm install```
+
+Run the intervention frame or the survey frame.
+
+```npm run surveys```
+```npm run interventions```
+
+The live-server will push changes to CSS to the window if the source file
+changes. If an html file or js file changes it will re-load the window.
 
 ## Contributing
 

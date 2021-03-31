@@ -15,8 +15,10 @@ protocol SurveyViewControllerDelegate: AnyObject {
 }
 
 class SurveyViewController: UIViewController {
-    private static let submitMessageName = "submitSurvey"
-    private static let finishMessageName = "finishSurvey"
+    private static let startMessageName = "surveyStarted"
+    private static let pageMessageName = "pageChanged"
+    private static let completedMessageName = "surveyCompleted"
+    private static let dismissMessageName = "surveyDismiss"
 
     weak var delegate: SurveyViewControllerDelegate?
 
@@ -40,8 +42,10 @@ class SurveyViewController: UIViewController {
 
         let config = WKWebViewConfiguration()
         config.userContentController = WKUserContentController()
-        config.userContentController.add(self, name: Self.submitMessageName)
-        config.userContentController.add(self, name: Self.finishMessageName)
+        config.userContentController.add(self, name: Self.startMessageName)
+        config.userContentController.add(self, name: Self.pageMessageName)
+        config.userContentController.add(self, name: Self.completedMessageName)
+        config.userContentController.add(self, name: Self.dismissMessageName)
 
         webView = WKWebView(frame: .zero, configuration: config)
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -72,8 +76,7 @@ class SurveyViewController: UIViewController {
             delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
             return
         }
-
-        webView.evaluateJavaScript("loadSurveyJson(`\(surveyJsonString)`);") { [self] _, error in
+        webView.evaluateJavaScript("loadSurvey(`\(surveyJsonString)`);") { [self] _, error in
             if let error = error {
                 os_log(.error, log: .file, "Failed to evaludate JavaScript into WKWebView: %s", error.localizedDescription)
                 delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
@@ -109,16 +112,17 @@ extension SurveyViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         os_log(.info, log: .file, "Received %s message back from web view", message.name)
         switch message.name {
-        case Self.submitMessageName:
+        case Self.completedMessageName:
             delegate?.surveyViewController(self, didBeginSubmission: survey)
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
                 guard let self = self else { return }
                 self.delegate?.surveyViewController(self, didCompleteSubmission: self.survey, withResult: .success(()))
             }
-        case Self.finishMessageName:
+        case Self.dismissMessageName:
             delegate?.surveyViewController(self, didFinishWithResult: .success(()))
+        // todo: handle pageChanged and surveyStarted messages
         default:
-            break // nothing to do
+            break // todo: send unknown message to support?
         }
     }
 }

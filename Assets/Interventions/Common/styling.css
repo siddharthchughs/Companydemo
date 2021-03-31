@@ -16,7 +16,6 @@
 }
 .panel-body .progress {
   z-index: 10;
-  margin-bottom: 0px;
   position: fixed;
   bottom: 16px;
   left: 30px;
@@ -295,24 +294,24 @@ img.center_align_img {
   }
 }
 
-.instruction_block{
+.instruction_block {
   text-align: center;
   margin-top: 30px;
 }
 
-.instruction_block a{
+.instruction_block a {
   text-decoration: underline;
-  color: #D64204;
+  color: #d64204;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
 }
-.choose_section{
+.choose_section {
   text-align: right;
   margin-top: 40px;
 }
-.choose_section a{
-  border: 2px solid #D64204;
+.choose_section a {
+  border: 2px solid #d64204;
   box-sizing: border-box;
   border-radius: 100px;
   font-weight: bold;
@@ -321,33 +320,33 @@ img.center_align_img {
   text-align: center;
   letter-spacing: 1.25px;
   text-transform: uppercase;
-  color: #D64204;
+  color: #d64204;
   padding: 5px 20px;
 }
-.choose_section a:focus{
+.choose_section a:focus {
   text-decoration: none;
-  color: #D64204;
+  color: #d64204;
 }
-.activity_info p{
+.activity_info p {
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
 }
-.activity_info p:first-child{
+.activity_info p:first-child {
   margin-bottom: 30px;
 }
-.activity_footer_info p{
+.activity_footer_info p {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: #404040;
 }
-.activity_img{
+.activity_img {
   margin: 50px 0px;
   text-align: center;
 }
-.activity_footer{
+.activity_footer {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -356,7 +355,7 @@ img.center_align_img {
   text-align: center;
   background: #fff;
 }
-.activity_footer button{
+.activity_footer button {
   width: 100%;
   padding: 15px;
   font-weight: bold;
@@ -365,24 +364,24 @@ img.center_align_img {
   text-align: center;
   letter-spacing: 1.25px;
   text-transform: uppercase;
-  color: #D64204;
+  color: #d64204;
 }
-.workout_img{
+.workout_img {
   text-align: center;
   background: #fcece6;
   height: 480px;
   position: relative;
 }
-.workout_img img{
+.workout_img img {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: 35%
+  top: 35%;
 }
-.player_btn{
+.player_btn {
   margin-bottom: 25px;
 }
-.activity_footer a{
+.activity_footer a {
   font-weight: normal;
   font-size: 17px;
   line-height: 22px;
@@ -390,8 +389,9 @@ img.center_align_img {
   color: #808080;
 }
 
-@media (max-width: 600px){
-  .sv_qstn, .sv_row{
+@media (max-width: 600px) {
+  .sv_qstn,
+  .sv_row {
     min-width: 100% !important;
   }
 }
