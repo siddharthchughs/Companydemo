@@ -16,13 +16,6 @@ function loadSurvey(json) {
   var jsonObj = JSON.parse(json);
   var survey = new Survey.Model(jsonObj);
 
-  // Auto dismiss the survey if there is no completion screen
-  if (!json.includes("completedHtml")) {
-    survey.onComplete.add(() => {
-      dismissSurvey();
-    });
-  }
-
   // Create survey interface in element
   $("#surveyElement").Survey({
     model: survey,
