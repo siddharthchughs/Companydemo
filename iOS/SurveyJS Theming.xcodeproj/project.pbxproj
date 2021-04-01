@@ -11,6 +11,7 @@
 		232035B325F88F83004CD468 /* NamedItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232035B225F88F83004CD468 /* NamedItemRow.swift */; };
 		232035B525F89611004CD468 /* InterventionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232035B425F89611004CD468 /* InterventionDetail.swift */; };
 		232035B725F8A1A9004CD468 /* InterventionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232035B625F8A1A9004CD468 /* InterventionViewController.swift */; };
+		236BB59E26144E7A0040731E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 236BB59D26144E7A0040731E /* Assets */; };
 		237E421525F5FAF000FB39C0 /* SurveyJSThemingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */; };
 		237E421725F5FAF000FB39C0 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E421625F5FAF000FB39C0 /* SurveyView.swift */; };
 		237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237E421825F5FAF100FB39C0 /* Assets.xcassets */; };
@@ -19,14 +20,9 @@
 		237E422C25F5FBC400FB39C0 /* SurveyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422B25F5FBC400FB39C0 /* SurveyListView.swift */; };
 		237E423025F5FCC400FB39C0 /* SurveyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */; };
 		237E423425F5FE2000FB39C0 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E423225F5FE2000FB39C0 /* SurveyViewController.swift */; };
-		237E424125F5FE6100FB39C0 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 237E423B25F5FE6100FB39C0 /* index.css */; };
 		23ECFC6125F755E2009D313F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6025F755E2009D313F /* AppDelegate.swift */; };
-		23ECFC6725F84645009D313F /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 23ECFC6625F84645009D313F /* Font */; };
 		23ECFC6A25F8485B009D313F /* InterventionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6825F8485B009D313F /* InterventionListView.swift */; };
 		23ECFC6B25F8485B009D313F /* InterventionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECFC6925F8485B009D313F /* InterventionView.swift */; };
-		60D5EBA925F98A7D0095B693 /* Common in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EBA625F98A7D0095B693 /* Common */; };
-		60D5EBAA25F98A7D0095B693 /* Interventions in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EBA725F98A7D0095B693 /* Interventions */; };
-		60D5EBAE25F98AF00095B693 /* SurveyJS in Resources */ = {isa = PBXBuildFile; fileRef = 60D5EBAD25F98AF00095B693 /* SurveyJS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +30,7 @@
 		232035B225F88F83004CD468 /* NamedItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedItemRow.swift; sourceTree = "<group>"; };
 		232035B425F89611004CD468 /* InterventionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionDetail.swift; sourceTree = "<group>"; };
 		232035B625F8A1A9004CD468 /* InterventionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionViewController.swift; sourceTree = "<group>"; };
+		236BB59D26144E7A0040731E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
 		237E421125F5FAF000FB39C0 /* SurveyJS Theming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SurveyJS Theming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyJSThemingApp.swift; sourceTree = "<group>"; };
 		237E421625F5FAF000FB39C0 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
@@ -44,14 +41,9 @@
 		237E422B25F5FBC400FB39C0 /* SurveyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListView.swift; sourceTree = "<group>"; };
 		237E422F25F5FCC400FB39C0 /* SurveyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetail.swift; sourceTree = "<group>"; };
 		237E423225F5FE2000FB39C0 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
-		237E423B25F5FE6100FB39C0 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
 		23ECFC6025F755E2009D313F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23ECFC6625F84645009D313F /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = ../../Assets/Font; sourceTree = "<group>"; };
 		23ECFC6825F8485B009D313F /* InterventionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionListView.swift; sourceTree = "<group>"; };
 		23ECFC6925F8485B009D313F /* InterventionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionView.swift; sourceTree = "<group>"; };
-		60D5EBA625F98A7D0095B693 /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Common; path = ../../Assets/Common; sourceTree = "<group>"; };
-		60D5EBA725F98A7D0095B693 /* Interventions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Interventions; path = ../../Assets/Interventions; sourceTree = "<group>"; };
-		60D5EBAD25F98AF00095B693 /* SurveyJS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SurveyJS; path = ../../Assets/SurveyJS; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236BB59A26144E320040731E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				237E421D25F5FAF100FB39C0 /* Info.plist */,
+				237E421825F5FAF100FB39C0 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		237E420825F5FAF000FB39C0 = {
 			isa = PBXGroup;
 			children = (
@@ -84,14 +85,13 @@
 		237E421325F5FAF000FB39C0 /* SurveyJS Theming */ = {
 			isa = PBXGroup;
 			children = (
+				236BB59D26144E7A0040731E /* Assets */,
 				23ECFC6025F755E2009D313F /* AppDelegate.swift */,
 				237E421425F5FAF000FB39C0 /* SurveyJSThemingApp.swift */,
 				237E422625F5FB5300FB39C0 /* Models */,
-				237E422325F5FB0000FB39C0 /* Views */,
-				237E424325F5FEB200FB39C0 /* Resources */,
-				237E421825F5FAF100FB39C0 /* Assets.xcassets */,
-				237E421D25F5FAF100FB39C0 /* Info.plist */,
 				237E421A25F5FAF100FB39C0 /* Preview Content */,
+				237E422325F5FB0000FB39C0 /* Views */,
+				236BB59A26144E320040731E /* Supporting Files */,
 			);
 			path = "SurveyJS Theming";
 			sourceTree = "<group>";
@@ -127,18 +127,6 @@
 				237E422925F5FB8E00FB39C0 /* Survey.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		237E424325F5FEB200FB39C0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				60D5EBAD25F98AF00095B693 /* SurveyJS */,
-				60D5EBA625F98A7D0095B693 /* Common */,
-				60D5EBA725F98A7D0095B693 /* Interventions */,
-				23ECFC6625F84645009D313F /* Font */,
-				237E423B25F5FE6100FB39C0 /* index.css */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237E424125F5FE6100FB39C0 /* index.css in Resources */,
-				60D5EBAA25F98A7D0095B693 /* Interventions in Resources */,
 				237E421C25F5FAF100FB39C0 /* Preview Assets.xcassets in Resources */,
-				60D5EBAE25F98AF00095B693 /* SurveyJS in Resources */,
+				236BB59E26144E7A0040731E /* Assets in Resources */,
 				237E421925F5FAF100FB39C0 /* Assets.xcassets in Resources */,
-				23ECFC6725F84645009D313F /* Font in Resources */,
-				60D5EBA925F98A7D0095B693 /* Common in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

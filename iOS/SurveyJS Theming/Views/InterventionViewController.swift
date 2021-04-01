@@ -40,7 +40,7 @@ class InterventionViewController: UIViewController {
         config.userContentController.add(self, name: Self.dismissMessageName)
 
         webView = WKWebView(frame: .zero, configuration: config)
-        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        webView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(webView)
 
         NSLayoutConstraint.activate([
