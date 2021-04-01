@@ -6,8 +6,6 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentActivity;
 
-import static ai.a2i2.surveyjstheming.MainActivity.INTERVENTION_LIST;
-
 public class InterventionActivity extends FragmentActivity {
 
     @Override
@@ -22,7 +20,7 @@ public class InterventionActivity extends FragmentActivity {
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
         toolbar.setTitle(interventionKey);
 
-        String interventionPath = INTERVENTION_LIST.get(interventionKey);
+        String interventionPath = InterventionListFragment.getInterventionList().get(interventionKey);
         createInterventionFragment("Interventions" + interventionPath);
     }
 

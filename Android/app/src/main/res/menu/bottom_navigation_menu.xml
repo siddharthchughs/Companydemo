@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/surveys_item"
-        android:enabled="true"
-        android:icon="@drawable/ic_menu_copy_holo_light"
-        android:title="@string/survey_label"/>
+        android:id="@+id/navigation_surveys"
+        android:icon="@drawable/ic_baseline_poll_24"
+        android:title="@string/survey_label" />
     <item
-        android:id="@+id/interventions_item"
-        android:enabled="true"
-        android:icon="@drawable/ic_menu_friendslist"
-        android:title="@string/intervention_label"/>
+        android:id="@+id/navigation_interventions"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="@string/intervention_label" />
+    <item
+        android:id="@+id/navigation_gethelp"
+        android:icon="@drawable/ic_baseline_help_outline_24"
+        android:title="@string/gethelp_label" />
 </menu>

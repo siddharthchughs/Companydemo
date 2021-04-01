@@ -37,7 +37,7 @@ public class SurveyDialogFragment extends DialogFragment {
     private DialogInterface.OnDismissListener onDismissListener;
 
     @Nullable
-    static ai.a2i2.surveyjstheming.SurveyDialogFragment newInstance(@NonNull final String jsonEntry) {
+    public static ai.a2i2.surveyjstheming.SurveyDialogFragment newInstance(@NonNull final String jsonEntry) {
         final SurveyDialogFragment f = new SurveyDialogFragment();
         final Bundle args = new Bundle();
         args.putString(SURVEY_JSON, jsonEntry);
@@ -100,6 +100,7 @@ public class SurveyDialogFragment extends DialogFragment {
 
     /**
      * Handle messages passed by the JavaScript embed context.
+     *
      * @param messageJson - { key: key, message: message } message JSON
      */
     private void handleMessage(String messageJson) {
