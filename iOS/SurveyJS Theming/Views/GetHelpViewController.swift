@@ -34,7 +34,7 @@ class GetHelpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let url = Bundle.main.url(forResource: "Assets/GetHelp/getHelp", withExtension: "html") else {
+        guard let url = Bundle.main.url(forResource: "Assets/GetHelp/index", withExtension: "html") else {
             delegate?.getHelpViewControllerDidFinish(self)
             return
         }

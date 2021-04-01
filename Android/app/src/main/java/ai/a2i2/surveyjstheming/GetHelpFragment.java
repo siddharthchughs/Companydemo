@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -56,20 +57,26 @@ public class GetHelpFragment extends Fragment implements View.OnKeyListener {
         webView.setOnKeyListener(this);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/GetHelp/getHelp.html");
+        webView.loadUrl("file:///android_asset/GetHelp/index.html");
         webView.setWebViewClient(new WebViewClient() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                String url = request.getUrl().toString();
                 if (url.startsWith("tel:")) {
                     try {
                         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(url));
                         if (intent.resolveActivity(requireActivity().getPackageManager()) != null) {
                             startActivity(intent);
                         }
-                        return true;
+                        return true; // Block URL loading
                     } catch (Exception e) {
                         Log.e(TAG, "Failed to load survey fallback url");
                     }
+                } else if (url.startsWith("http")) {
+                    // Launch external default browser
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(i);
+                    return true; // Block URL loading
                 }
                 return false;
             }
