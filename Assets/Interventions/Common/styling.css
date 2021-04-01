@@ -222,7 +222,10 @@ img.center_align_img {
   text-decoration: none;
 }
 .panel_heading a::after {
-  content: url("../../Common/img/expand_arrow.svg");
+  content: url("../../Common/img/arrow_up.svg");
+}
+.panel_heading a.collapsed::after {
+  content: url("../../Common/img/arrow_down.svg");
 }
 
 .title {
