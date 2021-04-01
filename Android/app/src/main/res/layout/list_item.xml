@@ -13,5 +13,5 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dmsans_font"
         android:gravity="start"
-        tools:text="Lorem ipsum" />
+        tools:text="@tools:sample/lorem[6]" />
 </LinearLayout>
