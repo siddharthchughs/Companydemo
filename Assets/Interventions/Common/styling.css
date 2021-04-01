@@ -138,8 +138,7 @@ img.center_align_img {
   height: 100vh;
 }
 
-.faq_list_section,
-.get_help_wrapper {
+.faq_list_section {
   background: #fff;
   border-radius: 30px 30px 0px 0px;
   padding: 30px 20px;
@@ -223,11 +222,10 @@ img.center_align_img {
   text-decoration: none;
 }
 .panel_heading a::after {
-  content: url("../Physical/Module-2/expand_arrow.svg");
+  content: url("../../Common/img/expand_arrow.svg");
 }
 
-.title,
-.get_help_title {
+.title {
   margin-bottom: 30px;
 }
 
@@ -396,72 +394,4 @@ img.center_align_img {
   .sv_row {
     min-width: 100% !important;
   }
-}
-
-/* Get Help Styles */
-
-.get_help_wrapper {
-  padding: 30px 20px;
-}
-
-.get_help_title h5 {
-  font-size: 15px;
-  line-height: 25px;
-}
-.get_help_title h5 a {
-  text-decoration: underline;
-  color: #000000;
-  font-weight: bold;
-}
-
-.getHelp_panel_default > .getHelp_panel_heading,
-.getHelp_panel_default {
-  background-color: #f4f1ef !important;
-  border-color: #f4f1ef !important;
-}
-.get_help_info h4 {
-  font-weight: bold;
-  color: #191919;
-  font-size: 18px;
-  margin: 0px 0px 5px 0px;
-}
-.get_help_info p,
-.get_contact_info > div span {
-  font-size: 10px;
-  color: #919090;
-  margin: 0;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: normal;
-}
-.moreServices_block {
-  text-align: center;
-  margin-top: 30px;
-}
-.moreServices_block a {
-  text-decoration: underline;
-  color: #191919;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-}
-.panel_body.getHelp_panel_body {
-  border-top: 0px;
-  padding: 5px 20px 30px 20px;
-}
-.get_contact_info > div {
-  margin-bottom: 10px;
-}
-.get_contact_info > div:last-child {
-  margin-bottom: 0px;
-}
-.get_contact_info > div span a {
-  color: #d64204;
-  font-weight: bold;
-}
-.get_contact_info > div span.chat {
-  line-height: 24px;
-}
-.get_contact_info > div span a img {
-  margin-right: 5px;
 }
