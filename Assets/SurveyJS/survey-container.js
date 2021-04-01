@@ -95,6 +95,7 @@ function onCurrentPageChanged(survey) {
 
   // Send message to context that page has changed
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
+  selectBox(survey);
 }
 
 function hideNavigation() {
@@ -198,3 +199,45 @@ $(window).resize(function () {
     $('.panel-footer, .pagination, .progress').show();
   }
 });
+
+// Following method is for Custom select box dropdown
+function selectBox(survey) {
+  if ($('select.form-control').length === 0) {
+    return;
+  }
+
+  $('select.form-control').each(function (index, element) {
+    $(this).parent()
+      .after()
+      .append("<div class='bg_drop'><div class='selectlableList'><div class='selectedOption'></div><ul class='dropdown_list'></ul><img src='../Common/img/arrow_down.svg'/></div></div>");
+    $(element).each(function (idx, elm) {
+      $('option', elm).each(function (id, el) {
+        $('.selectlableList ul:last').append('<li>' + el.text + '</li>');
+      });
+      $('.selectlableList ul').hide();
+    });
+
+    $('.selectlableList:last').children('div.selectedOption').text("Select");
+    $('.dropdown_list').addClass('opened');
+  });
+
+  $('.selectedOption').on('click', function () {
+    var textChange = this.nextElementSibling.firstElementChild.innerHTML = "<span>Select</span> <img src='../Common/img/arrow_up.svg'/>";
+    $(this).next('ul').slideToggle(200);
+    $('.selectedOption').not(this).next('ul').hide();
+    $(".bg_drop").addClass("background_drop")
+  });
+
+  $('.selectlableList ul li').on('click', function (elm, element) { 
+    var selectedLI = $(this).text();
+    $(this).parent().prev('.selectedOption').text(selectedLI);
+    var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
+    var obj = { [getProp]: selectedLI };
+    survey.data = obj;
+    survey.progressBarType = "requiredQuestions";
+    $(".bg_drop").removeClass("background_drop");
+    $(this).parent('ul').hide();
+  });
+  $('.selectlableList').addClass("selected_list");
+  $('select.form-control').hide();
+};

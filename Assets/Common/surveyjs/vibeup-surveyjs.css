@@ -602,3 +602,82 @@ textarea.form-control {
 .ceq_survey_label {
   width: 30px !important;
 }
+
+/* Select dropdown Box styles */
+
+.selectlableList {
+  width: 200px;
+  background: #fff;
+  display: none;
+  padding: 10px 15px;
+  line-height: 18px;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+.selectlableList ul {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 200px;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 100px;
+  margin: 30px auto;
+  right: 0;
+  left: 0;
+}
+.selectlableList ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 0px 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  align-items: center;
+  flex: 1;
+  display: flex;
+}
+.selectlableList ul li:first-child {
+  display: flex;
+  justify-content: space-between;
+  background: #fcece6;
+  margin: 5px;
+  border-radius: 5px;
+}
+.selectedOption {
+  width: 170px;
+  cursor: pointer;
+  height: 20px;
+}
+.selectlableList ul li:active,
+.selectlableList ul li:focus,
+.selectlableList ul li:hover {
+  background: #fcece6;
+}
+
+.dropdown_list::before {
+  visibility: hidden;
+}
+.opened::before {
+  visibility: visible;
+}
+.selected_list {
+  column-count: 2;
+  column-gap: 140px;
+  display: block;
+}
+.background_drop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
