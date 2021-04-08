@@ -410,7 +410,9 @@ span.sv_q_required_text {
 
 .btn-group label.btn {
   padding: 10px 0px;
-  width: 35px;
+  flex-grow: 1;
+  margin-left: 3px;
+  margin-right: 3px;
   border: none;
   border-radius: 0px;
   border-top: 0;
