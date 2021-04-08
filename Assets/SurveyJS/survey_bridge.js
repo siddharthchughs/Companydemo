@@ -13,6 +13,7 @@ window.onload = () => {
  */
 function injectSurvey(surveyJson) {
     var survey = new Survey.Model(surveyJson);
+    window.survey = survey;
     $("#surveyContainer").Survey({
         model: survey,
         onCurrentPageChanged: doOnCurrentPageChanged,
@@ -20,7 +21,6 @@ function injectSurvey(surveyJson) {
             submitSurvey(JSON.stringify(e.data));
         }
     });
-    window.survey = survey;
     surveySuccesCallback(survey);
     setCustomProperties(survey, surveyJson)
 }
