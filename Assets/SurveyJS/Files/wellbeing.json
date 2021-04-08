@@ -5,36 +5,59 @@
       "name": ".WELLBEING",
       "elements": [
         {
-          "type": "rating",
-          "name": "PAVS1",
-          "title": "In the past <b>week,</b> on how many <b>days</b> did you engage in moderate to strenuous exercise?",
-          "description": "Moderate exercise means that you are breathing hard enough that, while you might be able to talk, singing would not be possible.\n\nStrenuous exercise means being out of breath enough that you can’t talk.",
-          "isRequired": true,
-          "rateMin": 0,
-          "rateMax": 7
+          "type": "panel",
+          "name": "PAVS",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "PAVS1",
+              "title": "In the past week, on how many days did you engage in moderate to strenuous exercise?",
+              "description": "Moderate exercise means that you are breathing hard enough that, while you might be able to talk, singing would not be possible.\n\nStrenuous exercise means being out of breath enough that you can’t talk.",
+              "isRequired": true,
+              "rateMin": 0,
+              "rateMax": 7
+            },
+            {
+              "type": "html",
+              "name": "caption",
+              "html": "<div class='rating_caption_wellbeing'><p>Day(s)</p></div>"
+            }
+          ]
         },
         {
-          "type": "text",
-          "name": "PAVS2",
-          "visible": false,
-          "visibleIf": "{PAVS1} > 0 and {PAVS1} <= 7",
-          "title": "On average, how many <b>minutes</b> did each session of moderate to strenuous exercise last for?",
-          "requiredIf": "{PAVS1} > 0 and {PAVS1} <= 7",
-          "requiredErrorText": "Invalid value provided",
-          "validators": [
+          "type": "panel",
+          "name": "PAVS_1",
+          "elements": [
             {
-              "type": "numeric",
-              "text": "Invalid value provided",
-              "minValue": 1,
-              "maxValue": 240
+              "type": "text",
+              "name": "PAVS2",
+              "visible": false,
+              "visibleIf": "{PAVS1} > 0 and {PAVS1} <= 7",
+              "title": "On average, how many minutes did each session of moderate to strenuous exercise last for?",
+              "requiredIf": "{PAVS1} > 0 and {PAVS1} <= 7",
+              "requiredErrorText": "Invalid value provided",
+              "validators": [
+                {
+                  "type": "numeric",
+                  "text": "Invalid value provided",
+                  "minValue": 1,
+                  "maxValue": 240
+                }
+              ],
+              "inputType": "number",
+              "min": "1",
+              "max": "240",
+              "step": 1,
+              "maxLength": 1,
+              "placeHolder": "Enter value"
+            },
+            {
+              "type": "html",
+              "name": "caption",
+              "visibleIf": "{PAVS1} > 0 and {PAVS1} <= 7",
+              "html": "<div class='minute_caption'><p>minute(s)</p></div>"
             }
-          ],
-          "inputType": "number",
-          "min": "1",
-          "max": "240",
-          "step": 1,
-          "maxLength": 1,
-          "placeHolder": "Enter value"
+          ]
         },
         {
           "type": "radiogroup",
@@ -70,13 +93,13 @@
               "name": "MIND1",
               "title": "During the past <b>week,</b> how mindful have you been?",
               "isRequired": true,
-              "rateMin": 0,
+              "rateMin": 1,
               "rateMax": 4
             },
             {
               "type": "html",
               "name": "caption",
-              "html": "<div class='rating_caption_section wellbeing_caption'><p>Not at all <br/> mindful </p><p><p>Extremely <br/> mindful</p></div>"
+              "html": "<div class='rating_caption_section wellbeing_caption'><p>Not at all <br/> mindful </p><p><p>Extremely<br/>mindful</p></div>"
             }
           ],
           "title": "Mindfulness is a practice where you intentionally focus your attention on what you're experiencing in the present moment, with an attitude of openness and non-judgment."
@@ -90,5 +113,6 @@
   "progressBarType": "questions",
   "questionsOnPageMode": "questionPerPage",
   "goNextPageAutomatic": true,
-  "showPrevButton": false
+  "showPrevButton": false,
+  "questionNavigationUiType": "WELL_BEING"
 }

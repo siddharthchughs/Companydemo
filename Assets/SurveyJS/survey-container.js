@@ -20,6 +20,7 @@ function loadSurvey(json) {
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
+    onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
     onTextMarkdown: convertMarkdownToHtml,
@@ -36,7 +37,19 @@ function loadSurvey(json) {
 
   // Add survey to the global context for access
   window.survey = survey;
+  if (survey.firstPageIsStarted || survey.isLastPage) {
+    // If the first page is a starter page, or is the last page, then hide the progress navigation
+    hideNavigation();
+  }
+  else{
+    showNavigation();
+  }
 }
+
+function surveyRender(survey) {
+  showNavigation();
+  navigationUiApply(survey);
+};
 
 function surveyStarted(survey) {
   EmbedContext.sendMessage("surveyStarted", {});
@@ -134,12 +147,22 @@ function setCustomProperties(survey, jsonObj) {
  * Apply navigation property changes to the survey layout.
  * 
  * @param survey - Survey object
+ * 
  */
 function navigationUiApply(survey) {
-  if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
+  var customUI = survey.getPropertyValue("questionNavigationUiType");
+
+  if(customUI == "NO_PROGRESS_BAR") {
     $("#surveyProgress").hide();
     $(".pagination").addClass("no_progress_bar");
-    $(".panel-footer").addClass("no_progress_footer_position");
+  }
+
+  else if(customUI == "WELL_BEING") {
+    $(".form-control").addClass("well_being_form_control");
+  }
+
+  else if(customUI == "CEQ") {
+    $(".btn-group > .btn").addClass("ceq_survey_label");
   }
 }
 
