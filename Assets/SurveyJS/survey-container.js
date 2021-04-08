@@ -193,8 +193,8 @@ $(window).resize(function () {
   }
   // Check if the available height is smaller (keyboard is shown) so we hide the footer.
   if (document.documentElement.clientHeight < originalHeight) {
-    $('.panel-footer, .pagination').hide();
+    $('.panel-footer, .pagination, .progress').hide();
   } else {
-    $('.panel-footer, .pagination').show();
+    $('.panel-footer, .pagination, .progress').show();
   }
 });
