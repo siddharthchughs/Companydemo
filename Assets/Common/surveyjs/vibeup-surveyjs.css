@@ -615,7 +615,7 @@ textarea.form-control {
   border-radius: 10px;
 }
 .selectlableList ul {
-  padding: 0px;
+  padding: 0px 0px 10px 0px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -639,12 +639,12 @@ textarea.form-control {
   align-items: center;
   flex: 1;
   display: flex;
+  margin: 0px 9px;
 }
 .selectlableList ul li:first-child {
   display: flex;
   justify-content: space-between;
-  background: #fcece6;
-  margin: 5px;
+  margin: 8px;
   border-radius: 5px;
 }
 .selectedOption {
@@ -657,7 +657,10 @@ textarea.form-control {
 .selectlableList ul li:hover {
   background: #fcece6;
 }
-
+li.selected_active{
+  background: #fcece6;
+  border-radius: 6px;
+}
 .dropdown_list::before {
   visibility: hidden;
 }

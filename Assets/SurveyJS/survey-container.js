@@ -219,13 +219,14 @@ function selectBox(survey) {
 
     $('.selectlableList:last').children('div.selectedOption').text("Select");
     $('.dropdown_list').addClass('opened');
+    $('li:first-child').addClass('selected_active');
   });
 
   $('.selectedOption').on('click', function () {
     var textChange = this.nextElementSibling.firstElementChild.innerHTML = "<span>Select</span> <img src='../Common/img/arrow_up.svg'/>";
     $(this).next('ul').slideToggle(200);
     $('.selectedOption').not(this).next('ul').hide();
-    $(".bg_drop").addClass("background_drop")
+    $(".bg_drop").addClass("background_drop");
   });
 
   $('.selectlableList ul li').on('click', function (elm, element) { 
@@ -235,6 +236,8 @@ function selectBox(survey) {
     var obj = { [getProp]: selectedLI };
     survey.data = obj;
     survey.progressBarType = "requiredQuestions";
+    $(this).parent().find('li.selected_active').removeClass('selected_active');
+    $(this).addClass('selected_active');
     $(".bg_drop").removeClass("background_drop");
     $(this).parent('ul').hide();
   });
