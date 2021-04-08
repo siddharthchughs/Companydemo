@@ -156,11 +156,9 @@ function navigationUiApply(survey) {
     $("#surveyProgress").hide();
     $(".pagination").addClass("no_progress_bar");
   }
-
   else if(customUI == "WELL_BEING") {
     $(".form-control").addClass("well_being_form_control");
   }
-
   else if(customUI == "CEQ") {
     $(".btn-group > .btn").addClass("ceq_survey_label");
   }
@@ -181,3 +179,22 @@ function convertMarkdownToHtml(survey) {
     options.html = str;
   });
 }
+
+// The following method is for the Survey Navigation Footer Handler when the keyboard appears
+
+var originalHeight = document.documentElement.clientHeight;
+var originalWidth = document.documentElement.clientWidth;
+$(window).resize(function () {
+  // Control landscape/portrait mode switch
+  if (document.documentElement.clientHeight == originalWidth &&
+    document.documentElement.clientWidth == originalHeight) {
+    originalHeight = document.documentElement.clientHeight;
+    originalWidth = document.documentElement.clientWidth;
+  }
+  // Check if the available height is smaller (keyboard is shown) so we hide the footer.
+  if (document.documentElement.clientHeight < originalHeight) {
+    $('.panel-footer, .pagination, .progress').hide();
+  } else {
+    $('.panel-footer, .pagination, .progress').show();
+  }
+});
