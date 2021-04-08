@@ -377,11 +377,9 @@ span.sv_q_required_text {
 }
 
 .rating_caption_section {
-  column-count: 3;
-  column-gap: 50px;
-  margin-top: 5px;
-  text-align: center;
-  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .rating_caption_section p {
@@ -405,12 +403,17 @@ span.sv_q_required_text {
 }
 
 .btn-group {
-  left: 50%;
-  transform: translate(-50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-group label.btn {
-  padding: 12px 12px;
+  padding: 10px 0px;
+  flex-grow: 1;
+  margin-left: 3px;
+  margin-right: 3px;
+  border: none;
   border-radius: 0px;
   border-top: 0;
   border-bottom: 0;
@@ -440,6 +443,9 @@ span.sv_q_required_text {
 
 .wellbeing_caption {
   column-count: 2;
+  text-align: left;
+  padding: 0px;
+  margin-top: 8px;
 }
 
 .sv_qstn .checkbox label {
@@ -526,10 +532,6 @@ textarea.form-control {
   transform: translate(-50%);
 }
 
-.no_progress_footer_position {
-  position: absolute;
-}
-
 .sv_p_container {
   min-width: 100% !important;
 }
@@ -562,4 +564,41 @@ textarea.form-control {
   .image_section img.mood_img_height {
     padding: 40px;
   }
+}
+
+/* Wellnbeing styles*/
+
+.rating_caption_wellbeing,
+.minute_caption {
+  margin-top: 10px;
+}
+
+.rating_caption_wellbeing p,
+.minute_caption p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #808080;
+}
+
+.minute_caption {
+  text-align: center;
+}
+.minute_caption p {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.well_being_form_control {
+  width: 125px;
+  border-radius: 30px;
+  margin: 100px auto 5px auto;
+  padding: 22px;
+  text-align: center;
+}
+
+.well_being_form_control:focus {
+  outline: none;
+}
+.ceq_survey_label {
+  width: 30px !important;
 }
