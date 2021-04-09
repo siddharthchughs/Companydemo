@@ -18,7 +18,7 @@ function loadSurvey(json) {
   
   // Add survey to the global context for access
   window.survey = survey;
-  
+
   // Create survey interface in element
   $("#surveyElement").Survey({
     model: survey,
@@ -98,12 +98,16 @@ function onCurrentPageChanged(survey) {
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
 }
 
+$(document).ready(function(){
+  hideNavigation();
+});
+
 function hideNavigation() {
-  $(".pagination").hide();
+  $(".pagination").css("visibility", "hidden");
 }
 
 function showNavigation() {
-  $(".pagination").show();
+  $(".pagination").css("visibility", "visible");
 }
 
 function surveyPrev() {
