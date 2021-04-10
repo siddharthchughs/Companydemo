@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" href="data:;base64,=" />
 
+  <!-- Common VibeUp styling -->
   <link href="../../../Common/surveyjs/survey.css" rel="stylesheet" />
   <link href="../../Common/styling.css" rel="stylesheet" />
   <link href="../../../Common/vibeup-theme.css" rel="stylesheet" />
-
   <script src="../../../Common/embed-context.js"></script>
-  <!-- todo: when live server merged <script src="../../../Common/Lottie/lottie-player.js"></script> -->
-  <script src="../../../Common/audio/audio-player.js"></script>
-  <script src="../../../Common/pages/audio-content.js"></script>
 
-  <link href="../../../Common/audio/audio-player.css" rel="stylesheet" />
-  <link href="../../../Common/audio/play-button-style.css" rel="stylesheet" />
+  <!-- Audio player and components -->
+  <script src="../../../Common/media/media-player.js"></script>
+  <script src="../../../Common/media/audio-player.js"></script>
+  <link href="../../../Common/media/media-ui.css" rel="stylesheet" />
+  <link href="../../../Common/media/audio-player.css" rel="stylesheet" />
+  <link href="../../../Common/media/play-button-style.css" rel="stylesheet" />
+  <!-- <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script> -->
+
+  <!-- Page script and styles -->
+  <script src="../../../Common/pages/audio-content.js"></script>
   <link href="../../../Common/finish-slide-up.css" rel="stylesheet" />
   <style>
+    /* todo: this should go in global styles, if even needed */
     /* prettier-ignore */
     @media all {html, body { margin: 0; padding: 0; height: 100%; } * { box-sizing: border-box; }}
   </style>
@@ -27,6 +33,7 @@
     class="vu-audio-player"
     data-male="Unhooking from thoughts - male.mp4"
     data-female="Unhooking from thoughts - female.mp4"
+    style="--progress-proportion: 0"
   >
     <img class="ap-bg" src="../Common/Sprout_Meditation_Character_FA.gif" />
     <!-- <lottie-player 
@@ -34,8 +41,8 @@
       background="transparent"  speed="1"  
       style="width: 300px; height: 300px;"  loop  autoplay
     ></lottie-player> -->
-    <div class="ap-panel">
-      <div class="ap-controls">
+    <div class="vu-media-panel">
+      <div class="vu-media-controls">
         <audio></audio>
         <button class="ap-back">
           <img src="../../../Common/img/rewind_button.svg" />
@@ -65,7 +72,7 @@
           <img src="../../../Common/img/skip_button.svg" />
         </button>
       </div>
-      <div class="ap-prog">
+      <div class="vu-media-progress">
         <div class="time-display">
           <div class="time-current">00:00</div>
           <div class="time-total">00:00</div>
