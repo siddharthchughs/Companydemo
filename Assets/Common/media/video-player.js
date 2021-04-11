@@ -72,7 +72,6 @@ VideoPlayer = {
   showControls: function () {
     // Show the play controls when paused
     this.lastClick = new Date();
-    console.log(this.lastClick.valueOf());
     if (this.controlsEl.dataset.visibility !== "show") {
       this.controlsEl.dataset.visibility = "show";
     }
@@ -81,7 +80,6 @@ VideoPlayer = {
   hideControls: function () {
     // Hide the controls while playing
     var now = new Date();
-    console.log(now - this.lastClick);
     if (now - this.lastClick > this.CONTROL_FADE_DELAY) {
       if (this.controlsEl.dataset.visibility !== "hide") {
         this.controlsEl.dataset.visibility = "hide";

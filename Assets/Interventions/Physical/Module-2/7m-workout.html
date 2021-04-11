@@ -1,30 +1,116 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- Common styling of interventions -->
+    <link href="../../../Common/font.css" rel="stylesheet" />
+    <link href="../../../Common/surveyjs/survey.css" rel="stylesheet" />
+    <link href="../../Common/styling.css" rel="stylesheet" />
+    <link href="../../../Common/vibeup-theme.css" rel="stylesheet" />
+    <script src="../../../Common/embed-context.js"></script>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <!-- Common styling of interventions -->
-  <link href="../../Common/styling.css" type="text/css" rel="stylesheet" />
-  <!-- Common styling of interventions AND surveys -->
-  <link href="../../../Common/font.css" type="text/css" rel="stylesheet" />
-  <link href="../../../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
-  <link href="../../../../Assets/Common/surveyjs/survey.css" type="text/css" rel="stylesheet" />
-</head>
+    <!-- Video player and components -->
+    <script src="../../../Common/media/media-player.js"></script>
+    <script src="../../../Common/media/video-player.js"></script>
+    <link href="../../../Common/media/media-ui.css" rel="stylesheet" />
+    <link href="../../../Common/media/play-button-style.css" rel="stylesheet" />
+    <link href="../../../Common/media/video-player.css" rel="stylesheet" />
 
-<body>
-  <div class="container faq_container">
-    <div class="faq_list_section">
-      
-      <div class="workout_img">
-        <img src="./7m-workout_02.svg" />
-      </div>
-     
-      <div class="activity_footer">
-        <button type="button" class="player_btn">watch now</button>
-        <a href="#">I'll watch later</a>
+    <script>
+      /*
+       * Wire up page
+       * - create video
+       * - show video when button clicked
+       */
+      document.addEventListener("DOMContentLoaded", function () {
+        var el = document.querySelector(".vu-video-player");
+        // wire up video player
+        var vp = VideoPlayer.create(el);
+
+        // todo: messages for skip, pause, play
+        el.addEventListener("ended", function (e) {
+          EmbedContext.sendMessage("interventionCompleted", {});
+          vp.hide();
+        });
+
+        document
+          .querySelector(".player_btn")
+          .addEventListener("click", function (e) {
+            EmbedContext.sendMessage("interventionStarted", {});
+            vp.show();
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container faq_container">
+      <div class="faq_list_section">
+        <div class="workout_img">
+          <img src="./7m-workout_02.svg" />
+        </div>
+
+        <div class="activity_footer">
+          <button type="button" class="player_btn">watch now</button>
+          <a href="#">I'll watch later</a>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+    <div
+      class="vu-video-player"
+      data-visibility="hide"
+      style="--progress-proportion: 0"
+    >
+      <video playsinline preload>
+        <source src="./7m-exercise_720p32q25f.mp4" />
+      </video>
+      <div class="controls">
+        <button class="close">Close</button>
+      </div>
+      <div class="vu-media-panel" data-visibility="show">
+        <div class="vu-media-controls">
+          <button class="vp-back">
+            <img src="../../../Common/img/rewind_button.svg" />
+          </button>
+          <button class="vp-play">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              class="play-button"
+              data-state="start"
+            >
+              <circle class="glow" cx="30" cy="30" r="30" />
+              <g class="icon">
+                <circle class="border" cx="30" cy="30" r="22" />
+                <path class="play" d="M27 21.793L36 29.293L27 36.793V21.793Z" />
+                <g class="pause">
+                  <rect x="21" y="22" width="7" height="16" rx="1.3" />
+                  <rect x="32" y="22" width="7" height="16" rx="1.3" />
+                </g>
+              </g>
+            </svg>
+          </button>
+          <button class="vp-fwd">
+            <img src="../../../Common/img/skip_button.svg" />
+          </button>
+        </div>
+        <div class="vu-media-progress">
+          <div class="time-display">
+            <div class="time-current">00:00</div>
+            <div class="time-total">00:00</div>
+          </div>
+          <div class="prog-bar">
+            <div class="prog-amount"></div>
+            <div class="prog-thumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
