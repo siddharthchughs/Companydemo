@@ -15,6 +15,9 @@ Survey.surveyLocalization.locales[
 function loadSurvey(json) {
   var jsonObj = JSON.parse(json);
   var survey = new Survey.Model(jsonObj);
+  
+  // Add survey to the global context for access
+  window.survey = survey;
 
   // Create survey interface in element
   $("#surveyElement").Survey({
@@ -35,8 +38,6 @@ function loadSurvey(json) {
   // Set any custom properties defined in the JSON object
   setCustomProperties(survey, jsonObj);
 
-  // Add survey to the global context for access
-  window.survey = survey;
   if (survey.firstPageIsStarted || survey.isLastPage) {
     // If the first page is a starter page, or is the last page, then hide the progress navigation
     hideNavigation();
@@ -98,12 +99,16 @@ function onCurrentPageChanged(survey) {
   selectBox(survey);
 }
 
+$(document).ready(function(){
+  hideNavigation();
+});
+
 function hideNavigation() {
-  $(".pagination").hide();
+  $(".pagination").css("visibility", "hidden");
 }
 
 function showNavigation() {
-  $(".pagination").show();
+  $(".pagination").css("visibility", "visible");
 }
 
 function surveyPrev() {
