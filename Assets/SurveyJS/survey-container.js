@@ -23,6 +23,7 @@ function loadSurvey(json) {
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
+    onAfterRenderQuestion:rederQuestion,
     onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
@@ -47,9 +48,13 @@ function loadSurvey(json) {
   }
 }
 
-function surveyRender(survey) {
-  showNavigation();
+function rederQuestion(survey){
   navigationUiApply(survey);
+  selectBox(survey);
+}
+
+function surveyRender() {
+  showNavigation();
 };
 
 function surveyStarted(survey) {
@@ -96,7 +101,6 @@ function onCurrentPageChanged(survey) {
 
   // Send message to context that page has changed
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
-  selectBox(survey);
 }
 
 $(document).ready(function(){
@@ -166,7 +170,7 @@ function navigationUiApply(survey) {
     $(".form-control").addClass("well_being_form_control");
   }
   else if(customUI == "CEQ") {
-    $(".btn-group > .btn").addClass("ceq_survey_label");
+    $(".btn-group fieldset > .btn").addClass("ceq_survey_label");
   }
 }
 
@@ -226,13 +230,13 @@ function selectBox(survey) {
     $(".bg_drop").addClass("background_drop");
   });
 
-  $('.selectlableList ul li').on('click', function (elm, element) { 
+  $('.selectlableList ul li').on('click', function (elm, element) {
     var selectedLI = $(this).text();
     $(this).parent().prev('.selectedOption').text(selectedLI);
     var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
     var obj = { [getProp]: selectedLI };
     survey.data = obj;
-    survey.progressBarType = "requiredQuestions";
+    survey.progressBarType = "pages";
     $(this).parent().find('li.selected_active').removeClass('selected_active');
     $(this).addClass('selected_active');
     $(".bg_drop").removeClass("background_drop");

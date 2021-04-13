@@ -412,6 +412,11 @@ span.sv_q_required_text {
   margin-top: 100px;
 }
 
+.btn-group fieldset{
+  width: 100%;
+  display: flex !important;
+}
+
 .btn-group {
   text-align: center;
   display: flex;
