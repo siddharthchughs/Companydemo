@@ -5,34 +5,68 @@
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" href="data:;base64,=" />
 
-  <script src="../../Assets/Common/audio/audio-player.js"></script>
-  <script src="../../Assets/Common/pages/audio-content.js"></script>
-
-  <link href="../../Assets/Common/audio/audio-player.css" rel="stylesheet" />
-  <link href="../../Assets/Common/audio/play-button-style.css" rel="stylesheet" />
-
+  <!-- run through live-server -->
+  <script src="../project/Assets/Common/embed-context.js"></script>
+  <script src="../project/Assets/Common/media/media-player.js"></script>
+  <script src="../project/Assets/Common/media/audio-player.js"></script>
+  <link href="../project/Assets/Common/media/media-ui.css" rel="stylesheet" />
+  <link href="../project/Assets/Common/finish-slide-up.css" rel="stylesheet" />
+  <link
+    href="../project/Assets/Common/media/play-button-style.css"
+    rel="stylesheet"
+  />
+  <link
+    href="../project/Assets/Common/media/audio-player.css"
+    rel="stylesheet"
+  />
+  <script src="../project/Assets/Common/pages/audio-content.js"></script>
+  <script>
+    /*
+     * Audio Player Test Page
+     * ----------------------
+     * Audio player used in mindfulness intervention
+     * Uses audio content page script
+     */
+  </script>
   <style>
     /* prettier-ignore */
     @media all {html, body { margin: 0; padding: 0; height: 100%; } * { box-sizing: border-box; }}
+    .finish-slide-up {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      border-radius: 2em 2em 0 0;
+      padding: 4em;
+    }
+    .finish-slide-up button {
+      display: block;
+      border: 2px solid white;
+      padding: 1em;
+      background: transparent;
+      color: white;
+      width: 100%;
+    }
   </style>
 </head>
 <html>
   <div
-    class="audio-player"
-    data-male="../../Assets/Interventions/Mindfulness/Module-1/Mindful breathing - male.mp4"
-    data-female="../../Assets/Interventions/Mindfulness/Module-1/Mindful breathing - female.mp4"
+    class="vu-audio-player"
+    data-male="../project/Assets/Interventions/Mindfulness/Module-1/Mindful breathing - male.mp4"
+    data-female="../project/Assets/Interventions/Mindfulness/Module-1/Mindful breathing - female.mp4"
+    style="--progress-proportion: 0"
   >
     <img
-      class="background"
-      src="../../Assets/Interventions/Mindfulness/Common/Sprout_Meditation_Character_FA.gif"
+      class="ap-bg"
+      src="../project/Assets/Interventions/Mindfulness/Common/Sprout_Meditation_Character_FA.gif"
     />
-    <div class="panel">
-      <div class="controls">
+    <div class="vu-media-panel">
+      <div class="vu-media-controls">
         <audio></audio>
-        <button class="back">
-          <img src="../../Assets/Common/img/rewind_button.svg" />
+        <button class="ap-back">
+          <img src="../project/Assets/Common/img/rewind_button.svg" />
         </button>
-        <button class="play">
+        <button class="ap-play">
           <svg
             width="60"
             height="60"
@@ -53,20 +87,23 @@
             </g>
           </svg>
         </button>
-        <button class="forward">
-          <img src="../../Assets/Common/img/skip_button.svg" />
+        <button class="ap-fwd">
+          <img src="../project/Assets/Common/img/skip_button.svg" />
         </button>
       </div>
-      <div class="progress">
+      <div class="vu-media-progress">
         <div class="time-display">
-          <div class="current">00:00</div>
-          <div class="total">00:00</div>
+          <div class="time-current">00:00</div>
+          <div class="time-total">00:00</div>
         </div>
-        <div class="progress-bar">
-          <div class="progress"></div>
-          <div class="thumb"></div>
+        <div class="prog-bar">
+          <div class="prog-amount"></div>
+          <div class="prog-thumb"></div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="finish-slide-up">
+    <button class="audio-content-dismiss">Dismiss</button>
   </div>
 </html>

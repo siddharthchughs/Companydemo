@@ -1,0 +1,95 @@
+/*
+ * Media player progress bar (audio and video)
+ */
+
+.vu-media-progress .time-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #808080;
+  font-size: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.vu-media-progress .prog-bar {
+  height: 4px;
+  margin: -4px 10px;
+  position: relative;
+}
+
+.vu-media-progress .prog-bar .prog-amount {
+  background-color: #e8e5e3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.vu-media-progress .prog-bar .prog-amount::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+
+  background-color: #d64204;
+}
+
+.vu-media-progress .prog-bar .prog-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  transform: translate(5px, -3px);
+  background-color: #d64204;
+  position: absolute;
+}
+
+.vu-media-progress .prog-bar .prog-amount::after,
+.vu-media-progress .prog-bar .prog-thumb {
+  right: calc(100% * (1 - var(--progress-proportion)));
+  transition: right 0.1s;
+}
+
+/*
+ * Media player navigation controls
+ */
+.vu-media-controls {
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Have to override global button styling */
+.vu-media-controls button {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* todo: make sure focus and active states have strong contrast */
+.vu-media-controls button:focus,
+.vu-media-controls button:active {
+  outline: transparent;
+}
+
+/*
+ * Media player panel
+ * Separate from controls so video player can move progress bar
+ */
+.vu-media-panel {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 140px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
