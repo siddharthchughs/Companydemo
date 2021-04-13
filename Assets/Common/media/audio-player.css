@@ -12,3 +12,54 @@
   left: 0;
   object-fit: cover;
 }
+
+.vu-audio-player .gender-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 24px 0px 4px;
+  margin-left: 90%;
+}
+
+.vu-audio-player .gender-selector-active {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  align-self: flex-end;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #F4F1EF;
+  border-radius: 3px;
+  margin: 8px 48px 0px 0px;
+  padding: 0px 8px 8px 8px;
+  background-color: white;
+  width: 140px;
+}
+
+.vu-audio-player .narrator-title {
+  font-family: DM Sans;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #808080;
+  padding: 16px 0px 8px 6px;
+  text-align: left;
+}
+
+.vu-audio-player .female-voice-option {
+  color: black !important;
+  padding: 8px 0px 8px 6px;
+  font-weight: normal !important;
+  border-radius: 0px !important;
+  text-transform: none;
+  text-align: left !important;
+}
+.vu-audio-player .male-voice-option {
+  color: black !important;
+  padding: 8px 20px 8px 6px;
+  font-weight: normal !important;
+  border-radius: 0px !important;
+  text-transform: none;
+  text-align: left !important;
+}
