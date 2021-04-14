@@ -99,7 +99,7 @@
             {
               "type": "html",
               "name": "caption",
-              "html": "<div class='rating_caption_section wellbeing_caption'><p>Not at all <br/> mindful </p><p><p>Extremely<br/>mindful</p></div>"
+              "html": "<div class='rating_caption_section wellbeing_caption'><p>Not at all <br/> mindful </p><p>Extremely<br/>mindful</p></div>"
             }
           ],
           "title": "Mindfulness is a practice where you intentionally focus your attention on what you're experiencing in the present moment, with an attitude of openness and non-judgment."

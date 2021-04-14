@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "introduction",
-          "html": "<div class='image_section'><image class='mood_img_height' src='./Images/MoodSurvey - Start - 1064.svg'/></div><div class='description_section'><p>Please read each statement and choose the option which indicates how much the statement applied to <b>you over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p></div>"
+          "html": "<div class='image_section'><image class='mood_img_height' src='./Images/MoodSurvey - Start - 1064.svg'/></div><div class='description_section'><p>Please read each statement and choose the option which indicates how much the statement applied to you <b>over the past week</b>. There are no right or wrong answers. Do not spend too much time on any one question.</p></div>"
         }
       ]
     },
@@ -38,7 +38,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -70,7 +70,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -102,7 +102,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -135,7 +135,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -167,7 +167,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -199,7 +199,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -232,7 +232,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -264,7 +264,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -296,7 +296,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -328,7 +328,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -360,7 +360,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -392,7 +392,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -424,7 +424,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -456,7 +456,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -488,7 +488,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -520,7 +520,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -552,7 +552,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -584,7 +584,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -617,7 +617,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -649,7 +649,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
@@ -681,7 +681,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Applied to me very much, or most of the time "
+                  "text": "Applied to me very much, or most of the time"
                 }
               ]
             }
