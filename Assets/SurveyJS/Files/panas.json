@@ -18,7 +18,7 @@
           "type": "checkbox",
           "name": "PANAS0",
           "title": "How do you feel <b>right now?</b>",
-          "description": "Please select all that apply. Click 'Next' if none apply.",
+          "description": "Please select all that apply. Click the down arrow if none apply.",
           "choices": [
             {
               "value": "upset",

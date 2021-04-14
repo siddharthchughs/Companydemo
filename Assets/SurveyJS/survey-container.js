@@ -15,11 +15,15 @@ Survey.surveyLocalization.locales[
 function loadSurvey(json) {
   var jsonObj = JSON.parse(json);
   var survey = new Survey.Model(jsonObj);
+  
+  // Add survey to the global context for access
+  window.survey = survey;
 
   // Create survey interface in element
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
+    onAfterRenderQuestion:renderQuestion,
     onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
@@ -35,8 +39,6 @@ function loadSurvey(json) {
   // Set any custom properties defined in the JSON object
   setCustomProperties(survey, jsonObj);
 
-  // Add survey to the global context for access
-  window.survey = survey;
   if (survey.firstPageIsStarted || survey.isLastPage) {
     // If the first page is a starter page, or is the last page, then hide the progress navigation
     hideNavigation();
@@ -46,9 +48,13 @@ function loadSurvey(json) {
   }
 }
 
-function surveyRender(survey) {
-  showNavigation();
+function renderQuestion(survey){
   navigationUiApply(survey);
+  selectBox(survey);
+}
+
+function surveyRender() {
+  showNavigation();
 };
 
 function surveyStarted(survey) {
@@ -95,15 +101,18 @@ function onCurrentPageChanged(survey) {
 
   // Send message to context that page has changed
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
-  selectBox(survey);
 }
 
+$(document).ready(function(){
+  hideNavigation();
+});
+
 function hideNavigation() {
-  $(".pagination").hide();
+  $(".pagination").css("visibility", "hidden");
 }
 
 function showNavigation() {
-  $(".pagination").show();
+  $(".pagination").css("visibility", "visible");
 }
 
 function surveyPrev() {
@@ -161,7 +170,7 @@ function navigationUiApply(survey) {
     $(".form-control").addClass("well_being_form_control");
   }
   else if(customUI == "CEQ") {
-    $(".btn-group > .btn").addClass("ceq_survey_label");
+    $(".btn-group fieldset > .btn").addClass("ceq_survey_label");
   }
 }
 
@@ -169,16 +178,8 @@ function navigationUiApply(survey) {
  * The following converter allows for Markdown to be used within titles and descriptions of questions.
  * https://surveyjs.io/Examples/Library?id=survey-markdown-radiogroup&platform=jQuery&theme=default#content-js
  */
-function convertMarkdownToHtml(survey) {
-  var converter = new showdown.Converter();
-  survey.onTextMarkdown.add(function (survey, options) {
-    // Convert markdown text to html
-    var str = converter.makeHtml(options.text);
-    // Strip leading and trailing <p></p> tags from the string
-    str = str.substring(3);
-    str = str.substring(0, str.length - 4);
-    options.html = str;
-  });
+ function convertMarkdownToHtml(survey, options) {
+  options.html = options.text;
 }
 
 // The following method is for the Survey Navigation Footer Handler when the keyboard appears
@@ -229,13 +230,13 @@ function selectBox(survey) {
     $(".bg_drop").addClass("background_drop");
   });
 
-  $('.selectlableList ul li').on('click', function (elm, element) { 
+  $('.selectlableList ul li').on('click', function (elm, element) {
     var selectedLI = $(this).text();
     $(this).parent().prev('.selectedOption').text(selectedLI);
     var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
     var obj = { [getProp]: selectedLI };
     survey.data = obj;
-    survey.progressBarType = "requiredQuestions";
+    survey.progressBarType = "pages";
     $(this).parent().find('li.selected_active').removeClass('selected_active');
     $(this).addClass('selected_active');
     $(".bg_drop").removeClass("background_drop");

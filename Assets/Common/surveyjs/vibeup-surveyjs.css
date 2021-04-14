@@ -346,6 +346,16 @@ span.sv_q_required_text {
 
 .table tr {
   column-count: 2;
+  column-gap: 0px;
+  margin-bottom: 35px;
+}
+
+.table tr td:nth-child(1), .table tr td:nth-child(3) {
+  position: absolute;
+  top: 55px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 .table tr td {
@@ -400,6 +410,11 @@ span.sv_q_required_text {
 .btn-group,
 .form-control {
   margin-top: 100px;
+}
+
+.btn-group fieldset{
+  width: 100%;
+  display: flex !important;
 }
 
 .btn-group {
@@ -461,6 +476,7 @@ input[type="checkbox"] {
   position: absolute;
   margin-top: -5px !important;
   margin-left: -25px !important;
+  border: none !important;
 }
 
 input[type="checkbox"] {
@@ -657,7 +673,7 @@ textarea.form-control {
 .selectlableList ul li:hover {
   background: #fcece6;
 }
-li.selected_active{
+li.selected_active {
   background: #fcece6;
   border-radius: 6px;
 }

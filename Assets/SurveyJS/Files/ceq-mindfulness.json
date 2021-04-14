@@ -40,7 +40,7 @@
             {
               "type": "dropdown",
               "name": "CEQ6",
-              "title": "<b>By the end of the study,</b> how much improvement in your distress do you really <b>feel</b> will have occurred?",
+              "title": "<b>By the end of the study,</b> how much improvement in your distress do you really <b>feel</b> will occur?",
               "isRequired": true,
               "choices": [
                 "0%",

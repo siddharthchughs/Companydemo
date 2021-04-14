@@ -1,0 +1,14 @@
+.vu-audio-player {
+  background-color: #32dcd2; /* for contrast during development */
+  width: 100vw;
+  height: 100vh;
+}
+
+.vu-audio-player .ap-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
