@@ -7,7 +7,7 @@
         {
           "type": "radiogroup",
           "name": "EXP1",
-          "title": "In the past <b>two weeks,</b> my life or routine was disrupted for some reason (ignoring anything to do with this app.)",
+          "title": "In the past <b>two weeks,</b> my life or routine was disrupted for some reason (ignoring anything to do with this app).",
           "isRequired": true,
           "choices": [
             {
@@ -35,7 +35,7 @@
         {
           "type": "radiogroup",
           "name": "EXP2a",
-          "title": "In the past <b>two weeks,</b> something <b>negatively</b> affected my mental health (ignoring anything to do with this app.)",
+          "title": "In the past <b>two weeks,</b> something <b>negatively</b> affected my mental health (ignoring anything to do with this app).",
           "isRequired": true,
           "choices": [
             {
@@ -63,7 +63,7 @@
         {
           "type": "radiogroup",
           "name": "EXP2b",
-          "title": "In the past <b>two weeks,</b> something <b>positively</b> affected my mental health (ignoring anything to do with this app.)",
+          "title": "In the past <b>two weeks,</b> something <b>positively</b> affected my mental health (ignoring anything to do with this app).",
           "isRequired": true,
           "choices": [
             {
