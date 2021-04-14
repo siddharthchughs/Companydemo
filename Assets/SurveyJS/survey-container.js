@@ -23,7 +23,7 @@ function loadSurvey(json) {
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
-    onAfterRenderQuestion:rederQuestion,
+    onAfterRenderQuestion:renderQuestion,
     onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
@@ -48,7 +48,7 @@ function loadSurvey(json) {
   }
 }
 
-function rederQuestion(survey){
+function renderQuestion(survey){
   navigationUiApply(survey);
   selectBox(survey);
 }
