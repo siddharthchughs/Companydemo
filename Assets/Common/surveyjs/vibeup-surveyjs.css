@@ -353,9 +353,16 @@ span.sv_q_required_text {
 .table tr td:nth-child(1), .table tr td:nth-child(3) {
   position: absolute;
   top: 55px;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   width: 50%;
+}
+.table tr td:nth-child(1){
+  left: 0px;
+}
+
+.table tr td:nth-child(3){
+  right: 0px;
 }
 
 .table tr td {
