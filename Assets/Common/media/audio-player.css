@@ -18,6 +18,12 @@
   justify-content: flex-end;
   padding: 4px 24px 0px 4px;
   margin-left: 90%;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.vu-audio-player .gender-controls:focus {
+  outline: 0;
 }
 
 .vu-audio-player .gender-selector-active {
@@ -54,6 +60,9 @@
   border-radius: 0px !important;
   text-transform: none;
   text-align: left !important;
+  border: none !important;
+  background-color: transparent !important;
+  outline: 0 !important;
 }
 .vu-audio-player .male-voice-option {
   color: black !important;
@@ -62,4 +71,7 @@
   border-radius: 0px !important;
   text-transform: none;
   text-align: left !important;
+  border: none !important;
+  background-color: transparent !important;
+  outline: 0 !important;
 }

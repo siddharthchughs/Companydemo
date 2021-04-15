@@ -33,6 +33,15 @@ AudioPlayer = {
       : localStorage.getItem('voiceGender');
     ap.media.src = el.dataset[ap.gender];
 
+    // set the currently selected gender to be highlighted
+    if (localStorage.getItem('voiceGender') == "female") {
+      let femaleOption = document.querySelector(".vu-audio-player .female-voice-option");
+      femaleOption.style.setProperty("background-color", "#fcece6", "important");
+    } else {
+      let maleOption = document.querySelector(".vu-audio-player .male-voice-option");
+      maleOption.style.setProperty("background-color", "#fcece6", "important");
+    }
+
     // Set up gender button event listeners
     el.querySelector(".gender-controls").addEventListener(
       "click",
@@ -68,7 +77,7 @@ AudioPlayer = {
     // update the 'voiceGender' property in local storage and update the currently loaded audio file
     localStorage.setItem('voiceGender', 'female');
     this.gender = localStorage.getItem('voiceGender');
-    this.audio.src = this.el.dataset[this.gender];
+    this.media.src = this.el.dataset[this.gender];
 
     // reset the play button
     this.el.querySelector(".play-button").dataset.state = "play";
@@ -86,7 +95,7 @@ AudioPlayer = {
     // update the 'voiceGender' property in local storage and update the currently loaded audio file
     localStorage.setItem('voiceGender', 'male');
     this.gender = localStorage.getItem('voiceGender');
-    this.audio.src = this.el.dataset[this.gender];
+    this.media.src = this.el.dataset[this.gender];
     
     // reset the play button
     this.el.querySelector(".play-button").dataset.state = "play";
