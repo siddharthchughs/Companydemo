@@ -41,9 +41,9 @@ AudioPlayer = {
 
     // set the currently selected gender to be highlighted
     if (EmbedContext.getValue(this.GENDER_VOICE_KEY) == this.FEMALE) {
-      ap.femaleOptionButton.style.setProperty("background-color", "#fcece6", "important");
+      el.querySelector(".gender-selector-active").dataset.gender = this.FEMALE
     } else {
-      ap.maleOptionButton.style.setProperty("background-color", "#fcece6", "important");
+      el.querySelector(".gender-selector-active").dataset.gender = this.MALE
     }
 
     // Set up gender button event listeners
@@ -54,11 +54,11 @@ AudioPlayer = {
 
     ap.femaleOptionButton.addEventListener(
       "click",
-      this.genderChanged.bind(ap, this.FEMALE)
+      this.genderChanged.bind(ap)
     );
     ap.maleOptionButton.addEventListener(
       "click",
-      this.genderChanged.bind(ap, this.MALE)
+      this.genderChanged.bind(ap)
     );
 
     // Wire up controls
@@ -68,25 +68,13 @@ AudioPlayer = {
 
     return ap;
   },
-  
-  genderChanged: function (gender) {
-    if (gender == this.MALE) {
-      // highlight the male option and deselect the female option
-      this.maleOptionButton.style.setProperty("background-color", "#fcece6", "important");
-      this.femaleOptionButton.style.setProperty("background-color", "#ffffff", "important");
-    } else {
-      // deselect the male option and highlight the female option
-      this.maleOptionButton.style.setProperty("background-color", "#ffffff", "important");
-      this.femaleOptionButton.style.setProperty("background-color", "#fcece6", "important");
-    }
 
-    // update the 'voiceGender' property in local storage and update the currently loaded audio file
-    EmbedContext.setValue(this.GENDER_VOICE_KEY, gender);
-    this.gender = EmbedContext.getValue(this.GENDER_VOICE_KEY)
-    this.media.src = this.el.dataset[this.gender];
+  genderChanged: function (event) {
+    var genderButtonResponse = event.target.dataset.gender;
 
-    // reset the play button
-    this.el.querySelector(".play-button").dataset.state = "play";
+    this.el.querySelector(".gender-selector-active").dataset.gender = genderButtonResponse
+    EmbedContext.setValue(this.GENDER_VOICE_KEY, genderButtonResponse);    
+    this.media.src = this.el.dataset[genderButtonResponse];
   },
 
   toggleGenderMenu: function () {

@@ -53,20 +53,9 @@
   text-align: left;
 }
 
-.vu-audio-player .female-voice-option {
-  color: black !important;
-  padding: 8px 0px 8px 6px;
-  font-weight: normal !important;
-  border-radius: 0px !important;
-  text-transform: none;
-  text-align: left !important;
-  border: none !important;
-  background-color: transparent !important;
-  outline: 0 !important;
-}
+.vu-audio-player .female-voice-option,
 .vu-audio-player .male-voice-option {
   color: black !important;
-  padding: 8px 20px 8px 6px;
   font-weight: normal !important;
   border-radius: 0px !important;
   text-transform: none;
@@ -74,4 +63,14 @@
   border: none !important;
   background-color: transparent !important;
   outline: 0 !important;
+  padding: 8px 0px 8px 6px;
+}
+
+.male-option-padding {
+  padding-left: 20px;
+}
+
+.gender-selector-active[data-gender="male"] .male-voice-option,
+.gender-selector-active[data-gender="female"] .female-voice-option {
+  background-color: #fcece6 !important;
 }
