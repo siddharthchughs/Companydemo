@@ -1,6 +1,9 @@
 AudioPlayer = {
   // Default settings
   SKIP_TIME: 15,
+  MALE: "male",
+  FEMALE: "female",
+  GENDER_VOICE_KEY: "genderVoice",
 
   create: function (el) {
     if (!el) {
@@ -21,6 +24,8 @@ AudioPlayer = {
     ap.fwdBtn = el.querySelector(".ap-fwd");
     ap.playBtn = el.querySelector(".ap-play");
     ap.genderControlsOpen = false;
+    ap.maleOptionButton = el.querySelector(".male-voice-option");
+    ap.femaleOptionButton = el.querySelector(".female-voice-option");
 
     // Wire up media events to handlers
     ap.media.addEventListener("loadedmetadata", ap.showTotalTime.bind(ap));
@@ -28,18 +33,17 @@ AudioPlayer = {
     ap.media.addEventListener("timeupdate", ap.updateProgress.bind(ap));
 
     // if theres no intial gender selected, default to female
-    ap.gender = localStorage.getItem('voiceGender') == null 
+    ap.gender = EmbedContext.getValue(this.GENDER_VOICE_KEY) == null 
       ? "female"
-      : localStorage.getItem('voiceGender');
+      : EmbedContext.getValue(this.GENDER_VOICE_KEY)
     ap.media.src = el.dataset[ap.gender];
+    EmbedContext.setValue(this.GENDER_VOICE_KEY, ap.gender);
 
     // set the currently selected gender to be highlighted
-    if (localStorage.getItem('voiceGender') == "female") {
-      let femaleOption = document.querySelector(".vu-audio-player .female-voice-option");
-      femaleOption.style.setProperty("background-color", "#fcece6", "important");
+    if (EmbedContext.getValue(this.GENDER_VOICE_KEY) == this.FEMALE) {
+      ap.femaleOptionButton.style.setProperty("background-color", "#fcece6", "important");
     } else {
-      let maleOption = document.querySelector(".vu-audio-player .male-voice-option");
-      maleOption.style.setProperty("background-color", "#fcece6", "important");
+      ap.maleOptionButton.style.setProperty("background-color", "#fcece6", "important");
     }
 
     // Set up gender button event listeners
@@ -48,13 +52,13 @@ AudioPlayer = {
       this.toggleGenderMenu.bind(ap)
     );
 
-    el.querySelector(".female-voice-option").addEventListener(
+    ap.femaleOptionButton.addEventListener(
       "click",
-      this.femaleSelected.bind(ap)
+      this.genderChanged.bind(ap, this.FEMALE)
     );
-    el.querySelector(".male-voice-option").addEventListener(
+    ap.maleOptionButton.addEventListener(
       "click",
-      this.maleSelected.bind(ap)
+      this.genderChanged.bind(ap, this.MALE)
     );
 
     // Wire up controls
@@ -65,38 +69,22 @@ AudioPlayer = {
     return ap;
   },
   
-  femaleSelected: function () {
-    // de-select the male option
-    let maleOption = document.querySelector(".vu-audio-player .male-voice-option");
-    maleOption.style.setProperty("background-color", "#ffffff", "important");
-
-    // highlight the female option
-    let femaleOption = document.querySelector(".vu-audio-player .female-voice-option");
-    femaleOption.style.setProperty("background-color", "#fcece6", "important");
-    
-    // update the 'voiceGender' property in local storage and update the currently loaded audio file
-    localStorage.setItem('voiceGender', 'female');
-    this.gender = localStorage.getItem('voiceGender');
-    this.media.src = this.el.dataset[this.gender];
-
-    // reset the play button
-    this.el.querySelector(".play-button").dataset.state = "play";
-  },
-  
-  maleSelected: function () {
-    // highlight the male option
-    let maleOption = document.querySelector(".vu-audio-player .male-voice-option");
-    maleOption.style.setProperty("background-color", "#fcece6", "important");
-
-    // de-select the female option
-    let femaleOption = document.querySelector(".vu-audio-player .female-voice-option");
-    femaleOption.style.setProperty("background-color", "#ffffff", "important");
+  genderChanged: function (gender) {
+    if (gender == this.MALE) {
+      // highlight the male option and deselect the female option
+      this.maleOptionButton.style.setProperty("background-color", "#fcece6", "important");
+      this.femaleOptionButton.style.setProperty("background-color", "#ffffff", "important");
+    } else {
+      // deselect the male option and highlight the female option
+      this.maleOptionButton.style.setProperty("background-color", "#ffffff", "important");
+      this.femaleOptionButton.style.setProperty("background-color", "#fcece6", "important");
+    }
 
     // update the 'voiceGender' property in local storage and update the currently loaded audio file
-    localStorage.setItem('voiceGender', 'male');
-    this.gender = localStorage.getItem('voiceGender');
+    EmbedContext.setValue(this.GENDER_VOICE_KEY, gender);
+    this.gender = EmbedContext.getValue(this.GENDER_VOICE_KEY)
     this.media.src = this.el.dataset[this.gender];
-    
+
     // reset the play button
     this.el.querySelector(".play-button").dataset.state = "play";
   },
