@@ -77,15 +77,20 @@ AudioPlayer = {
     this.media.src = this.el.dataset[genderButtonResponse];
   },
 
-  toggleGenderMenu: function () {
-    let menu = document.querySelector(".vu-audio-player .gender-selector-active");
-
-    if (this.genderControlsOpen) {
-      menu.style.setProperty("display", "none", "important");
-      this.genderControlsOpen = !this.genderControlsOpen;
+  toggleGenderMenu: function (event) {
+    var buttonEventResponse = event.target.dataset.menu;
+    var genderControlsButton = this.el.querySelector(".gender-controls");
+    var container = this.el.querySelector(".vu-media-panel");
+    container.dataset.menu = buttonEventResponse;
+    
+    if (container.dataset.menu == "no") {
+      // display the menu
+      container.dataset.menu == "yes";
+      genderControlsButton.dataset.menu = "yes";
     } else {
-      menu.style.setProperty("display", "flex", "important");
-      this.genderControlsOpen = !this.genderControlsOpen;
+      // hide the menu
+      container.dataset.menu == "no";
+      genderControlsButton.dataset.menu = "no";
     }
   }
 };

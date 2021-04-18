@@ -13,15 +13,6 @@
   object-fit: cover;
 }
 
-.vu-audio-player .gender-controls {
-  display: flex;
-  justify-content: flex-end;
-  padding: 4px 24px 0px 4px;
-  margin-left: 90%;
-  border: none !important;
-  background-color: transparent !important;
-}
-
 .vu-audio-player .gender-controls:focus {
   outline: 0;
 }
@@ -73,4 +64,41 @@
 .gender-selector-active[data-gender="male"] .male-voice-option,
 .gender-selector-active[data-gender="female"] .female-voice-option {
   background-color: #fcece6 !important;
+}
+
+.vu-media-panel[data-menu="yes"] .gender-selector-active {
+  display: flex !important;
+}
+
+.vu-media-panel[data-menu="no"] .gender-selector-active {
+  display: none !important;
+}
+
+.vu-audio-player .gender-controls {
+  position: absolute;
+  right: 0;
+  text-indent: -2000px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background-color: grey !important;
+  border: none !important;
+}
+
+.vu-audio-player .gender-controls::before {
+  display: block;
+  position: absolute;
+  left: calc(50% - 2.5px);
+  top: calc(50% - 2.5px);
+  content: "";
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+  border: 2.5px solid black;
+  background-color: black;
+  box-shadow: 0 -10px black, 0 10px black;
+}
+
+.gender-controls-padding {
+  padding-bottom: 28px;
 }
