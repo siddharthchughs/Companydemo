@@ -66,11 +66,11 @@
   background-color: #fcece6 !important;
 }
 
-.vu-media-panel[data-menu="yes"] .gender-selector-active {
+.vu-media-panel[data-menu="open"] .gender-selector-active {
   display: flex !important;
 }
 
-.vu-media-panel[data-menu="no"] .gender-selector-active {
+.vu-media-panel[data-menu="closed"] .gender-selector-active {
   display: none !important;
 }
 

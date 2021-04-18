@@ -4,6 +4,8 @@ AudioPlayer = {
   MALE: "male",
   FEMALE: "female",
   GENDER_VOICE_KEY: "genderVoice",
+  CLOSED: "closed",
+  OPEN: "open",
 
   create: function (el) {
     if (!el) {
@@ -71,10 +73,16 @@ AudioPlayer = {
 
   genderChanged: function (event) {
     var genderButtonResponse = event.target.dataset.gender;
+    var genderControlsButton = this.el.querySelector(".gender-controls");
+    var container = this.el.querySelector(".vu-media-panel");
 
+    // change the gender
     this.el.querySelector(".gender-selector-active").dataset.gender = genderButtonResponse
     EmbedContext.setValue(this.GENDER_VOICE_KEY, genderButtonResponse);    
     this.media.src = this.el.dataset[genderButtonResponse];
+
+    // hide the menu
+    this.updateGenderMenuOpenStatus(this.CLOSED, genderControlsButton, container);
   },
 
   toggleGenderMenu: function (event) {
@@ -83,15 +91,18 @@ AudioPlayer = {
     var container = this.el.querySelector(".vu-media-panel");
     container.dataset.menu = buttonEventResponse;
     
-    if (container.dataset.menu == "no") {
+    if (container.dataset.menu == this.CLOSED) {
       // display the menu
-      container.dataset.menu == "yes";
-      genderControlsButton.dataset.menu = "yes";
+      this.updateGenderMenuOpenStatus(this.OPEN, genderControlsButton, container);
     } else {
       // hide the menu
-      container.dataset.menu == "no";
-      genderControlsButton.dataset.menu = "no";
+      this.updateGenderMenuOpenStatus(this.CLOSED, genderControlsButton, container);
     }
+  },
+
+  updateGenderMenuOpenStatus(state, button, container) {
+    container.dataset.menu = state;
+    button.dataset.menu = state;
   }
 };
 Object.setPrototypeOf(AudioPlayer, MediaPlayer);
