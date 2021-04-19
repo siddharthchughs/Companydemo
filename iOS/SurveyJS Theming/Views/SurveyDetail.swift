@@ -30,7 +30,7 @@ struct SurveyDetail: UIViewControllerRepresentable {
     }
 
     func makeUIViewController(context: Self.Context) -> SurveyViewController {
-        let controller = SurveyViewController(survey: survey)
+        guard let controller = SurveyViewController(survey: survey) else { fatalError("Failed to make survey controller") }
         controller.delegate = context.coordinator
         return controller
     }

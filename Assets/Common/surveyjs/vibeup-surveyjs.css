@@ -179,17 +179,17 @@
   display: none;
 }
 
-.small {
+.panel-body .sv_row .sv_qstn .small {
   margin-top: 10px;
 }
 
-.small span {
+.panel-body .sv_row .sv_qstn .small span {
   color: #808080;
   font-size: 15px;
   line-height: 22px;
 }
 
-.progress {
+.sv_container .panel-body .progress {
   z-index: 10;
   margin-bottom: 0px;
   position: fixed;
@@ -200,7 +200,7 @@
   background: #f8d1c0;
 }
 
-.progress .progress-bar {
+.sv_container .panel-body .progress .progress-bar {
   margin-left: 0px !important;
   margin-right: 0px !important;
   background: #d64204;
@@ -282,7 +282,7 @@
 
 /* If alert appears after table then remove top. Used in log time surveys */
 
-.table + .alert-danger {
+.sv_container .panel-body .sv_row .sv_qstn .table + .alert-danger {
   top: 0px;
 }
 
@@ -338,49 +338,49 @@ span.sv_q_required_text {
   outline: none;
 }
 
-.table {
+.sv_container .panel-body .sv_row .sv_qstn .table {
   position: relative;
   text-align: center;
   margin-top: 50px;
 }
 
-.table tr {
+.sv_container .panel-body .sv_row .sv_qstn .table tr {
   column-count: 2;
   column-gap: 0px;
   margin-bottom: 35px;
 }
 
-.table tr td:nth-child(1), .table tr td:nth-child(3) {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1), .sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   position: absolute;
   top: 55px;
   display: flex !important;
   justify-content: center;
   width: 50%;
 }
-.table tr td:nth-child(1){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1){
   left: 0px;
 }
 
-.table tr td:nth-child(3){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3){
   right: 0px;
 }
 
-.table tr td {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td {
   border-top: none !important;
 }
 
-.table tr td .form-control {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td .form-control {
   margin-top: 0px;
 }
 
-.table tr td span {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td span {
   font-size: 16px;
   line-height: 24px;
   color: #808080;
   text-transform: uppercase;
 }
 
-.table tr td input {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td input {
   text-align: center;
   font-size: 16px;
   line-height: 24px;
@@ -479,20 +479,16 @@ span.sv_q_required_text {
   color: #000000;
 }
 
-input[type="checkbox"] {
-  position: absolute;
+.sv_q_select_column .checkbox label input[type="checkbox"] {
+  position: absolute !important;
   margin-top: -5px !important;
   margin-left: -25px !important;
   border: none !important;
-}
-
-input[type="checkbox"] {
-  position: relative;
   cursor: pointer;
   padding: 0;
 }
 
-input[type="checkbox"]:before {
+.sv_q_select_column .checkbox label input[type="checkbox"]:before {
   content: "";
   margin-right: 10px;
   display: inline-block;
@@ -503,12 +499,12 @@ input[type="checkbox"]:before {
   border: 1.5px solid #000000;
 }
 
-input[type="checkbox"]:checked:before {
+.sv_q_select_column .checkbox label input[type="checkbox"]:checked:before {
   background: #d64204;
   border: none;
 }
 
-input[type="checkbox"]:checked:after {
+.sv_q_select_column .checkbox label input[type="checkbox"]:checked:after {
   content: "";
   position: absolute;
   left: 5px;
