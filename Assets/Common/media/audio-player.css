@@ -81,8 +81,15 @@
   width: 40px;
   height: 40px;
   border-radius: 50% !important;
-  background-color: grey !important;
   border: none !important;
+}
+
+.vu-media-panel[data-menu="open"] .gender-controls {
+  background-color: grey !important;
+}
+
+.vu-audio-player .gender-controls:active {
+  background-color: transparent !important;
 }
 
 .vu-audio-player .gender-controls::before {
