@@ -25,7 +25,6 @@ AudioPlayer = {
     ap.backBtn = el.querySelector(".ap-back");
     ap.fwdBtn = el.querySelector(".ap-fwd");
     ap.playBtn = el.querySelector(".ap-play");
-    ap.genderControlsOpen = false;
     ap.maleOptionButton = el.querySelector(".male-voice-option");
     ap.femaleOptionButton = el.querySelector(".female-voice-option");
 
@@ -62,6 +61,24 @@ AudioPlayer = {
       "click",
       this.genderChanged.bind(ap)
     );
+
+    // there are 2 situations where we want to keep the gender selection menu open despite
+    // the element losing focus, when they press on the container of the gender buttons and
+    // when they press on the tile containing the 'narrator' text
+    document.addEventListener("click", (event) => {
+      var controlsButton = el.querySelector(".gender-controls")
+      var container = el.querySelector(".vu-media-panel");
+
+      if (event.target == el.querySelector(".narrator-title")
+        || event.target == el.querySelector(".gender-selector-active")
+      ) {
+        this.updateGenderMenuOpenStatus(this.OPEN, controlsButton, container);
+      } else if (event.target == controlsButton) {
+        // when the controls button is pressed, the menu is opened in its respective handler
+      } else {
+        this.updateGenderMenuOpenStatus(this.CLOSED, controlsButton, container);
+      }
+    });
 
     // Wire up controls
     ap.playBtn.addEventListener("click", ap.togglePlay.bind(ap));
@@ -100,7 +117,7 @@ AudioPlayer = {
     }
   },
 
-  updateGenderMenuOpenStatus(state, button, container) {
+  updateGenderMenuOpenStatus: function (state, button, container) {
     container.dataset.menu = state;
     button.dataset.menu = state;
   }
