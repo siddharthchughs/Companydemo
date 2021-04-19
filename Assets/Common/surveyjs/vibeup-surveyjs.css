@@ -350,18 +350,18 @@ span.sv_q_required_text {
   margin-bottom: 35px;
 }
 
-.table tr td:nth-child(1), .table tr td:nth-child(3) {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1), .sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   position: absolute;
   top: 55px;
   display: flex !important;
   justify-content: center;
   width: 50%;
 }
-.table tr td:nth-child(1){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1){
   left: 0px;
 }
 
-.table tr td:nth-child(3){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3){
   right: 0px;
 }
 
@@ -484,10 +484,6 @@ span.sv_q_required_text {
   margin-top: -5px !important;
   margin-left: -25px !important;
   border: none !important;
-}
-
-input[type="checkbox"] {
-  position: relative;
   cursor: pointer;
   padding: 0;
 }
