@@ -100,6 +100,9 @@ AudioPlayer = {
 
     // hide the menu
     this.updateGenderMenuOpenStatus(this.CLOSED, genderControlsButton, container);
+
+    // reset the play button back to its inital configuration
+    this.el.querySelector(".play-button").dataset.state = "play";
   },
 
   toggleGenderMenu: function (event) {
