@@ -346,6 +346,23 @@ span.sv_q_required_text {
 
 .sv_container .panel-body .sv_row .sv_qstn .table tr {
   column-count: 2;
+  column-gap: 0px;
+  margin-bottom: 35px;
+}
+
+.table tr td:nth-child(1), .table tr td:nth-child(3) {
+  position: absolute;
+  top: 55px;
+  display: flex !important;
+  justify-content: center;
+  width: 50%;
+}
+.table tr td:nth-child(1){
+  left: 0px;
+}
+
+.table tr td:nth-child(3){
+  right: 0px;
 }
 
 .sv_container .panel-body .sv_row .sv_qstn .table tr td {
@@ -377,11 +394,9 @@ span.sv_q_required_text {
 }
 
 .rating_caption_section {
-  column-count: 3;
-  column-gap: 50px;
-  margin-top: 5px;
-  text-align: center;
-  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .rating_caption_section p {
@@ -404,13 +419,23 @@ span.sv_q_required_text {
   margin-top: 100px;
 }
 
+.btn-group fieldset{
+  width: 100%;
+  display: flex !important;
+}
+
 .btn-group {
-  left: 50%;
-  transform: translate(-50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-group label.btn {
-  padding: 12px 12px;
+  padding: 10px 0px;
+  flex-grow: 1;
+  margin-left: 3px;
+  margin-right: 3px;
+  border: none;
   border-radius: 0px;
   border-top: 0;
   border-bottom: 0;
@@ -440,6 +465,9 @@ span.sv_q_required_text {
 
 .wellbeing_caption {
   column-count: 2;
+  text-align: left;
+  padding: 0px;
+  margin-top: 8px;
 }
 
 .sv_qstn .checkbox label {
@@ -455,6 +483,11 @@ span.sv_q_required_text {
   position: absolute !important;
   margin-top: -5px !important;
   margin-left: -25px !important;
+  border: none !important;
+}
+
+input[type="checkbox"] {
+  position: relative;
   cursor: pointer;
   padding: 0;
 }
@@ -522,10 +555,6 @@ textarea.form-control {
   transform: translate(-50%);
 }
 
-.no_progress_footer_position {
-  position: absolute;
-}
-
 .sv_p_container {
   min-width: 100% !important;
 }
@@ -558,4 +587,123 @@ textarea.form-control {
   .image_section img.mood_img_height {
     padding: 40px;
   }
+}
+
+/* Wellnbeing styles*/
+
+.rating_caption_wellbeing,
+.minute_caption {
+  margin-top: 10px;
+}
+
+.rating_caption_wellbeing p,
+.minute_caption p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #808080;
+}
+
+.minute_caption {
+  text-align: center;
+}
+.minute_caption p {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.well_being_form_control {
+  width: 125px;
+  border-radius: 30px;
+  margin: 100px auto 5px auto;
+  padding: 22px;
+  text-align: center;
+}
+
+.well_being_form_control:focus {
+  outline: none;
+}
+.ceq_survey_label {
+  width: 30px !important;
+}
+
+/* Select dropdown Box styles */
+
+.selectlableList {
+  width: 200px;
+  background: #fff;
+  display: none;
+  padding: 10px 15px;
+  line-height: 18px;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+.selectlableList ul {
+  padding: 0px 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 200px;
+  background: #fff;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 100px;
+  margin: 30px auto;
+  right: 0;
+  left: 0;
+}
+.selectlableList ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 0px 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  align-items: center;
+  flex: 1;
+  display: flex;
+  margin: 0px 9px;
+}
+.selectlableList ul li:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+  border-radius: 5px;
+}
+.selectedOption {
+  width: 170px;
+  cursor: pointer;
+  height: 20px;
+}
+.selectlableList ul li:active,
+.selectlableList ul li:focus,
+.selectlableList ul li:hover {
+  background: #fcece6;
+}
+li.selected_active {
+  background: #fcece6;
+  border-radius: 6px;
+}
+.dropdown_list::before {
+  visibility: hidden;
+}
+.opened::before {
+  visibility: visible;
+}
+.selected_list {
+  column-count: 2;
+  column-gap: 140px;
+  display: block;
+}
+.background_drop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
 }

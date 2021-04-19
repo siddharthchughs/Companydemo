@@ -24,10 +24,27 @@ class SurveyViewController: UIViewController {
 
     private var webView: WKWebView!
 
+    private let assetsURL: URL
+    private let surveyContainerURL: URL
     private let survey: Survey
+    private let surveyJSContent: String
 
-    init(survey: Survey) {
+    init?(survey: Survey) {
+        guard let assetsURL = Bundle.main.url(forResource: "Assets", withExtension: nil) else {
+            os_log(.error, "Unable to locate 'Assets' folder in main bundle")
+            return nil
+        }
+        guard let surveyContainerURL = Bundle.main.url(forResource: "Assets/SurveyJS/survey_container", withExtension: "html") else {
+            os_log(.error, "Unable to locate 'Assets/SurveyJS/survey_container.html' in main bundle")
+            return nil
+        }
+        guard let surveyJSContent = Self.prepareJSON(survey) else {
+            return nil
+        }
+        self.assetsURL = assetsURL
+        self.surveyContainerURL = surveyContainerURL
         self.survey = survey
+        self.surveyJSContent = surveyJSContent
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -46,10 +63,11 @@ class SurveyViewController: UIViewController {
         config.userContentController.add(self, name: Self.pageMessageName)
         config.userContentController.add(self, name: Self.completedMessageName)
         config.userContentController.add(self, name: Self.dismissMessageName)
+        let surveyLoadScript = WKUserScript(source: "loadSurvey(`\(surveyJSContent)`);", injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        config.userContentController.addUserScript(surveyLoadScript)
 
         webView = WKWebView(frame: .zero, configuration: config)
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.navigationDelegate = self
         view.addSubview(webView)
 
         NSLayoutConstraint.activate([
@@ -63,46 +81,26 @@ class SurveyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        guard let url = Bundle.main.url(forResource: "Assets/SurveyJS/survey_container", withExtension: "html") else {
-            delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
-            return
-        }
-        webView.loadFileURL(url, allowingReadAccessTo: survey.rootDirectory)
+        webView.loadFileURL(surveyContainerURL, allowingReadAccessTo: assetsURL)
     }
 
-    private func loadSurvey() {
-        guard let surveyJsonString = prepareSurveyJson() else {
-            os_log(.error, log: .file, "Survey data could not be parsed to a JSON string")
-            delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
-            return
-        }
-        webView.evaluateJavaScript("loadSurvey(`\(surveyJsonString)`);") { [self] _, error in
-            if let error = error {
-                os_log(.error, log: .file, "Failed to evaludate JavaScript into WKWebView: %s", error.localizedDescription)
-                delegate?.surveyViewController(self, didFinishWithResult: .failure(.loadFailed))
+    private static func prepareJSON(_ survey: Survey) -> String? {
+        do {
+            guard let surveyContents = survey.contents else {
+                return nil
             }
-        }
-    }
-
-    private func prepareSurveyJson() -> String? {
-        guard let surveyContents = survey.contents,
-              let surveyData = try? JSONEncoder().encode(surveyContents),
-              let surveyJsonString = String(data: surveyData, encoding: .utf8)
-        else {
+            let surveyData = try JSONEncoder().encode(surveyContents)
+            guard let surveyJsonString = String(data: surveyData, encoding: .utf8) else {
+                os_log(.error, "Failed to parse SurveyJS json to be injected into web view")
+                return nil
+            }
+            return surveyJsonString
+                .replacingOccurrences(of: "\\", with: "\\\\")
+                .replacingOccurrences(of: "\'", with: "\\'")
+        } catch {
+            os_log(.error, "Failed to encode SurveyJS json to be injected into web view: %s", error.localizedDescription)
             return nil
         }
-        return surveyJsonString // the following is required so we can successfully evaluate the injected JS
-            .replacingOccurrences(of: "\\", with: "\\\\")
-            .replacingOccurrences(of: "\'", with: "\\'")
-    }
-}
-
-// MARK: - Web view delegate methods
-
-extension SurveyViewController: WKNavigationDelegate {
-    // swiftlint:disable:next implicitly_unwrapped_optional
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        loadSurvey()
     }
 }
 

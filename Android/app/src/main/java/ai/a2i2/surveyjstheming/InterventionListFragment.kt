@@ -40,6 +40,7 @@ class InterventionListFragment : Fragment() {
                 "Sleep - Module 3" to "/Sleep/Module-3/index.html",
                 "Sleep - Module 4" to "/Sleep/Module-4/index.html",
                 "Sleep - FAQ" to "/Sleep/FAQ/index.html",
+                "Mindfulness - Intro" to "/Mindfulness/Intro/index.html",
                 "Mindfulness - Module 1" to "/Mindfulness/Module-1/index.html",
                 "Mindfulness - Module 2" to "/Mindfulness/Module-2/index.html",
                 "Mindfulness - Module 3" to "/Mindfulness/Module-3/index.html",

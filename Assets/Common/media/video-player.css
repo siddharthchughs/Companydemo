@@ -1,0 +1,64 @@
+/*
+ * Video Player styling
+ * - video player also uses generic media player styling
+ */
+.vu-video-player {
+  width: 100vh;
+  height: 100vw;
+  width: var(--wih);
+  height: var(--wiw);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-color: black;
+}
+.vu-video-player[data-visibility="show"] {
+  display: block;
+}
+.vu-video-player[data-visibility="hide"] {
+  display: none;
+}
+.vu-video-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.vu-video-player .hide-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/*
+ * Todo - move to scrolllock/dialog/fullscreen utility file
+ */
+body.scrolllock {
+  overflow: hidden;
+  overscroll-behavior: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Position media player controls
+ */
+.vu-media-panel {
+  position: fixed;
+  bottom: 1em;
+  right: 20%;
+  left: 20%;
+}
+
+.vu-media-panel[data-visibility="hide"] {
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}

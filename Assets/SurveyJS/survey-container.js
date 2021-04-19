@@ -15,11 +15,16 @@ Survey.surveyLocalization.locales[
 function loadSurvey(json) {
   var jsonObj = JSON.parse(json);
   var survey = new Survey.Model(jsonObj);
+  
+  // Add survey to the global context for access
+  window.survey = survey;
 
   // Create survey interface in element
   $("#surveyElement").Survey({
     model: survey,
     onCurrentPageChanged: onCurrentPageChanged,
+    onAfterRenderQuestion:renderQuestion,
+    onAfterRenderPage: surveyRender,
     onStarted: surveyStarted,
     onComplete: surveyComplete,
     onTextMarkdown: convertMarkdownToHtml,
@@ -34,9 +39,23 @@ function loadSurvey(json) {
   // Set any custom properties defined in the JSON object
   setCustomProperties(survey, jsonObj);
 
-  // Add survey to the global context for access
-  window.survey = survey;
+  if (survey.firstPageIsStarted || survey.isLastPage) {
+    // If the first page is a starter page, or is the last page, then hide the progress navigation
+    hideNavigation();
+  }
+  else{
+    showNavigation();
+  }
 }
+
+function renderQuestion(survey){
+  navigationUiApply(survey);
+  selectBox(survey);
+}
+
+function surveyRender() {
+  showNavigation();
+};
 
 function surveyStarted(survey) {
   EmbedContext.sendMessage("surveyStarted", {});
@@ -84,12 +103,16 @@ function onCurrentPageChanged(survey) {
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
 }
 
+$(document).ready(function(){
+  hideNavigation();
+});
+
 function hideNavigation() {
-  $(".pagination").hide();
+  $(".pagination").css("visibility", "hidden");
 }
 
 function showNavigation() {
-  $(".pagination").show();
+  $(".pagination").css("visibility", "visible");
 }
 
 function surveyPrev() {
@@ -134,12 +157,20 @@ function setCustomProperties(survey, jsonObj) {
  * Apply navigation property changes to the survey layout.
  * 
  * @param survey - Survey object
+ * 
  */
 function navigationUiApply(survey) {
-  if(survey.getPropertyValue("questionNavigationUiType") == "NO_PROGRESS_BAR"){
+  var customUI = survey.getPropertyValue("questionNavigationUiType");
+
+  if(customUI == "NO_PROGRESS_BAR") {
     $("#surveyProgress").hide();
     $(".pagination").addClass("no_progress_bar");
-    $(".panel-footer").addClass("no_progress_footer_position");
+  }
+  else if(customUI == "WELL_BEING") {
+    $(".form-control").addClass("well_being_form_control");
+  }
+  else if(customUI == "CEQ") {
+    $(".btn-group fieldset > .btn").addClass("ceq_survey_label");
   }
 }
 
@@ -147,14 +178,70 @@ function navigationUiApply(survey) {
  * The following converter allows for Markdown to be used within titles and descriptions of questions.
  * https://surveyjs.io/Examples/Library?id=survey-markdown-radiogroup&platform=jQuery&theme=default#content-js
  */
-function convertMarkdownToHtml(survey) {
-  var converter = new showdown.Converter();
-  survey.onTextMarkdown.add(function (survey, options) {
-    // Convert markdown text to html
-    var str = converter.makeHtml(options.text);
-    // Strip leading and trailing <p></p> tags from the string
-    str = str.substring(3);
-    str = str.substring(0, str.length - 4);
-    options.html = str;
-  });
+ function convertMarkdownToHtml(survey, options) {
+  options.html = options.text;
 }
+
+// The following method is for the Survey Navigation Footer Handler when the keyboard appears
+
+var originalHeight = document.documentElement.clientHeight;
+var originalWidth = document.documentElement.clientWidth;
+$(window).resize(function () {
+  // Control landscape/portrait mode switch
+  if (document.documentElement.clientHeight == originalWidth &&
+    document.documentElement.clientWidth == originalHeight) {
+    originalHeight = document.documentElement.clientHeight;
+    originalWidth = document.documentElement.clientWidth;
+  }
+  // Check if the available height is smaller (keyboard is shown) so we hide the footer.
+  if (document.documentElement.clientHeight < originalHeight) {
+    $('.panel-footer, .pagination, .progress').hide();
+  } else {
+    $('.panel-footer, .pagination, .progress').show();
+  }
+});
+
+// Following method is for Custom select box dropdown
+function selectBox(survey) {
+  if ($('select.form-control').length === 0) {
+    return;
+  }
+
+  $('select.form-control').each(function (index, element) {
+    $(this).parent()
+      .after()
+      .append("<div class='bg_drop'><div class='selectlableList'><div class='selectedOption'></div><ul class='dropdown_list'></ul><img src='../Common/img/arrow_down.svg'/></div></div>");
+    $(element).each(function (idx, elm) {
+      $('option', elm).each(function (id, el) {
+        $('.selectlableList ul:last').append('<li>' + el.text + '</li>');
+      });
+      $('.selectlableList ul').hide();
+    });
+
+    $('.selectlableList:last').children('div.selectedOption').text("Select");
+    $('.dropdown_list').addClass('opened');
+    $('li:first-child').addClass('selected_active');
+  });
+
+  $('.selectedOption').on('click', function () {
+    var textChange = this.nextElementSibling.firstElementChild.innerHTML = "<span>Select</span> <img src='../Common/img/arrow_up.svg'/>";
+    $(this).next('ul').slideToggle(200);
+    $('.selectedOption').not(this).next('ul').hide();
+    $(".bg_drop").addClass("background_drop");
+  });
+
+  $('.selectlableList ul li').on('click', function (elm, element) {
+    var selectedLI = $(this).text();
+    $(this).parent().prev('.selectedOption').text(selectedLI);
+    var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
+    var obj = { [getProp]: selectedLI };
+    survey.data = {...survey.data, ...obj};
+    survey.progressBarType = "pages";
+    $(this).parent().find('li.selected_active').removeClass('selected_active');
+    $(this).addClass('selected_active');
+    $(".bg_drop").removeClass("background_drop");
+    $(this).parent('ul').hide();
+  });
+  $('.selectlableList').addClass("selected_list");
+  $('select.form-control').hide();
+};
