@@ -26,9 +26,11 @@ Subdirectories:
 
 - Common - Contains any common files used between interventions and surveys
 - Font - Contains the custom fonts
+- GetHelp - Contains files to show Get Help page
 - Interventions - Contains the subdirectories and files for interventions and modules
   - Common - Contains any common files used between intervention files
   - {Intervention-Name} - Each intervention has it's own directory, and subdirectories for modules if needed
+- Overview - Contains files to show Overview page
 - SurveyJS - Contains SurveyJS related files
   - Files - Contains SurveyJS JSON files
   - Images - Contains the images used for the surveys
@@ -44,12 +46,12 @@ loaded in the [live-server](https://www.npmjs.com/package/live-server) to
 be able to update the survey container. To run the live-server it must be
 installed using npm.
 
-```npm install```
+`npm install`
 
 Run the intervention frame or the survey frame.
 
-```npm run surveys```
-```npm run interventions```
+`npm run surveys`
+`npm run interventions`
 
 The live-server will push changes to CSS to the window if the source file
 changes. If an html file or js file changes it will re-load the window.
