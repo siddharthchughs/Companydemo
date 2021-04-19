@@ -9,6 +9,7 @@ struct SurveyJSThemingApp: App {
         switch selectedTab {
         case 0: return "Surveys"
         case 1: return "Interventions"
+        case 2: return "Overview"
         default: return "Get Help"
         }
     }
@@ -38,12 +39,19 @@ struct SurveyJSThemingApp: App {
                         }
                         .tag(1)
 
+                    OverviewView()
+                        .tabItem {
+                            Label("Overview", systemImage: "list.bullet.rectangle")
+                                .font(.customFont(forTextStyle: .callout))
+                        }
+                        .tag(2)
+                    
                     GetHelpView()
                         .tabItem {
                             Label("Get Help", systemImage: "lifepreserver")
                                 .font(.customFont(forTextStyle: .callout))
                         }
-                        .tag(2)
+                        .tag(3)
                 }
                 .navigationBarTitle(title, displayMode: displayMode)
             }
