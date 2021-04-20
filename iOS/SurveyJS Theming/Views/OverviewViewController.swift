@@ -17,7 +17,6 @@ class OverviewViewController: UIViewController, WKNavigationDelegate {
         
         webView = WKWebView(frame: .zero)
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.navigationDelegate = self
         view.addSubview(webView)
 
         NSLayoutConstraint.activate([
