@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_list" />
 
     <fragment
+        android:id="@+id/navigation_overview"
+        android:name="ai.a2i2.surveyjstheming.OverviewFragment"
+        android:label="@string/overview_label"
+        tools:layout="@layout/fragment_overview" />
+
+    <fragment
         android:id="@+id/navigation_gethelp"
         android:name="ai.a2i2.surveyjstheming.GetHelpFragment"
         android:label="@string/gethelp_label"
