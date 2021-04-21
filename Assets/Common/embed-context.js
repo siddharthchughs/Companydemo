@@ -58,6 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
       callback(values[key]);
     }
 
+    function getValue(key) {
+      return values[key];
+    }
+
     // Return an Embed Context for particular platform
     // (Not using ES6 object shorthand for platform support)
     if (platform === "ios") {
