@@ -235,7 +235,7 @@ function selectBox(survey) {
     $(this).parent().prev('.selectedOption').text(selectedLI);
     var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
     var obj = { [getProp]: selectedLI };
-    survey.data = {...survey.data, ...obj};
+    survey.data = Object.assign(survey.data, obj);
     survey.progressBarType = "pages";
     $(this).parent().find('li.selected_active').removeClass('selected_active');
     $(this).addClass('selected_active');

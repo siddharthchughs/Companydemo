@@ -53,9 +53,12 @@ MediaPlayer = {
     if (now - this.progressLastUpdated > this.PROGRESS_FREQ) {
       this.progressLastUpdated = now;
       this.currentTimeEl.innerText = this.convertToMMSS(this.media.currentTime);
+
+      var proportion = this.media.currentTime / this.media.duration;
+      var proportionValue = isNaN(proportion) ? 0 : proportion;
       this.el.style.setProperty(
         "--progress-proportion",
-        this.media.currentTime / this.media.duration
+        proportionValue
       );
     }
   },

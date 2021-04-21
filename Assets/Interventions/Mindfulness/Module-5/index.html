@@ -37,12 +37,29 @@
     style="--progress-proportion: 0"
   >
     <img class="ap-bg" src="../Common/Sprout_Meditation_Character_FA.gif" />
-    <!-- <lottie-player 
-      src="../../../Common/characters/STAGE24+MAIN.lottie"  
-      background="transparent"  speed="1"  
-      style="width: 300px; height: 300px;"  loop  autoplay
-    ></lottie-player> -->
-    <div class="vu-media-panel">
+    <!-- <div class="ap-bg">
+      <dotlottie-player
+        src="../../../Common/characters/STAGE25%20MAIN.lottie"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div> -->
+    <div data-menu="closed" class="vu-media-panel">
+      <div class="gender-controls-padding">
+        <button data-menu="closed" class="gender-controls">
+        </button>
+      </div>
+      <div data-gender="" class="gender-selector-active">
+        <div class="narrator-title">narrator</div>
+        <button data-gender="female" class="female-voice-option">
+          Female
+        </button>
+        <button data-gender="male" class="male-voice-option male-option-padding">
+          Male
+        </button>
+      </div>
       <div class="vu-media-controls">
         <audio></audio>
         <button class="ap-back">

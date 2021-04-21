@@ -12,3 +12,105 @@
   left: 0;
   object-fit: cover;
 }
+
+.vu-audio-player .gender-controls:focus {
+  outline: 0;
+}
+
+.vu-audio-player .gender-selector-active {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  align-self: flex-end;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #f4f1ef;
+  border-radius: 3px;
+  margin: 8px 48px 0px 0px;
+  padding: 0px 8px 8px 8px;
+  background-color: white;
+  width: 140px;
+}
+
+.vu-audio-player .narrator-title {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #808080;
+  padding: 16px 0px 8px 6px;
+  text-align: left;
+}
+
+.vu-audio-player .female-voice-option,
+.vu-audio-player .male-voice-option {
+  color: black !important;
+  font-weight: normal !important;
+  border-radius: 0px !important;
+  text-transform: none;
+  text-align: left !important;
+  border: none !important;
+  background-color: transparent !important;
+  outline: 0 !important;
+  padding: 8px 0px 8px 6px;
+}
+
+.male-option-padding {
+  padding-left: 20px;
+}
+
+.gender-selector-active[data-gender="male"] .male-voice-option,
+.gender-selector-active[data-gender="female"] .female-voice-option {
+  background-color: #fcece6 !important;
+}
+
+.vu-media-panel[data-menu="open"] .gender-selector-active {
+  display: flex !important;
+}
+
+.vu-media-panel[data-menu="closed"] .gender-selector-active {
+  display: none !important;
+}
+
+.vu-audio-player .gender-controls {
+  position: absolute;
+  right: 0;
+  text-indent: -2000px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  border: none !important;
+}
+
+.vu-media-panel[data-menu="open"] .gender-controls {
+  background-color: #f0a282 !important;
+}
+
+.vu-audio-player .gender-controls:active {
+  background-color: transparent !important;
+}
+
+.vu-audio-player .gender-controls::before {
+  display: block;
+  position: absolute;
+  left: calc(50% - 2.5px);
+  top: calc(50% - 2.5px);
+  content: "";
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+  border: 2.5px solid #f0a282;
+  background-color: #f0a282;
+  box-shadow: 0 -10px #f0a282, 0 10px #f0a282;
+}
+
+.vu-media-panel[data-menu="open"] .gender-controls::before {
+  border: 2.5px solid #ea7648;
+  background-color: #ea7648;
+  box-shadow: 0 -10px #ea7648, 0 10px #ea7648;
+}
+
+.gender-controls-padding {
+  padding-bottom: 28px;
+}
