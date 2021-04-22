@@ -1,0 +1,103 @@
+.vu-page-sheet {
+  margin-top: 20px;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 30px 30px 0px 0px;
+  padding: 30px 20px;
+  min-height: 100%;
+}
+
+.vu-page-sheet > * + * {
+  margin-top: 30px;
+}
+
+.vu-details-list .txt-eyebrow {
+  margin-bottom: 8px;
+}
+
+.vu-details-list > .vu-details-item + .vu-details-item {
+  margin-top: 16px;
+}
+
+.vu-details-item {
+  border-radius: 10px;
+  background-color: #f9f8f7;
+  padding: 20px;
+}
+
+.vu-details-item summary {
+  display: flex;
+  align-items: center;
+}
+
+.vu-details-item summary:focus {
+  outline: 0;
+}
+
+.vu-details-item .title {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.vu-details-item .content {
+  margin-top: 27px;
+}
+
+.vu-details-item .icon {
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.vu-details-item[data-state="done"] .icon {
+  background-color: #9dedc0;
+}
+
+.vu-details-item[data-state="active"] .icon {
+  background-color: #f0a282;
+}
+
+.show-done.show-done,
+.show-locked.show-locked,
+.show-active.show-active {
+  display: none;
+}
+
+.vu-details-item[data-state="done"] .show-done {
+  display: inline-block;
+}
+.vu-details-item[data-state="locked"] .show-locked {
+  display: inline-block;
+}
+.vu-details-item[data-state="active"] .show-active {
+  display: inline-block;
+}
+
+.vu-tags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vu-tags li {
+  background-color: #ffcf8d;
+  border-radius: 100px;
+  padding: 1px 11px;
+  display: inline-block;
+}
+
+.h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.txt-eyebrow {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
