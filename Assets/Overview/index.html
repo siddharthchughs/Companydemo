@@ -42,6 +42,21 @@
           document.getElementById(p.id).dataset.state = state;
         });
       }
+
+      if (window.webkit && window.webkit.messageHandlers) {
+        platform = "ios";
+      }
+      if (window.AndroidBridge) {
+        platform = "android";
+      }
+
+      if (platform === "android") {
+        window.addEventListener("load", function () {
+          if (typeof AndroidBridge.getActivePhase === "function") {
+            setProgress(window.AndroidBridge.getActivePhase());
+          }
+        });
+      }
     </script>
   </head>
   <body>
