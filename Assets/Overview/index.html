@@ -21,43 +21,7 @@
 
     <!-- Page script and styles -->
     <link href="overview.css" rel="stylesheet" />
-    <script>
-      var progressList = {
-        KICK_OFF: { stage: 1, id: "vu-kick" },
-        DAILY_CHECK_INS: { stage: 2, id: "vu-check-ins" },
-        MIDWAY: { stage: 3, id: "vu-midway" },
-        VIBE_UP: { stage: 4, id: "vu-vibeup" },
-        FINAL_QUESTIONS: { stage: 5, id: "vu-final-questions" },
-        REPORT_GIFT: { stage: 6, id: "vu-report-gift" },
-      };
-
-      function setProgress(progress) {
-        var active = progressList[progress];
-        Object.values(progressList).forEach((p) => {
-          var state = "locked";
-          if (p.stage === active.stage) state = "active";
-          if (p.stage < active.stage) state = "done";
-          if (active.stage === progressList["REPORT_GIFT"].stage) state = "done";
-
-          document.getElementById(p.id).dataset.state = state;
-        });
-      }
-
-      if (window.webkit && window.webkit.messageHandlers) {
-        platform = "ios";
-      }
-      if (window.AndroidBridge) {
-        platform = "android";
-      }
-
-      if (platform === "android") {
-        window.addEventListener("load", function () {
-          if (typeof AndroidBridge.getActivePhase === "function") {
-            setProgress(window.AndroidBridge.getActivePhase());
-          }
-        });
-      }
-    </script>
+    <script src="overview.js"></script>
   </head>
   <body>
     <div class="vu-page-sheet">
@@ -69,9 +33,11 @@
         <header class="txt-eyebrow">Part 1</header>
         <details class="vu-details-item" id="vu-kick" data-state="locked">
           <summary>
-            <img class="icon" src="./kick-off.svg" />
-            <h3 class="title h3">Kick-off questions</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./kick-off.svg" />
+              <h3 class="title h3">Kick-off questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>
@@ -88,9 +54,11 @@
         </details>
         <details class="vu-details-item" id="vu-check-ins" data-state="locked">
           <summary>
-            <img class="icon" src="./daily-check-ins.svg" />
-            <h3 class="title h3">Daily check-ins</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./daily-check-ins.svg" />
+              <h3 class="title h3">Daily check-ins</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>
@@ -107,9 +75,11 @@
         </details>
         <details class="vu-details-item" id="vu-midway" data-state="locked">
           <summary>
-            <img class="icon" src="./midway.svg" />
-            <h3 class="title h3">Midway questions</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./midway.svg" />
+              <h3 class="title h3">Midway questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>
@@ -129,9 +99,11 @@
         <header class="txt-eyebrow">Part 2</header>
         <details class="vu-details-item" id="vu-vibeup" data-state="locked">
           <summary>
-            <img class="icon" src="./vibeup.svg" />
-            <h3 class="title h3">Vibe Up!</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./vibeup.svg" />
+              <h3 class="title h3">Vibe Up!</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>
@@ -152,9 +124,11 @@
           data-state="locked"
         >
           <summary>
-            <img class="icon" src="./final-questions.svg" />
-            <h3 class="title h3">Final questions</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./final-questions.svg" />
+              <h3 class="title h3">Final questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>
@@ -169,11 +143,17 @@
             </ul>
           </div>
         </details>
-        <details class="vu-details-item" id="vu-report-gift" data-state="locked">
+        <details
+          class="vu-details-item"
+          id="vu-report-gift"
+          data-state="locked"
+        >
           <summary>
-            <img class="icon" src="./report-gift.svg" />
-            <h3 class="title h3">Your report + gift card</h3>
-            <img class="expander" src="../Common/img/arrow_down.svg" />
+            <div class="row">
+              <img class="icon" src="./report-gift.svg" />
+              <h3 class="title h3">Your report + gift card</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
           </summary>
           <div class="content">
             <p>

@@ -25,9 +25,22 @@
   padding: 20px;
 }
 
-.vu-details-item summary {
+.vu-details-item .row {
   display: flex;
   align-items: center;
+  margin: 0; /* to override bootstrap/survey.css:1150 010 */
+}
+
+.vu-details-item summary {
+  list-style-type: none;
+}
+
+.vu-details-item summary::marker {
+  display: none;
+}
+
+.vu-details-item summary::-webkit-details-marker {
+  display: none;
 }
 
 .vu-details-item summary:focus {
