@@ -21,6 +21,27 @@
 
     <!-- Page script and styles -->
     <link href="overview.css" rel="stylesheet" />
+    <script>
+      var progressList = {
+        KICK_OFF: { stage: 1, id: "vu-kick" },
+        DAILY_CHECK_INS: { stage: 2, id: "vu-check-ins" },
+        MIDWAY: { stage: 3, id: "vu-midway" },
+        VIBE_UP: { stage: 4, id: "vu-vibeup" },
+        FINAL_QUESTIONS: { stage: 5, id: "vu-final-questions" },
+        REPORT_GIFT: { stage: 6, id: "vu-report-gift" },
+      };
+
+      function setProgress(progress) {
+        var active = progressList[progress];
+        Object.values(progressList).forEach((p) => {
+          var state = "locked";
+          if (p.stage === active.stage) state = "active";
+          if (p.stage < active.stage) state = "done";
+
+          document.getElementById(p.id).dataset.state = state;
+        });
+      }
+    </script>
   </head>
   <body>
     <div class="vu-page-sheet">
@@ -30,7 +51,7 @@
       </p>
       <section class="vu-details-list">
         <header class="txt-eyebrow">Part 1</header>
-        <details class="vu-details-item" id="vu-kick" data-state="done">
+        <details class="vu-details-item" id="vu-kick" data-state="init">
           <summary>
             <img class="icon" src="./kick-off.svg" />
             <h3 class="title h3">Kick-off questions</h3>
@@ -49,7 +70,7 @@
             </ul>
           </div>
         </details>
-        <details class="vu-details-item" id="vu-check-ins" data-state="done">
+        <details class="vu-details-item" id="vu-check-ins" data-state="init">
           <summary>
             <img class="icon" src="./daily-check-ins.svg" />
             <h3 class="title h3">Daily check-ins</h3>
@@ -68,7 +89,7 @@
             </ul>
           </div>
         </details>
-        <details class="vu-details-item" id="vu-midway" data-state="active">
+        <details class="vu-details-item" id="vu-midway" data-state="init">
           <summary>
             <img class="icon" src="./midway.svg" />
             <h3 class="title h3">Midway questions</h3>
@@ -90,7 +111,7 @@
       </section>
       <section class="vu-details-list">
         <header class="txt-eyebrow">Part 2</header>
-        <details class="vu-details-item" id="vu-vibeup" data-state="locked">
+        <details class="vu-details-item" id="vu-vibeup" data-state="init">
           <summary>
             <img class="icon" src="./vibeup.svg" />
             <h3 class="title h3">Vibe Up!</h3>
@@ -112,7 +133,7 @@
         <details
           class="vu-details-item"
           id="vu-final-questions"
-          data-state="locked"
+          data-state="init"
         >
           <summary>
             <img class="icon" src="./final-questions.svg" />
@@ -132,11 +153,7 @@
             </ul>
           </div>
         </details>
-        <details
-          class="vu-details-item"
-          id="vu-report-gift"
-          data-state="locked"
-        >
+        <details class="vu-details-item" id="vu-report-gift" data-state="init">
           <summary>
             <img class="icon" src="./report-gift.svg" />
             <h3 class="title h3">Your report + gift card</h3>

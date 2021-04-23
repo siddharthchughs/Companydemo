@@ -30,7 +30,7 @@
        * Populate the survey container with the json object.
        */
       function populateSurvey(json) {
-        document.querySelector(".survey-frame").contentWindow.loadSurvey(json);
+        document.querySelector(".wrapper-frame").contentWindow.loadSurvey(json);
       }
 
       /**
@@ -61,7 +61,7 @@
         <button id="submitBtn">Load survey</button>
       </div>
       <iframe
-        class="survey-frame"
+        class="wrapper-frame"
         src="project/Assets/SurveyJS/survey_container.html"
       ></iframe>
     </div>

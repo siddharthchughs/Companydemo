@@ -4,7 +4,8 @@
   "description": "A web embed context for VibeUp app",
   "scripts": {
     "surveys": "live-server --mount=/project:../ --port=9999 --open=surveys.html",
-    "interventions": "live-server --mount=/project:../ --port=9999 --open=interventions.html"
+    "interventions": "live-server --mount=/project:../ --port=9999 --open=interventions.html",
+    "overview": "live-server --mount=/project:../ --port=9999 --open=overview.html"
   },
   "author": "A2I2",
   "dependencies": {
