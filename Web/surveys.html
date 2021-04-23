@@ -37,13 +37,13 @@
        * Load the selected JSON file and populate the survey.
        */
       function loadSelectedFile() {
-        let file = document.querySelector("#file-input").files[0];
+        var file = document.querySelector("#file-input").files[0];
         if (!file) {
           alert("Please select a survey JSON file");
           return;
         }
 
-        let reader = new FileReader();
+        var reader = new FileReader();
         reader.addEventListener("load", function (e) {
           var json = e.target.result;
           populateSurvey(json);
