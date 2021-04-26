@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Overview Page</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:;base64,=" />
+    <script>
+      /*
+       * Overview Page Web Wrapper
+       * -------------------------
+       * Container for testing overview page from a desktop web
+       * browser. Needs to be run in the live-server or CORS will
+       * not allow the contained frame to be accessed.
+       */
+
+      // Watch for messages from frame
+      window.addEventListener("message", (e) => {
+        console.log(e);
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("submitBtn")
+          .addEventListener("click", setProgress);
+      });
+
+      // Set the users progress through the experiment
+      function setProgress() {
+        var progress = document.querySelector(".load-data").selectedOptions[0]
+          .value;
+        document
+          .querySelector(".wrapper-frame")
+          .contentWindow.setProgress(progress);
+      }
+    </script>
+    <link rel="stylesheet" href="web-wrapper.css" />
+  </head>
+
+  <body>
+    <div class="web-wrapper">
+      <div class="loading-form">
+        <select class="load-data">
+          <option value="KICK_OFF">Kick off</option>
+          <option value="DAILY_CHECK_INS">Daily check-ins</option>
+          <option value="MIDWAY">Midway</option>
+          <option value="VIBE_UP">VibeUp</option>
+          <option value="FINAL_QUESTIONS">Final questions</option>
+          <option value="REPORT_GIFT">Report+Gift</option>
+        </select>
+        <button id="submitBtn">Set progress</button>
+      </div>
+      <iframe
+        class="wrapper-frame"
+        src="project/Assets/Overview/index.html"
+      ></iframe>
+    </div>
+  </body>
+</html>

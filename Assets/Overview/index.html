@@ -1,18 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="icon" href="data:;base64,=" />
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Included libraries -->
     <script src="../Common/jquery.min.js"></script>
     <script src="../Common/bootstrap.min.js"></script>
-    <link href="overview.css" type="text/css" rel="stylesheet" />
-    <link href="../Common/font.css" type="text/css" rel="stylesheet" />
-    <link href="../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
-</head>
 
-<body>
+    <!-- Common VibeUp styling -->
+    <link href="../Common/font.css" rel="stylesheet" />
+    <link href="../Common/surveyjs/survey.css" rel="stylesheet" />
+    <link href="../Common/vibeup-theme.css" rel="stylesheet" />
+    <link href="../Interventions/Common/styling.css" rel="stylesheet" />
 
-    <h1>Hello World!</h1>
-
-</body>
+    <!-- Page script and styles -->
+    <link href="overview.css" rel="stylesheet" />
+    <script src="overview.js"></script>
+  </head>
+  <body>
+    <div class="vu-page-sheet">
+      <p>
+        See where you’re headed - click below for an overview of each phase in
+        the 30 day study.
+      </p>
+      <section class="vu-details-list">
+        <header class="txt-eyebrow">Part 1</header>
+        <details class="vu-details-item" id="vu-kick" data-state="locked">
+          <summary>
+            <div class="row">
+              <img class="icon" src="./kick-off.svg" />
+              <h3 class="title h3">Kick-off questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              A few questions on your mood and wellbeing, to get a baseline of
+              where you’re at, so we can track your progress.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="duration">1 Day</li>
+              <li class="show-active">Active</li>
+              <li class="show-done">Done!</li>
+              <li class="show-locked">Not yet</li>
+            </ul>
+          </div>
+        </details>
+        <details class="vu-details-item" id="vu-check-ins" data-state="locked">
+          <summary>
+            <div class="row">
+              <img class="icon" src="./daily-check-ins.svg" />
+              <h3 class="title h3">Daily check-ins</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              We’ll check-in on how your vibe changes from moment to moment, by
+              sending prompts every day for about one week.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="duration">1 Week</li>
+              <li class="show-active">Active</li>
+              <li class="show-done">Done!</li>
+              <li class="show-locked">Not yet</li>
+            </ul>
+          </div>
+        </details>
+        <details class="vu-details-item" id="vu-midway" data-state="locked">
+          <summary>
+            <div class="row">
+              <img class="icon" src="./midway.svg" />
+              <h3 class="title h3">Midway questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              Do a few quick surveys to build your profile and unlock Part 2.
+              We’ll ask about your mood and thoughts on self-help.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="duration">1 Day</li>
+              <li class="show-active">Active</li>
+              <li class="show-done">Done!</li>
+              <li class="show-locked">Not yet</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+      <section class="vu-details-list">
+        <header class="txt-eyebrow">Part 2</header>
+        <details class="vu-details-item" id="vu-vibeup" data-state="locked">
+          <summary>
+            <div class="row">
+              <img class="icon" src="./vibeup.svg" />
+              <h3 class="title h3">Vibe Up!</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              Find out which group the AI has allocated you to, then up your
+              vibe with 2 weeks of wellbeing strategies or mood monitoring.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="duration">2 Weeks</li>
+              <li class="show-active">Active</li>
+              <li class="show-done">Done!</li>
+              <li class="show-locked">Not yet</li>
+            </ul>
+          </div>
+        </details>
+        <details
+          class="vu-details-item"
+          id="vu-final-questions"
+          data-state="locked"
+        >
+          <summary>
+            <div class="row">
+              <img class="icon" src="./final-questions.svg" />
+              <h3 class="title h3">Final questions</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              A few quick surveys to track your mood and give us your feedback
+              on Vibe Up. We’ll use it for your summary report.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="duration">1 Day</li>
+              <li class="show-active">Active</li>
+              <li class="show-done">Done!</li>
+              <li class="show-locked">Not yet</li>
+            </ul>
+          </div>
+        </details>
+        <details
+          class="vu-details-item"
+          id="vu-report-gift"
+          data-state="locked"
+        >
+          <summary>
+            <div class="row">
+              <img class="icon" src="./report-gift.svg" />
+              <h3 class="title h3">Your report + gift card</h3>
+              <img class="expander" src="../Common/img/arrow_down.svg" />
+            </div>
+          </summary>
+          <div class="content">
+            <p>
+              If you finish the study, we’ll send a personalised report on your
+              wellbeing and a $30 gift card to say thanks.
+            </p>
+            <ul class="vu-tags txt-eyebrow">
+              <li class="show-done">Email coming soon!</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </div>
+  </body>
 </html>

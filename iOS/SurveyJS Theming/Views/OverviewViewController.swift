@@ -15,7 +15,13 @@ class OverviewViewController: UIViewController, WKNavigationDelegate {
         view = UIView()
         view.backgroundColor = .systemBackground
         
-        webView = WKWebView(frame: .zero)
+        let config = WKWebViewConfiguration()
+        config.userContentController = WKUserContentController()
+        // Active phase would normally be determined based on trial progress in the real apps
+        let surveyLoadScript = WKUserScript(source: "setProgress(\"MIDWAY\");", injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        config.userContentController.addUserScript(surveyLoadScript)
+        
+        webView = WKWebView(frame: .zero, configuration: config)
         webView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(webView)
 
