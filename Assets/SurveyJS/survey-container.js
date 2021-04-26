@@ -169,9 +169,6 @@ function navigationUiApply(survey) {
   else if(customUI == "WELL_BEING") {
     $(".form-control").addClass("well_being_form_control");
   }
-  else if(customUI == "CEQ") {
-    $(".btn-group fieldset > .btn").addClass("ceq_survey_label");
-  }
 }
 
 /**
@@ -236,11 +233,13 @@ function selectBox(survey) {
     var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
     var obj = { [getProp]: selectedLI };
     survey.data = Object.assign(survey.data, obj);
+    console.log(survey.data)
     survey.progressBarType = "pages";
     $(this).parent().find('li.selected_active').removeClass('selected_active');
     $(this).addClass('selected_active');
     $(".bg_drop").removeClass("background_drop");
     $(this).parent('ul').hide();
+    surveyNext();
   });
   $('.selectlableList').addClass("selected_list");
   $('select.form-control').hide();
