@@ -233,7 +233,6 @@ function selectBox(survey) {
     var getProp = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.name
     var obj = { [getProp]: selectedLI };
     survey.data = Object.assign(survey.data, obj);
-    console.log(survey.data)
     survey.progressBarType = "pages";
     $(this).parent().find('li.selected_active').removeClass('selected_active');
     $(this).addClass('selected_active');
