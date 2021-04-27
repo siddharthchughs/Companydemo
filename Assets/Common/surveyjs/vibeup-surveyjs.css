@@ -217,14 +217,16 @@
 
 .pagination {
   position: fixed;
-  right: 30px;
-  bottom: 12px;
+  right: 10px;
+  bottom: -4px;
   z-index: 100;
 }
 
 .pagination a {
   text-decoration: none;
-  margin-left: 22px;
+  margin-left: 12px;
+  padding: 15px 12px;
+  display: inline-block;
 }
 
 .footer_home_btn {
@@ -543,15 +545,14 @@ textarea.form-control {
   padding: 0px 80px;
   left: 0;
   align-items: center;
-  bottom: 20px;
+  bottom: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .no_progress_bar a {
-  margin-left: 0px;
-  height: 14px;
+  margin-left: -6px;
 }
 
 .no_progress_bar::after {

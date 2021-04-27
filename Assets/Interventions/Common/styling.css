@@ -38,13 +38,15 @@
 }
 .pagination {
   position: fixed;
-  right: 30px;
-  bottom: 12px;
+  right: 10px;
+  bottom: -4px;
   z-index: 100 !important;
 }
 .pagination a {
   text-decoration: none !important;
-  margin-left: 22px;
+  margin-left: 12px;
+  display: inline-block;
+  padding: 15px 12px;
 }
 .progress-bar .undefined {
   display: none !important;
