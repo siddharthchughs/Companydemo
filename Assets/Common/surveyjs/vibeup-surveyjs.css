@@ -631,9 +631,6 @@ textarea.form-control {
 .well_being_form_control:focus {
   outline: none;
 }
-.ceq_survey_label {
-  width: 30px !important;
-}
 
 /* Select dropdown Box styles */
 
