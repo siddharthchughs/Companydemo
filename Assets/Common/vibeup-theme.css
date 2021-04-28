@@ -32,10 +32,10 @@ input[type="button"]:active {
   color: #ffffff !important;
 }
 
-
-#surveyPrev{
+#surveyPrev {
   content: url('./img/arrow_up.svg');
 }
-#surveyNext{
+
+#surveyNext {
   content: url('./img/arrow_down.svg');
 }
