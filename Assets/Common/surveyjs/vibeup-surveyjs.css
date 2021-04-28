@@ -351,18 +351,19 @@ span.sv_q_required_text {
   margin-bottom: 35px;
 }
 
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1), .sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1),
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   position: absolute;
   top: 55px;
   display: flex !important;
   justify-content: center;
   width: 50%;
 }
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1) {
   left: 0px;
 }
 
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   right: 0px;
 }
 
@@ -420,7 +421,7 @@ span.sv_q_required_text {
   margin-top: 100px;
 }
 
-.btn-group fieldset{
+.btn-group fieldset {
   width: 100%;
 }
 
@@ -595,6 +596,10 @@ textarea.form-control {
 
   .image_section img.mood_img_height {
     padding: 40px;
+  }
+
+  .sv_qcbc.form-inline {
+    margin-top: 50px;
   }
 }
 
