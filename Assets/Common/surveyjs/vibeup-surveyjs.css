@@ -320,7 +320,12 @@ span.sv_q_required_text {
   width: 100%;
   padding: 15px;
   bottom: 0px;
+  height: 54px;
   text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+  background-color: #f4f1ef !important;
 }
 
 .log-time-section .log-time-img {
