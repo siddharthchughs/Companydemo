@@ -121,7 +121,7 @@
   width: 100%;
   min-width: 100px;
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .radio.sv-q-col-1.checked label,
