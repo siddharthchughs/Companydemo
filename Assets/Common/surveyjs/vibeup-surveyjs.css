@@ -121,7 +121,7 @@
   width: 100%;
   min-width: 100px;
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .radio.sv-q-col-1.checked label,
@@ -217,14 +217,15 @@
 
 .pagination {
   position: fixed;
-  right: 30px;
-  bottom: 12px;
+  right: 20px;
+  bottom: -4px;
   z-index: 100;
 }
 
 .pagination a {
   text-decoration: none;
-  margin-left: 22px;
+  padding: 15px 12px;
+  display: inline-block;
 }
 
 .footer_home_btn {
@@ -319,7 +320,12 @@ span.sv_q_required_text {
   width: 100%;
   padding: 15px;
   bottom: 0px;
+  height: 54px;
   text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+  background-color: #f4f1ef !important;
 }
 
 .log-time-section .log-time-img {
@@ -350,18 +356,19 @@ span.sv_q_required_text {
   margin-bottom: 35px;
 }
 
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1), .sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1),
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   position: absolute;
   top: 55px;
   display: flex !important;
   justify-content: center;
   width: 50%;
 }
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(1) {
   left: 0px;
 }
 
-.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3){
+.sv_container .panel-body .sv_row .sv_qstn .table tr td:nth-child(3) {
   right: 0px;
 }
 
@@ -419,7 +426,7 @@ span.sv_q_required_text {
   margin-top: 100px;
 }
 
-.btn-group fieldset{
+.btn-group fieldset {
   width: 100%;
 }
 
@@ -543,15 +550,14 @@ textarea.form-control {
   padding: 0px 80px;
   left: 0;
   align-items: center;
-  bottom: 20px;
+  bottom: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .no_progress_bar a {
-  margin-left: 0px;
-  height: 14px;
+  margin-left: -6px;
 }
 
 .no_progress_bar::after {
@@ -596,6 +602,10 @@ textarea.form-control {
   .image_section img.mood_img_height {
     padding: 40px;
   }
+
+  .sv_qcbc.form-inline {
+    margin-top: 50px;
+  }
 }
 
 /* Wellnbeing styles*/
@@ -630,9 +640,6 @@ textarea.form-control {
 
 .well_being_form_control:focus {
   outline: none;
-}
-.ceq_survey_label {
-  width: 30px !important;
 }
 
 /* Select dropdown Box styles */
