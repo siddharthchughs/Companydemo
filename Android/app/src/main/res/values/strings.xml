@@ -5,6 +5,7 @@
     <string name="button_no">No</string>
     <string name="survey_label">Surveys</string>
     <string name="intervention_label">Interventions</string>
+    <string name="notification_label">Notifications</string>
     <string name="gethelp_label">Get help</string>
     <string name="title_activity_intervention">InterventionActivity</string>
     <!-- TODO: Remove or change this placeholder text -->

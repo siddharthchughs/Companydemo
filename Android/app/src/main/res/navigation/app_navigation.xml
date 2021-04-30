@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_list" />
 
     <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="ai.a2i2.surveyjstheming.NotificationsListFragment"
+        android:label="@string/notification_label"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
         android:id="@+id/navigation_overview"
         android:name="ai.a2i2.surveyjstheming.OverviewFragment"
         android:label="@string/overview_label"
