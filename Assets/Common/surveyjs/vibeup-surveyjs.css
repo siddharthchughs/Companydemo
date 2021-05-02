@@ -112,7 +112,7 @@
 }
 
 .radio.sv-q-col-1 label {
-  display: block;
+  display: inline-flex !important;
   font-size: 16px;
   padding: 15px 20px;
   font-weight: 400;
@@ -122,6 +122,8 @@
   min-width: 100px;
   cursor: pointer;
   border-radius: 10px;
+  min-height: 78px; /* 2 lines tall */
+  align-items: center;
 }
 
 .radio.sv-q-col-1.checked label,
