@@ -21,7 +21,7 @@ class NotificationsListFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         binding = FragmentListBinding.inflate(inflater)
-        binding.toolbarWithTitle.title.setText(R.string.notification_label)
+        binding.toolbarWithTitle.title.setText(R.string.email_label)
         binding.itemList.adapter = NotificationArrayAdapter(this, getSurveyItemList())
         binding.itemList.itemAnimator = DefaultItemAnimator()
         return binding.root
@@ -30,7 +30,7 @@ class NotificationsListFragment : Fragment() {
     private fun getSurveyItemList(): ArrayList<String> {
         val itemList = mutableListOf<String>()
         try {
-            requireContext().assets.list("Notifications")?.let {
+            requireContext().assets.list("Emails")?.let {
                 itemList.addAll(it.toList())
             }
         } catch (e: IOException) {

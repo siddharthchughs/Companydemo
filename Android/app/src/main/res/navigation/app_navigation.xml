@@ -18,9 +18,9 @@
         tools:layout="@layout/fragment_list" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_emails"
         android:name="ai.a2i2.surveyjstheming.NotificationsListFragment"
-        android:label="@string/notification_label"
+        android:label="@string/email_label"
         tools:layout="@layout/fragment_list" />
 
     <fragment

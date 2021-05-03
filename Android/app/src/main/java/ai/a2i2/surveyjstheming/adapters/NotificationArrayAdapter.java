@@ -51,7 +51,7 @@ public class NotificationArrayAdapter extends RecyclerView.Adapter<NotificationA
 
         @Override
         public void onClick(View view) {
-            createSurveyDialog(fragment.getChildFragmentManager(), "Notifications/" + binding.rowItem.getText());
+            createSurveyDialog(fragment.getChildFragmentManager(), "Emails/" + binding.rowItem.getText());
         }
 
         private void createSurveyDialog(final FragmentManager fragmentManager, String path) {
