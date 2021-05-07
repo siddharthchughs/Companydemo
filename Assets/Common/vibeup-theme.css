@@ -2,7 +2,15 @@
 
 html,
 body {
+  /* Required since 100% excludes unsafe areas */
+  height: 100vh;
   background-color: #f4f1ef !important;
+  /* To create new box formatting context */
+  display: flow-root;
+}
+/* To push first page element out from under header */
+body > :first-child {
+  margin-top: env(safe-area-inset-top);
 }
 
 button,
