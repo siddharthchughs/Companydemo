@@ -5,6 +5,7 @@
         <entry key="app/src/main/res/layout-w900dp/contain_search.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/contain_search.xml" value="0.1" />
+        <entry key="cessadvisory/src/main/res/drawable/ic_close.xml" value="0.1" />
         <entry key="cessadvisory/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="cessadvisory/src/main/res/layout/fragment_opening.xml" value="0.1" />
         <entry key="cessadvisory/src/main/res/layout/fragment_pending_issues.xml" value="0.1" />
