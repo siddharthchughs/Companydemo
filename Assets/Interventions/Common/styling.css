@@ -1,5 +1,4 @@
 /* Specific styling of the interventions */
-
 #surveyElement {
   /* To contain absolutely positioned descendant content */
   height: 100%;
@@ -370,9 +369,9 @@ img.center_align_img {
   padding: 25px;
   padding-bottom: calc(25px + env(safe-area-inset-bottom));
   text-align: center;
-  background: #fff;
 }
 .activity_footer button {
+  background-color: #fff;
   width: 100%;
   padding: 15px;
   font-weight: bold;
