@@ -2,6 +2,8 @@
   background-color: #32dcd2; /* for contrast during development */
   width: 100vw;
   height: 100vh;
+  position:relative;
+  margin-top: 0 !important; /* override safe area */
 }
 
 .vu-audio-player .ap-bg {
@@ -11,6 +13,7 @@
   top: 0;
   left: 0;
   object-fit: cover;
+  object-position: center bottom;
 }
 
 .vu-audio-player .gender-controls:focus {

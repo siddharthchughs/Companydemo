@@ -1,6 +1,6 @@
 /* Specific styling of the interventions */
 .panel-body {
-  padding: 25px 25px 110px 25px !important;
+  padding: 25px 25px 110px !important;
 }
 
 .panel-body::before {
@@ -11,6 +11,7 @@
   left: 0;
   width: 100%;
   height: 99px;
+  height: calc(99px + env(safe-area-inset-bottom));
   background-image: linear-gradient(120deg, #fff, #fff);
   border-radius: 30px 30px 0px 0px;
 }
@@ -18,6 +19,7 @@
   z-index: 10;
   position: fixed;
   bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   left: 30px;
   height: 8px !important;
   border-radius: 12px;
@@ -33,6 +35,7 @@
   color: #4d4d4d;
   position: fixed;
   bottom: 50px;
+  bottom: calc(50px + env(safe-area-inset-bottom));
   left: 30px;
   z-index: 1;
 }
@@ -40,6 +43,7 @@
   position: fixed;
   right: 20px;
   bottom: -4px;
+  bottom: calc(-4px + env(safe-area-inset-bottom));
   z-index: 100 !important;
 }
 .pagination a {
@@ -60,6 +64,7 @@
   width: 100%;
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
+  padding-bottom: calc(25px + env(safe-area-inset-bottom));
 }
 .sv_complete_home .sv_home_btn {
   width: 100%;
@@ -356,6 +361,7 @@ img.center_align_img {
   right: 0;
   left: 0;
   padding: 25px;
+  padding-bottom: calc(25px + env(safe-area-inset-bottom));
   text-align: center;
   background: #fff;
 }
