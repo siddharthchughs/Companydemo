@@ -103,8 +103,11 @@ function onCurrentPageChanged(survey) {
   EmbedContext.sendMessage("pageChanged", { page: survey.currentPageNo });
 }
 
-$(document).ready(function(){
-  hideNavigation();
+$(document).ready(function () {
+  // Ensure the navigation is not shown too early, which only occurs on Android.
+  if (window.AndroidBridge) {
+    hideNavigation();
+  }
 });
 
 function hideNavigation() {
