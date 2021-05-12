@@ -9,6 +9,17 @@
   <link href="../../../Common/font.css" type="text/css" rel="stylesheet" />
   <link href="../../../Common/vibeup-theme.css" type="text/css" rel="stylesheet" />
   <link href="../../../Common/surveyjs/survey.css" type="text/css" rel="stylesheet" />
+  <script src="../../../Common/embed-context.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelector(".submit_btn")
+        .addEventListener("click", function (e) {
+          EmbedContext.sendMessage("interventionCompleted", {});
+          EmbedContext.sendMessage("interventionDismiss", {});
+        });
+    });
+  </script>
 </head>
 
 <body>
@@ -25,7 +36,7 @@
         <p>Consider setting a reminder for later today. We'll check in with you tomorrow to see how you went!</p>
       </div>
       <div class="activity_footer">
-        <button type="button">got it</button>
+        <button type="button" class="submit_btn">got it</button>
       </div>
     </div>
   </div>
