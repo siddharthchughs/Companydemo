@@ -2,12 +2,20 @@
 
 html,
 body {
+  /* Required since 100% excludes unsafe areas */
+  height: 100vh;
   background-color: #f4f1ef !important;
+}
+body {
+  /* To push first page element out from under header */
+  padding-top: env(safe-area-inset-top);
+  /* To create new box formatting context */
+  display: flow-root;
 }
 
 button,
 input[type="button"] {
-  background-color: transparent !important;
+  background-color: transparent;
 
   border: 2px solid #d64204 !important;
   box-sizing: border-box;
@@ -33,9 +41,9 @@ input[type="button"]:active {
 }
 
 #surveyPrev {
-  content: url('./img/arrow_up.svg');
+  content: url("./img/arrow_up.svg");
 }
 
 #surveyNext {
-  content: url('./img/arrow_down.svg');
+  content: url("./img/arrow_down.svg");
 }
