@@ -95,7 +95,7 @@ AudioPlayer = {
 
     // change the gender
     this.el.querySelector(".gender-selector-active").dataset.gender = genderButtonResponse
-    EmbedContext.setValue(this.GENDER_VOICE_KEY, genderButtonResponse);    
+    EmbedContext.setValue(this.GENDER_VOICE_KEY, genderButtonResponse);
     this.media.src = this.el.dataset[genderButtonResponse];
 
     // hide the menu
@@ -110,7 +110,7 @@ AudioPlayer = {
     var genderControlsButton = this.el.querySelector(".gender-controls");
     var container = this.el.querySelector(".vu-media-panel");
     container.dataset.menu = buttonEventResponse;
-    
+
     if (container.dataset.menu == this.CLOSED) {
       // display the menu
       this.updateGenderMenuOpenStatus(this.OPEN, genderControlsButton, container);
