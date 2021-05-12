@@ -575,6 +575,7 @@ textarea.form-control {
   position: absolute;
   border: 2px solid #f4f1ef;
   left: 50%;
+  bottom: calc(-1px * env(safe-area-inset-bottom));
   transform: translate(-50%);
 }
 

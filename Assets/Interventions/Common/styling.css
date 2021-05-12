@@ -1,4 +1,11 @@
 /* Specific styling of the interventions */
+
+#surveyElement {
+  /* To contain absolutely positioned descendant content */
+  height: 100%;
+  position: relative;
+}
+
 .panel-body {
   padding: 25px 25px 110px !important;
 }
