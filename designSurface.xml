@@ -3,7 +3,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout-w900dp/contain_search.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33125" />
         <entry key="app/src/main/res/layout/contain_search.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.375" />
@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.14221014492753623" />
+        <entry key="app/src/main/res/layout/fragment_survey_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_movieitem.xml" value="0.25" />
         <entry key="app/src/main/res/layout/layout_networkcheck.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/layout_search_items.xml" value="0.33" />
