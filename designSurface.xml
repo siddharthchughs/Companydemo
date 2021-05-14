@@ -2,6 +2,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_view_bg.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout-w900dp/contain_search.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/layout/contain_search.xml" value="0.1" />
