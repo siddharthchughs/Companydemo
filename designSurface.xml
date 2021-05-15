@@ -2,7 +2,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_sheet_corner.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/drawable/card_view_bg.xml" value="0.31614583333333335" />
+        <entry key="app/src/main/res/drawable/ic_remove.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/drawable/view_dsshape.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/drawable/view_shape.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout-w900dp/contain_search.xml" value="0.1" />
