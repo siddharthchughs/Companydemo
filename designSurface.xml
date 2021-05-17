@@ -27,6 +27,8 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.30104166666666665" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.14221014492753623" />
         <entry key="app/src/main/res/layout/fragment_survey_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_view_1.xml" value="0.2964102564102564" />
+        <entry key="app/src/main/res/layout/item_view_2.xml" value="0.30104166666666665" />
         <entry key="app/src/main/res/layout/layout_indexrouteitem.xml" value="0.5" />
         <entry key="app/src/main/res/layout/layout_movieitem.xml" value="0.30104166666666665" />
         <entry key="app/src/main/res/layout/layout_networkcheck.xml" value="0.2375" />
