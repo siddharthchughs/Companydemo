@@ -42,6 +42,7 @@
         <entry key="app/src/main/res/layout/layout_source_header.xml" value="0.38275862068965516" />
         <entry key="appSD/src/main/res/layout/activity_my_dashboard.xml" value="1.0" />
         <entry key="appSD/src/main/res/layout/fragment_dashboard.xml" value="0.2484375" />
+        <entry key="appSD/src/main/res/menu/bottom_nav_menu.xml" value="0.2484375" />
         <entry key="appStepViewer/src/main/res/layout/activity_main.xml" value="0.30104166666666665" />
         <entry key="appStepViewer/src/main/res/layout/fragment_landing.xml" value="0.30104166666666665" />
         <entry key="appStepViewer/src/main/res/layout/fragment_new_alarm.xml" value="0.30104166666666665" />
