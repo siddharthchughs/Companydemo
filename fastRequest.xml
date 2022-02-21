@@ -72,6 +72,11 @@
         </DataMapping>
       </list>
     </option>
+    <option name="paramGroup">
+      <ParamGroup>
+        <option name="originUrl" value="" />
+      </ParamGroup>
+    </option>
     <option name="randomStringLength" value="5" />
   </component>
 </application>
