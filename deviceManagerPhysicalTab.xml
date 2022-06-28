@@ -8,9 +8,9 @@
             <value value="ZF6224BJ2L" />
           </Key>
         </key>
-        <name value="motorola moto g(7)" />
-        <target value="Android 10.0" />
-        <api value="29" />
+        <name value="Device" />
+        <target value="Android 1.0" />
+        <api value="1" />
       </PhysicalDevice>
       <PhysicalDevice>
         <key>
