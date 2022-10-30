@@ -1,10 +1,12 @@
 <application>
   <component name="AndroidLogcatFilterHistory">
-    <option name="mostRecentlyUsed" value="the heightt" />
+    <option name="mostRecentlyUsed" value="I" />
     <option name="nonFavorites">
       <list>
-        <option value="the heightt" />
+        <option value="I" />
         <option value="package:mine" />
+        <option value="the height" />
+        <option value="the heightt" />
       </list>
     </option>
   </component>
